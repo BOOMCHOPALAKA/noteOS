@@ -1,4 +1,4 @@
-# pkmOS — Building Your Second Brain with AI
+# pkmOS — Your No-Code, Plain-Text Second Brain, Supercharged by AI
 *A practical guidebook to building your own AI-powered personal knowledge management system that connects everything you know, forgets nothing, and gets more helpful the more you use it.*
 
 ## Table of Contents
