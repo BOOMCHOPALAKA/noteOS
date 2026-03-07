@@ -22,25 +22,27 @@ Imagine a personal Wikipedia for your entire life. Work, side projects, health, 
 
 That's noteOS. Here's what it looks like in practice:
 
-**It turns your meetings into lasting knowledge.** You probably already get transcripts from Zoom or Otter or whatever recording tool your team uses. Maybe you get a summary too. And then what? It sits in a folder somewhere and you never look at it again. In this system, you drop that transcript in and AI turns it into a structured summary linked to the project it's about, the people who were there, and every other meeting where those topics came up. Three weeks later someone asks "what did we decide about the vendor contract?" and you have the answer in ten seconds. Not because you remembered. Because the system did.
+**It remembers what you don't.** You had a conversation with your doctor three months ago. Or a contractor gave you a quote. Or you made a decision in a meeting and can't remember the reasoning. Instead of digging through emails or hoping you wrote it down somewhere, you ask. The system traces through your notes and gives you the answer with full context. Not because you organized everything perfectly. Because the system did.
 
 **It makes connections you wouldn't.** A vendor quoted me $2.80 per unit. Without being asked, the AI flagged that the same vendor quoted $2.40 for similar work three months ago on a different project. It traced through my notes, found the overlap, and surfaced it.
 
 **It builds itself.** I thought I'd spend hours organizing notes. Instead I just talk. I tell it what happened in a meeting, what I'm thinking about, what I need to remember. It creates the notes, files them, links them to everything related. You don't build a productivity system. You just talk to AI and the system grows around you.
 
-The whole thing runs on plain text files and a free app. No code. No databases. I'm not a developer. If my wife started using this tomorrow, she'd become an AI power user without realizing it, because the system does the heavy lifting.
+The whole thing runs on plain text files and a free app. No code. No databases. You don't need to be technical. The system does the heavy lifting.
 
 ---
 
 ## The Core Idea
 
-Think of it like this: if you had the world's best personal assistant, their value wouldn't just be their skills. It would be the six months they spent learning how you work, what you care about, how you like things done, and what's going on in your life. If they quit, all of that knowledge walks out the door.
+You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you've had it help draft an email, summarize a meeting transcript, explain something complicated, or brainstorm an idea. Maybe you've even set up projects or custom instructions, and the memory features mean it remembers some things between conversations.
 
-This system is like writing all of that down so the next assistant (or AI) can pick it up on day one.
+But there's a ceiling. The memory is shallow. A few saved facts, some conversation history. You still end up re-explaining context, pasting things in, managing what it knows and doesn't know. It's like having a really smart coworker who remembers your name and your title but nothing about what happened in last week's meetings. And everything you've built is locked inside that one app. Claude doesn't know what you told ChatGPT. ChatGPT doesn't know what you told Gemini. The more you put into one, the harder it is to leave.
 
-Your knowledge, your preferences, your workflows, your context. It all lives in files you control on your computer. Plain text. Markdown. Nothing proprietary. Right now I use Claude as the AI engine. But because everything is just files, I could switch to a different AI tomorrow and bring my entire system with me. The intelligence is in the structure, not the tool.
+This system removes that ceiling. Instead of AI that remembers fragments, you get AI that searches through a structured knowledge base of everything you've built. Your projects, your people, your decisions, your preferences. All of it lives in files you control on your computer. Plain text. Nothing proprietary. The AI reads those files, works inside them, and gets more helpful the more you add. Every meeting summary, every note, every document you feed it makes the whole system smarter.
 
-I think of it as: **own the playbook, rent the tech.** The playbook is yours. The AI is just the engine you plug in.
+Think of it this way. If you had the world's best personal assistant, their value wouldn't just be their skills. It would be the six months they spent learning how you work, what you care about, and what's going on in your life. If they quit, all of that walks out the door. This system is like writing all of that down so the next assistant, or AI, can pick it up on day one.
+
+Right now I use Claude as the AI engine. But because everything is just files, I could switch tomorrow and bring my entire system with me. The intelligence is in the structure, not the tool. Own the playbook, rent the tech.
 
 ---
 
