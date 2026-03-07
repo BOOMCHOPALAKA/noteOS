@@ -1,4 +1,4 @@
-# pkmOS — Your Instruction File
+# noteOS — Your Instruction File
 
 > **This is a working system you can use out of the box.** Every convention below was developed through months of real daily use. The system conventions, meeting processing rules, TODO filtering, daily note structure, and linking patterns all work as-is. Just fill in the personal sections (About Me, Active Projects, People) and start using it. Or just start talking to AI and have it fill them in for you based on your conversations. Customize everything over time as you develop your own preferences.
 

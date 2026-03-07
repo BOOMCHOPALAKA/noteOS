@@ -1,11 +1,11 @@
-# pkmOS — Your No-Code, Plain-Text Second Brain, Supercharged by AI
-*A practical guidebook to building your own AI-powered personal knowledge management system that connects everything you know, forgets nothing, and gets more helpful the more you use it.*
+# noteOS — An Operating System Built on Notes
+*A practical guidebook to building your own AI-powered knowledge system that connects everything you know, forgets nothing, and gets more helpful the more you use it.*
 
 ## Table of Contents
-- [What This Is (and Why You Should Care)](#what-this-is-and-why-you-should-care)
+- [What This Is](#what-this-is)
 - [The Core Idea](#the-core-idea)
 - [Who's This For](#whos-this-for)
-- [Enough Reading. Let's Build It.](#enough-reading-lets-build-it)
+- [Getting Started](#getting-started)
 - [How It Actually Works](#how-it-actually-works)
 - [Making It More Powerful](#making-it-more-powerful-go-as-deep-as-you-want)
 - [What the Payoff Looks Like](#what-the-payoff-looks-like)
@@ -16,27 +16,19 @@
 
 ---
 
-## What This Is (and Why You Should Care)
+## What This Is
 
-Imagine having a personal Wikipedia for your entire life. Not just work. Everything. The projects you're managing, the side business you're building, the house you're trying to buy, the research you did last month on a health question, the conversation with your financial advisor, the recipe you perfected over the summer. All of it indexed, linked together, and searchable. Not buried in email threads or scattered across apps. Structured, connected, and growing every day.
+Imagine a personal Wikipedia for your entire life. Work, side projects, health, finances, real estate, recipes, everything. All of it connected, searchable, and growing every day. Now imagine that Wikipedia is fully interactive and conversational. You can talk to it, ask it questions, and it talks back with the full weight of everything you've ever put into it.
 
-Now imagine an AI that can search through all of it. You ask "what did we decide about the vendor contract?" and it traces through your notes, finds the meeting where it was discussed, pulls up the decision and the reasoning behind it. You ask "what were the terms Martin proposed on the house?" and it pulls up the negotiation timeline. You ask "draft an update for my team" and it already knows the status, the people, the blockers, and your writing style. You get pulled into a meeting with someone you've only met once, and it tells you who they are, what they work on, and the last time they came up in your notes. It doesn't need a briefing. It's been building the knowledge base alongside you.
+That's noteOS. Here's what it looks like in practice:
 
-That's what this is. Personal knowledge management, reimagined as an AI-powered "operating system" for your life. Except this OS runs on markdown files and conversations, not code. It gets more helpful every week because every note, every conversation, every document you feed it makes the whole system more connected and more useful. Work, personal, side projects, whatever matters to you. It's all one system.
+**It turns your meetings into lasting knowledge.** You probably already get transcripts from Zoom or Otter or whatever recording tool your team uses. Maybe you get a summary too. And then what? It sits in a folder somewhere and you never look at it again. In this system, you drop that transcript in and AI turns it into a structured summary linked to the project it's about, the people who were there, and every other meeting where those topics came up. Three weeks later someone asks "what did we decide about the vendor contract?" and you have the answer in ten seconds. Not because you remembered. Because the system did.
 
-I'm not a developer. There's no code involved here. Everything is plain text files and an AI tool that can read them. I've been using this system every day for the past couple months. The time savings alone are worth it. The way it organizes your thinking, the brainstorming sessions it enables, the fact that it can draft something in your voice without you explaining your voice. All of that is great. But the thing that's surprised me most is how accurate the AI becomes when it has your actual knowledge base to work from. It's not guessing. It's searching through your notes, tracing the links, pulling up what was really said and what was actually decided. I've had it recall details from weeks-old meetings to help me give someone an update on the spot. I was in a meeting where I asked it about something that happened a while back, it traced through the vault, and gave me context that nobody in the room remembered. That opened some eyes. When AI has real source material to work with instead of just its training data, the answers get remarkably reliable. That was the most delightful surprise of this whole system for me.
+**It makes connections you wouldn't.** A vendor quoted me $2.80 per unit. Without being asked, the AI flagged that the same vendor quoted $2.40 for similar work three months ago on a different project. It traced through my notes, found the overlap, and surfaced it.
 
-Here's the thing most people don't realize. You might already use ChatGPT or Claude. You might even use projects or custom instructions or memory features. That's great, and honestly it puts you ahead of most people. But there's a ceiling to what a chat window can do. You're still copying and pasting things in. You're still the one remembering what context to give it. You're still managing the conversation. It's like having a really smart coworker who you have to brief from scratch every time you need something, even if you've briefed them before. The memory features help, but they're shallow. A few saved facts. Not a living, structured knowledge base that grows every day.
+**It builds itself.** I thought I'd spend hours organizing notes. Instead I just talk. I tell it what happened in a meeting, what I'm thinking about, what I need to remember. It creates the notes, files them, links them to everything related. You don't build a productivity system. You just talk to AI and the system grows around you.
 
-Now, tools like Claude Code, Claude Cowork, and others have started changing this. They let AI work directly inside a folder on your computer. Read files, create notes, edit things, trace connections. That's a huge leap, and honestly just having AI in a folder is already powerful. You can point it at your documents and start getting useful answers immediately.
-
-But what I've found is that having a framework underneath it makes the whole thing dramatically better. Linking conventions that let AI trace connections between notes. Templates that teach AI how to build things the way you want them. An instruction file that captures how you work, how you communicate, what to include and what to leave out. A structure that compounds over time so every new piece of information makes everything else more findable. AI in a folder is the superpower. This project is the framework that makes that superpower compound.
-
-And the wildest part is you don't need to be technical to get there. My wife doesn't think of herself as an AI power user. But if she started using this system, she'd naturally become one, because the system does the heavy lifting. You talk to it, it organizes everything, and suddenly you have a knowledge base that makes every future conversation smarter. You didn't build a productivity system. You just kept talking to AI, and the system built itself around you.
-
-The key ingredient is an AI that can see and work within your file system. Not a chat window where you paste things in. An actual tool that lives in your vault, reads your files, creates new ones, edits existing ones, and follows the links between them. Right now that's tools like Claude Code, Claude Cowork, or similar tools from other providers. The specific tool doesn't matter. What matters is it can read and write to a folder on your computer. That's the unlock.
-
-And yes, it also means you never re-explain yourself. Most people use AI like a search engine with personality. Every conversation starts from zero. This system doesn't. But that's just the entry point. The real value is having a knowledge partner that compounds over time.
+The whole thing runs on plain text files and a free app. No code. No databases. I'm not a developer. If my wife started using this tomorrow, she'd become an AI power user without realizing it, because the system does the heavy lifting.
 
 ---
 
@@ -72,64 +64,46 @@ The common thread: if you've ever thought "I know I wrote this down somewhere" o
 
 ---
 
-## Enough Reading. Let's Build It.
+## Getting Started
 
-You could keep reading about this or you could have a working system in 20 minutes. Here's how.
+The whole system is built on two things: a folder of text files on your computer, and an AI tool that can read and write to that folder. That's it. Everything else is just structure that makes it compound over time.
 
-**Step 1: Download Obsidian**
+**A quick note on Obsidian.** You'll see Obsidian mentioned throughout this guide. Obsidian is a free app that gives you a visual interface for a folder of text files. It's not a platform or a service. There's no account to create, no cloud to sync to. You point it at a folder on your computer, and it lets you browse, edit, and link your files in a nice visual way. Think of it as a really good file viewer with superpowers like linking and search. Under the hood, everything is still just a folder with `.md` text files inside.
 
-Go to [obsidian.md](https://obsidian.md) and download it. It's free. Works on Mac, Windows, Linux, and mobile.
+You could create a folder on your Desktop right now called "MyBrain" and that would technically be your vault. That's how simple the foundation is.
 
-**Step 2: Get the starter vault**
+### Step 1: Download Obsidian
 
-You're looking at it. This repo is the starter vault. Clone it or download the zip:
+Go to [obsidian.md](https://obsidian.md) and download it. Free, works on Mac, Windows, Linux, and mobile.
 
-```bash
-git clone https://github.com/BOOMCHOPALAKA/pkmOS.git
-```
+### Step 2: Get the starter vault
 
-Or click the green **Code** button above and select **Download ZIP**. Unzip it and put it somewhere easy to find on your computer. Your Documents folder works great. Then open Obsidian and point it at that folder.
+Download the starter vault from the [noteOS GitHub repo](https://github.com/BOOMCHOPALAKA/noteOS). Click the green **Code** button and select **Download ZIP**. Unzip it and put the folder somewhere on your computer. Your Documents folder works great.
 
-The starter vault comes pre-built with the folder structure from this guide: Map, Calendar, Downloads, Attachments, and Templates. It also includes:
-- **An instruction file** (`CLAUDE.md`) pre-loaded with battle-tested conventions: meeting processing rules, TODO filtering, daily note structure, linking patterns, weekly report format, communication style defaults. All of it works out of the box. Just fill in the personal sections (About Me, Active Projects, People) and start using it.
-- **A memory file** (`MEMORY.md`) pre-loaded with system-level patterns that AI learns to follow: how to handle recaps, how to research your vault, how to process transcripts, how to hand off between sessions. AI will add to this over time as it learns your specific preferences.
-- **A daily note template** in Templates/ so every day starts with the same structure.
-- **A Basecamp template** in Templates/ with the Compass section already in place.
+Open Obsidian and point it at that folder. You now have a working vault with:
+- **An instruction file** (`CLAUDE.md`) pre-loaded with battle-tested conventions for meeting processing, daily notes, linking, TODO filtering, status reports, and communication style. Works out of the box. Fill in the personal sections (About Me, Active Projects, People) whenever you're ready, or just start talking to AI and let it fill them in from your conversations.
+- **A memory file** (`MEMORY.md`) pre-loaded with system-level patterns that AI follows: how to handle recaps, research your vault, process transcripts, hand off between sessions. AI adds to this over time as it learns your preferences.
+- **Templates** for daily notes, Basecamps (topic hubs), meeting summaries, and weekly status reports.
+- **The folder structure** already set up: Map, Calendar, Downloads, Attachments, Templates.
 
-You're not starting from scratch. The conventions, the rules, the patterns are all live. The only things that need your input are the personal sections: who you are, what you're working on, and who comes up in your conversations. You can type those in yourself, or just start talking to AI and let it fill them in based on your conversations. Either way, you're up and running.
-
-**Step 3: Fill in your instruction file**
-
-Open `CLAUDE.md` and fill in the basics. Five lines is enough to start:
-- Who you are and what you do
-- Your active projects or areas of focus (work, personal, whatever)
-- People who come up a lot
-- Any formatting preferences you already know you want
-
-That's it for now. This file grows over time based on real experience, not upfront planning. Every time AI does something you don't like, you add a line. Every time it gets something right, you leave it alone.
-
-The good news: your `CLAUDE.md` already comes loaded with conventions that work. Meeting processing, TODO filtering, daily note structure, linking rules, weekly reports, communication style. It's all there. You're not building from zero. You're personalizing a system that's already running.
-
-**Step 4: Create your first daily note**
-
-Tell AI: "Create a daily note for today. Here's what I worked on..." and give it a few bullets about your day. It'll create the note in the right place with the right structure. Or if you prefer, open the Calendar folder, create a note using the daily note template, and type it yourself. Either way, a few bullets is fine. This is your first deposit into the system.
-
-**Step 5: Connect AI to your vault**
+### Step 3: Connect your AI tool
 
 This is the part that makes it all work. You need an AI tool that can read and write files on your computer. Not a chat window. An AI that lives inside your vault.
 
-If your experience with AI so far has been chat windows, whether that's ChatGPT or Claude in a browser, on your phone, or even the desktop apps, this is the part that's different. All of those are conversations that happen separately from your files. These tools are different. They run on your computer and work directly inside your folders. You talk to them the same way, but instead of a chat window, they're operating inside your vault. They can read your notes, create new ones, edit existing ones, and search across everything.
+If your experience with AI has been chat windows (ChatGPT or Claude in a browser, on your phone, or even the desktop apps), this is the part that's different. Those are conversations that happen separately from your files. The tools below are different. They run on your computer and work directly inside your folders. You talk to them the same way, but they can read your notes, create new ones, edit existing ones, and search across everything.
 
-Right now the best options are **Claude Cowork** and **Claude Code** (both from Anthropic):
+**My path here:** I started with Claude in the browser. Custom instructions, projects, memory features. It was useful. But every conversation still felt like briefing a new coworker. Then I tried Claude Code, which runs in your terminal and works directly inside a folder on your computer. That was the unlock. The moment AI could actually read my files, create notes, edit things, and trace connections between documents, everything changed. It went from "smart chatbot" to "knowledge partner that knows my entire system." That's when this project started taking shape.
 
-- **Claude Cowork** is the easiest starting point. It's built into the Claude desktop app. You point it at your vault folder and start talking. Great for anyone who wants the conversational experience without any terminal or command line setup. If you're new to this, start here. [Getting started with Cowork](https://support.claude.com/en/articles/13345190-get-started-with-cowork)
-- **Claude Code** is a command-line tool that runs in your terminal. More powerful, more flexible, usage-based pricing. This is what I use daily. If you're comfortable with a terminal or want to grow into it, this is the path. [Getting started with Claude Code](https://code.claude.com/docs/en/overview)
+**Here's what makes this powerful:** because your vault is just folders and text files, you're not locked into any single AI tool. Plain text and markdown are universal. If something better comes along next month, you take your entire vault and plug it into the new tool. Full context, day one. No re-explaining, no starting over. You own the knowledge. The AI is just the engine you plug in. Pick the best tool available today knowing you can switch tomorrow without losing anything.
 
-Other AI providers are building similar file-system tools. The specific tool will evolve. What matters is the AI can see your files and operate within them.
+Right now the tools I'd recommend are **Claude Cowork** and **Claude Code** (both from Anthropic):
 
-Once it's connected, try it. "Here's a meeting I had today. Summarize it and add it to my daily note." Or ask it something. "What did I write down yesterday?" It reads your instruction file, knows your conventions, and starts working within your system from the first conversation.
+- **Claude Cowork** is the easiest starting point. It's built into the Claude desktop app. You point it at your vault folder and start talking. If you're new to this, start here. [Getting started with Cowork](https://support.claude.com/en/articles/13345190-get-started-with-cowork)
+- **Claude Code** is what I use daily. It's a command-line tool. More powerful, more flexible, usage-based pricing. If you're comfortable with a terminal or want to grow into it, this is the path. [Getting started with Claude Code](https://code.claude.com/docs/en/overview)
 
-**Using a different AI tool?** The starter vault ships with `CLAUDE.md` because Claude Code auto-discovers it. But the instructions inside are just plain text. They work with any AI tool that reads files. If you're using a different tool, just rename or copy the file to match what your tool expects:
+Other AI providers are building similar tools. The specific tool doesn't matter. What matters is it can see your files and work inside them. The whole system is designed to be portable.
+
+**Using a different AI tool?** The starter vault ships with `CLAUDE.md` because Claude Code auto-discovers it. But the instructions inside are just plain text. They work with any AI tool that reads files. Just rename or copy the file to match what your tool expects:
 
 | Tool | Instruction file it reads |
 |---|---|
@@ -140,9 +114,15 @@ Once it's connected, try it. "Here's a meeting I had today. Summarize it and add
 | Gemini CLI | `GEMINI.md` |
 | Windsurf | `.windsurfrules` |
 
-The content stays the same. Only the filename changes.
+### Step 4: Start using it
 
-That's your setup. You have a vault, an instruction file, and a daily note. The system is live. Everything below this point explains how it works under the hood and how to get the most out of it.
+You're live. Try one of these to see it in action:
+
+- **"Create a daily note for today. Here's what I worked on..."** and give it a few bullets about your day.
+- **"Here's a meeting I had today. Summarize it and add it to my daily note."** Paste or drop a transcript.
+- **Ask it something.** "What did I write down yesterday?" or "What am I working on this week?"
+
+AI reads your instruction file, knows your conventions, and starts working within your system from the first conversation. Everything below this point explains how it works under the hood and how to get the most out of it.
 
 ---
 
