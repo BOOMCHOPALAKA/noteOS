@@ -55,7 +55,7 @@ That's noteOS. Here's what it looks like in practice:
 
 **It remembers what you don't.** You had a conversation with your doctor three months ago. Or a contractor gave you a quote. Or you made a decision in a meeting and can't remember the reasoning. Instead of digging through emails or hoping you wrote it down somewhere, you ask. The system traces through your notes and gives you the answer with full context. Not because you organized everything perfectly. Because the system did.
 
-**It makes connections you wouldn't.** A vendor gives you a quote. Without being asked, AI flags that the same vendor quoted a lower price three months ago on a different project. It traced through your notes, found the overlap, and surfaced it before you even thought to look.
+**Things start connecting themselves.** You're planning a ski trip to the Alps and AI surfaces a hotel your friend raved about two years ago in a completely different conversation. You're writing a birthday card for your dad and it pulls up a story he told you that you'd completely forgotten you wrote down. You're experimenting with a new recipe and it connects it to notes from a cooking class you took on vacation. Your life is full of these threads. The system finds them for you.
 
 **It builds itself.** I thought I'd spend hours organizing notes. Instead I just talk. I tell it what happened in a meeting, what I'm thinking about, what I need to remember. It creates the notes, files them, links them to everything related. You don't build a productivity system. You just talk to AI and the system grows around you.
 
