@@ -24,7 +24,7 @@ That's noteOS. Here's what it looks like in practice:
 
 **It remembers what you don't.** You had a conversation with your doctor three months ago. Or a contractor gave you a quote. Or you made a decision in a meeting and can't remember the reasoning. Instead of digging through emails or hoping you wrote it down somewhere, you ask. The system traces through your notes and gives you the answer with full context. Not because you organized everything perfectly. Because the system did.
 
-**It makes connections you wouldn't.** A vendor quoted me $2.80 per unit. Without being asked, the AI flagged that the same vendor quoted $2.40 for similar work three months ago on a different project. It traced through my notes, found the overlap, and surfaced it.
+**It makes connections you wouldn't.** A vendor gives you a quote. Without being asked, AI flags that the same vendor quoted a lower price three months ago on a different project. It traced through your notes, found the overlap, and surfaced it before you even thought to look.
 
 **It builds itself.** I thought I'd spend hours organizing notes. Instead I just talk. I tell it what happened in a meeting, what I'm thinking about, what I need to remember. It creates the notes, files them, links them to everything related. You don't build a productivity system. You just talk to AI and the system grows around you.
 
@@ -52,13 +52,13 @@ Honestly, anyone. But that's not a useful answer, so here's what it actually loo
 
 This was built for normal people with busy lives who want AI to actually be useful for them.
 
-**You're not a tech person. You just want things to work.** You've tried ChatGPT a few times. Maybe you had it help with an email or asked it to explain something. It was fine. But you're not sure what else to do with it, and every conversation feels like it starts from zero. You re-explain your job, your situation, your preferences. You can tell there's something bigger here but nobody's shown you what it looks like in practice. This system gives you that. You don't need to be technical. You don't need to know what markdown is. You talk to AI, it builds and organizes your knowledge, and the whole thing gets more helpful over time.
+**You're not a tech person. You just want things to work.** You've tried ChatGPT a few times. It was fine. But you can tell there's something bigger here and nobody's shown you what it looks like in practice. This system gives you that. You talk to AI, it builds and organizes your knowledge, and the whole thing gets more helpful over time.
 
-**You have a lot going on and things slip through the cracks.** Work, family, personal projects, health stuff, finances, a house hunt, a side business, whatever. You're not looking for a productivity system with dashboards and workflows. You just want a place where the conversation with your financial advisor, the research on your kid's school options, and the details of the contractor bid all live in one searchable system that doesn't forget. You want to be able to say "what did the doctor recommend in March?" and get an actual answer.
+**You have a lot going on and things slip through the cracks.** Work, family, personal projects, health stuff, finances, a house hunt, a side business, whatever. You're not looking for a productivity system with dashboards and workflows. You just want a place where the conversation with your financial advisor, the research on your kid's school options, and the details of the contractor bid all live in one searchable system that doesn't forget.
 
 **You're a knowledge worker drowning in information.** Product managers, project managers, consultants, directors, lawyers, anyone whose job is meetings, decisions, documents, and keeping track of what happened and why. You have more information flowing through your week than you can retain. If you've heard the term "personal knowledge management" (PKM), this is that. But instead of you doing the organizing, AI does it. This system catches information, structures it, links it, and gives it back to you when you need it.
 
-**You already use AI and want the next level.** You're past the basics. You use ChatGPT or Claude regularly. Maybe you've set up projects, custom instructions, or memory features. It's been useful. But you've hit the wall. You still spend time re-explaining context. You still copy and paste things in. The AI remembers some things but misses others, and you can't really control what sticks. You know there's more here but the chat window feels like a ceiling. This system breaks through that ceiling. Instead of AI that remembers fragments of past conversations, you get AI that searches through a structured knowledge base of everything you've built. Your meeting summaries, your project notes, your decisions, your preferences. All linked, all searchable, all growing. You drop a meeting transcript and it comes back as a fully linked summary connected to the three other meetings where this topic came up. You ask a question and it traces through months of accumulated context to give you a real answer. The difference between using AI in a chat window and using AI inside your knowledge base is the difference between asking a stranger for directions and asking someone who's walked the trail a hundred times.
+**You already use AI and want the next level.** You're past the basics. You've hit the ceiling described in [The Core Idea](#the-core-idea). You know there's more here but the chat window isn't it. This system is what's on the other side. The difference between using AI in a chat window and using AI inside your knowledge base is the difference between asking a stranger for directions and asking someone who's walked the trail a hundred times.
 
 **You're technical and want to build on this.** Developers, engineers, technical leads. You can customize the instruction file for code review workflows, architecture decision records, sprint planning, codebase analysis. The whole thing is just text files. Fork it, modify it, make it yours.
 
@@ -96,7 +96,7 @@ If your experience with AI has been chat windows (ChatGPT or Claude in a browser
 
 **My path here:** I started with Claude in the browser. Custom instructions, projects, memory features. It was useful. But every conversation still felt like briefing a new coworker. Then I tried Claude Code, which runs in your terminal and works directly inside a folder on your computer. That was the unlock. The moment AI could actually read my files, create notes, edit things, and trace connections between documents, everything changed. It went from "smart chatbot" to "knowledge partner that knows my entire system." That's when this project started taking shape.
 
-**Here's what makes this powerful:** because your vault is just folders and text files, you're not locked into any single AI tool. Plain text and markdown are universal. If something better comes along next month, you take your entire vault and plug it into the new tool. Full context, day one. No re-explaining, no starting over. You own the knowledge. The AI is just the engine you plug in. Pick the best tool available today knowing you can switch tomorrow without losing anything.
+**Here's what makes this powerful:** because your vault is just folders and text files, you're not locked into any single AI tool. Plain text and markdown are universal. If something better comes along next month, you take your entire vault and plug it into the new tool. Full context, day one. The AI is just the engine you plug in.
 
 Right now the tools I'd recommend are **Claude Cowork** and **Claude Code** (both from Anthropic):
 
@@ -135,6 +135,14 @@ Three things are happening: a structured place for your knowledge, an instructio
 ### 1. A structured place for your knowledge
 
 I use [Obsidian](https://obsidian.md). It's free, it works on everything, and under the hood it's just a folder of markdown files on your computer. Obsidian calls this folder a "vault." That's your second brain.
+
+**Why Obsidian?** It's not just a file viewer. It's a powerful visual layer for everything AI builds. You can hit a keyboard shortcut and instantly search across every note in your vault. Links between notes are clickable, so you navigate your knowledge the same way you'd browse Wikipedia. Hashtags let you filter and organize. Themes make it visually clean. And because Obsidian renders markdown, every note AI creates shows up beautifully formatted with headers, bold text, bullet lists, and links, without you writing any of it.
+
+Speaking of markdown: you don't need to learn it. Markdown is just a simple way to format text files using characters like `#` for headers and `**` for bold. The reason it matters is that AI models already think in markdown. When AI creates a note, it writes markdown automatically. Obsidian renders it so it looks clean. You get the benefit of a structured, formatted knowledge base without ever learning the syntax. And because markdown is plain text, your notes work in hundreds of other apps too. It's one of the most widely supported formats in software.
+
+**And then there's the graph view.** Obsidian can show your entire vault as a visual network. Every note is a node, every link is a connection between them. You can watch your knowledge base grow from a handful of scattered dots into a dense, interconnected web. It's not just cool to look at (it is). It's a real way to spot clusters, find orphan notes that may or may not need connecting, and see which topics are most central to your thinking.
+
+Most of the time, I'm talking to Claude directly. But I always have Obsidian open alongside it. When I want to browse a note, follow links between topics, or just see how things connect visually, I switch over. AI is the engine. Obsidian is the dashboard.
 
 **What the vault actually looks like on your computer:**
 
@@ -230,7 +238,9 @@ Over time, you add more. You notice AI formatted something wrong, so you add a r
 
 This is the part that surprised me most about my own system.
 
-Your primary interaction with this whole thing is talking to the AI. Not writing notes in Obsidian. Not manually organizing files. Talking. You can absolutely write notes manually if you want to. That's the beauty of this system. It's hybrid. But here's what actually happened after two months of using it: I thought I'd be writing a lot more by hand. I expected to spend time in Obsidian crafting notes, organizing things, building out the structure myself. Instead, I just talk to Claude. I tell it what happened in a meeting, what I'm working on, what I need to remember. It generates the notes, files them in the right place, links them to everything else. And then Obsidian becomes this beautiful visual layer where I can open a Basecamp, click through to the notes connected to it, follow links between topics, and just browse what's been built. Or I skip Obsidian entirely and ask Claude a question right in the chat. "What did we decide about the pricing portal?" And it searches the vault and gives me the answer. Both paths work. That's the freedom of it.
+**One thing to know upfront:** your conversations with AI don't automatically turn into notes. The system isn't recording everything in the background. You have a conversation, and when something feels worth keeping, you tell AI to save it. "Create a note on what we just talked about." "Add this to my daily note." "Could we make this a Basecamp?" That's the extent of the manual work. You decide what matters, AI does the building. Over time, the instruction file also teaches AI to proactively ask, like "This is getting substantial. Want me to create a note?" But the decision is always yours.
+
+Your primary interaction with this whole thing is talking to the AI. Not writing notes in Obsidian. Not manually organizing files. Talking. You can absolutely write notes manually if you want to. But here's what actually happened after two months of using it: I thought I'd be writing a lot more by hand. Instead, I just talk to Claude. I tell it what happened in a meeting, what I'm working on, what I need to remember. It generates the notes, files them in the right place, links them to everything else. When I want to browse, I open Obsidian. When I want an answer, I ask Claude. Both paths work.
 
 And "talking" goes in a few directions:
 
@@ -272,15 +282,13 @@ The basic system works with just notes and an instruction file. How far you go i
 
 After a few weeks of using this, some things start to shift:
 
-**Your knowledge compounds.** The 50th note is more useful than the 5th, because it has 49 other notes to connect to. Every meeting summary links to the project it's about, the people who were there, and the decisions that were made. Every new note makes every existing note more findable. Most productivity tools accumulate clutter. This one accumulates understanding.
+**Your knowledge compounds.** The 50th note is more useful than the 5th, because it has 49 other notes to connect to. Most productivity tools accumulate clutter. This one accumulates understanding.
 
-**You have a knowledge partner, not just an assistant.** This isn't AI that answers one question and forgets. It's AI that knows the full history of your projects, your personal life, your decisions, your interests. Ask it to draft something and it already has context. Ask it a question and it traces through weeks of connected notes to give you a real answer. The more you use it, the more it has to work with.
+**You have a knowledge partner, not just an assistant.** Ask it to draft something and it already has context. Ask it a question and it traces through weeks of connected notes to give you a real answer.
 
-**You catch connections you'd miss.** When you add a note about a new problem, AI can link it to a similar problem from two months ago that you forgot about. The network does pattern matching that your memory can't.
+**The network does pattern matching your memory can't.** When you add a note about a new problem, AI can link it to a similar problem from two months ago that you forgot about.
 
-**You build a memory that doesn't fade.** Decisions, context, reasoning. All searchable and linked. Why did you choose that contractor? What were the terms of that deal? What did the doctor say in March? The system has it. You don't have to reconstruct it from memory or dig through email.
-
-**You stop re-explaining yourself.** AI knows your projects, your people, your preferences. Conversations start where you left off, not from zero. But honestly, by this point that's the least interesting thing about the system.
+**Decisions, context, reasoning. All searchable.** Why did you choose that contractor? What were the terms of that deal? You don't have to reconstruct it from memory or dig through email.
 
 ---
 
@@ -338,15 +346,9 @@ The setup takes 20 minutes. The value comes from using it consistently. Here's h
 
 ## Why Portability Matters
 
-Some AI tools have started adding memory features. ChatGPT remembers things. Claude remembers things. And it's helpful. But here's the catch: Claude's memory doesn't know what you told ChatGPT. ChatGPT's memory doesn't follow you into Gemini. Your phone app doesn't share context with your laptop. Every company is building its own little silo of your context, and they don't talk to each other. On purpose.
+Your dentist doesn't own your x-rays. Your bank doesn't own your transaction history. But the AI that knows your job, your goals, your writing style? That company owns all of it. The moment you want to try something better, you start from zero.
 
-The more you tell one tool, the harder it is to leave. That's not memory. That's a loyalty program dressed up as a feature.
-
-Your dentist doesn't own your x-rays. Your bank doesn't own your transaction history. But right now, the AI that knows your job, your goals, your writing style? That company owns all of it. The moment you want to try something better, you start from zero.
-
-This system fixes that. Everything is plain text files. Markdown. The most universal, future-proof format there is. If Obsidian disappears, the files still work. If Claude disappears, the files still work. If something better drops next week, you take your files and plug them into the new thing. Full context, day one, no re-explaining.
-
-Own the playbook. Rent the tech.
+This system changes the equation. Everything is plain text files. Markdown. The most universal, future-proof format there is. If Obsidian disappears, the files still work. If Claude disappears, the files still work. If something better drops next week, you take your files and plug them into the new thing. Full context, day one.
 
 ---
 
