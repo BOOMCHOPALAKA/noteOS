@@ -31,7 +31,9 @@ Some terms come up a lot in this guide. Here's what they mean in plain language.
 
 **Basecamp.** A hub note for a topic. It doesn't contain everything about that topic. It links to everything about that topic. Your "Work Project" Basecamp links to related meeting summaries, decisions, tickets, and people. Think of it as a table of contents for an area of your life.
 
-**Markdown.** A simple way to format text files using characters like `#` for headers and `**` for bold. You don't need to learn it. AI writes it automatically, and Obsidian renders it so it looks clean. The reason it matters: markdown is plain text, so your notes work in hundreds of apps, not just one.
+**Map.** The folder that holds all your Basecamps. Think of it as the territory overview for your whole vault. You open the Map folder to see every topic you're tracking, then click into a Basecamp to go deeper.
+
+**Markdown.** A simple way to format text files using characters like `#` for headers, `**` for bold, and `-` for bullet lists. Most of the time AI writes it for you, but it's easy enough to pick up yourself, and knowing even a little makes you more effective when talking to AI. You can structure a request, format your own notes, or edit what AI created. It takes about five minutes to learn the basics. Obsidian renders it so it looks clean, and because markdown is plain text, your notes work in hundreds of apps, not just one.
 
 **Instruction file.** A text file (`CLAUDE.md`) that teaches AI how you work. Your preferences, your projects, your people, your formatting rules. AI reads it at the start of every conversation so it already knows your situation. You build it over time as you notice things you want AI to do differently.
 
@@ -163,7 +165,30 @@ I use [Obsidian](https://obsidian.md). It's free, it works on everything, and un
 
 **Why Obsidian?** It's not just a file viewer. It's a powerful visual layer for everything AI builds. You can hit a keyboard shortcut and instantly search across every note in your vault. Links between notes are clickable, so you navigate your knowledge the same way you'd browse Wikipedia. Hashtags let you filter and organize. Themes make it visually clean. And because Obsidian renders markdown, every note AI creates shows up beautifully formatted with headers, bold text, bullet lists, and links, without you writing any of it.
 
-Speaking of markdown: you don't need to learn it. Markdown is just a simple way to format text files using characters like `#` for headers and `**` for bold. The reason it matters is that AI models already think in markdown. When AI creates a note, it writes markdown automatically. Obsidian renders it so it looks clean. You get the benefit of a structured, formatted knowledge base without ever learning the syntax. And because markdown is plain text, your notes work in hundreds of other apps too. It's one of the most widely supported formats in software.
+**Speaking of markdown.** Markdown is a simple way to format text files using plain characters. AI writes it automatically when it creates notes, and Obsidian renders it so everything looks clean. But here's the thing: it's worth learning the basics yourself. It takes five minutes, and it makes you noticeably more effective when working with AI. When you can structure a request with headers and bullets, AI gives you better output. When you can scan a note and tweak a heading or add a bold callout, you're not waiting for AI to do a two-second edit.
+
+Here's what it looks like:
+
+```
+# This is a heading
+## This is a smaller heading
+
+**This text is bold**
+*This text is italic*
+
+- This is a bullet point
+- Another bullet point
+  - A nested bullet
+
+1. A numbered list
+2. Second item
+
+[[Link to another note]]
+```
+
+That's most of what you need. `#` for headings (more `#`s = smaller), `**` for bold, `-` for bullets, `[[]]` for links between notes. You can write a fully formatted note with just those. AI uses the same syntax, so you're both speaking the same language.
+
+The reason markdown matters beyond formatting: it's plain text. Your notes aren't stored in some proprietary format that only works in one app. They work in Obsidian, in any text editor, in hundreds of other apps. It's one of the most widely supported formats in software. That's what makes the whole system portable.
 
 **And then there's the graph view.** Obsidian can show your entire vault as a visual network. Every note is a node, every link is a connection between them. You can watch your knowledge base grow from a handful of scattered dots into a dense, interconnected web. It's not just cool to look at (it is). It's a real way to spot clusters, find orphan notes that may or may not need connecting, and see which topics are most central to your thinking.
 
