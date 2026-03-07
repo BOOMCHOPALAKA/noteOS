@@ -1,4 +1,4 @@
-# noteOS — An Operating System Built on Notes
+# noteOS — A Personal "Operating System" That Runs on Simple Text Files, Supercharged by AI
 *A practical guidebook to building your own AI-powered knowledge system that connects everything you know, forgets nothing, and gets more helpful the more you use it.*
 
 ## Table of Contents
