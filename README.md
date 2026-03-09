@@ -1,5 +1,5 @@
-# noteOS — A Personal "Operating System" That Runs on Simple Text Files, Supercharged by AI
-*A starter vault of folders, text files, and AI instructions that connects everything you know, gets more helpful the more you use it, and anyone can set up.*
+# noteOS — Your Personal "Operating System", Supercharged by AI
+*All your knowledge, connected and searchable. Built on simple text files and folders that anyone (and we mean anyone) can set up and use.*
 
 ## Table of Contents
 - [Imagine a World...](#imagine-a-world)
@@ -14,12 +14,15 @@
 - [FAQ](#faq)
 
 ---
-
 ## Imagine a World...
 
 ...where you had a personal Wikipedia for your life. Work, side projects, health, finances, travel, adventures, recipes. Anything and everything related to your life. Your life is an endless, messy, beautiful web of subjects and connections and throughlines that link them all together. All of it connected, searchable, and growing every day. Now imagine it's fully interactive and conversational. You can talk to it, ask it questions, and it talks back with the full weight of everything you've ever put into it.
 
-That's noteOS. Here's what it looks like in practice:
+You've probably heard that humans only use 10% of their brain. Ya well, hopefully we're not the first to tell you, but that's not true. With AI though? Yeah, most people really are only scratching the surface. Why is that? Maybe nobody showed them what else it can do outside of asking it questions all day. Maybe they feel like they're not technical enough to do the things they've heard about. Maybe they feel it's too complicated and are intimidated.
+
+That's where this comes in. If you can make a folder on your computer and talk to AI, then guess what?! you're already there. 
+
+That's noteOS. 
 
 **It remembers what you don't.** You had a conversation with your doctor three months ago. Or a contractor gave you a quote. Or you made a decision in a meeting and can't remember the reasoning. Instead of digging through emails or hoping you wrote it down somewhere, you ask. The system traces through your notes and gives you the answer with full context. Not because you organized everything perfectly. Because the system did.
 
@@ -45,7 +48,7 @@ Think of it this way. If you had the world's best personal assistant, their valu
 
 ## Your Knowledge, Your Files
 
-Right now, everything you've built inside an AI tool stays inside that AI tool. Your conversations, your preferences, the context it's learned about you and your work. Switch from ChatGPT to Claude and you're re-explaining everything from zero. Use both at the same time and neither one knows what you told the other. Want to try something new that launches next month? Start over again.
+Right now, everything you've built inside an AI tool (like ChatGPT) stays inside that AI tool. Your conversations, your preferences, the context it's learned about you and your work. Switch from ChatGPT to Claude and you're re-explaining everything from zero. Use both at the same time and neither one knows what you told the other. Want to try something new that launches next month? Start over again.
 
 This system doesn't have that problem because there's nothing to migrate. It's folders and files on your computer. Plain text. Nothing proprietary, nothing cloud-locked, nothing that belongs to a platform. The AI reads your files, but your files don't live inside the AI. If Obsidian disappears, the files still work. If Claude disappears, the files still work. If something better drops next week, you take your files and plug them into the new thing. Full context, day one.
 
