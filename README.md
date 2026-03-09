@@ -35,7 +35,7 @@ The whole thing runs on plain text files and a free app. No code. No databases. 
 
 You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you've had it help draft an email, summarize a meeting transcript, explain something complicated, or brainstorm an idea. Maybe you've even set up projects or custom instructions, and the memory features mean it remembers some things between conversations.
 
-But there's a ceiling. The memory is shallow. A few saved facts, some conversation history. You still end up re-explaining context, pasting things in, managing what it knows and doesn't know. It's like having a really smart coworker who remembers your name and your title but nothing about what happened in last week's meetings. And when you ask "where did you get that?" the answer is vague. "Based on our previous conversations." "From the documents you shared." You're trusting the AI's summary of its own reasoning with no easy way to check. And everything you've built is locked inside that one app. Claude doesn't know what you told ChatGPT. ChatGPT doesn't know what you told Gemini. The more you put into one, the harder it is to leave.
+But there's a ceiling. The memory can be shallow. A few saved facts, some conversation history. You still end up re-explaining context, pasting things in, managing what it knows and doesn't know. It's like having a really smart coworker who remembers your name and your title but nothing about what happened in last week's meetings. And when you ask "where did you get that?" the answer is vague. "Based on our previous conversations." "From the documents you shared." You're trusting the AI's summary of its own reasoning with no easy way to check. And everything you've built is locked inside that one app. Claude doesn't know what you told ChatGPT. ChatGPT doesn't know what you told Gemini. The more you put into one, the harder it is to leave.
 
 This system removes that ceiling. Instead of AI that remembers fragments, you get AI that searches through a structured knowledge base of everything you've built. Your projects, your people, your decisions, your preferences. All of it lives in files you control on your computer. Plain text. Nothing proprietary. The AI reads those files, works inside them, and gets more helpful the more you add.
 
@@ -51,29 +51,24 @@ This system doesn't have that problem because there's nothing to migrate. It's f
 
 **This matters more than you think right now.** Companies are making AI decisions constantly. Your workplace might standardize on ChatGPT this quarter and switch to Claude next quarter. You might use one tool for personal stuff and be required to use another at work. A new tool might launch next month that's better than everything. The AI landscape is moving fast, and locking your knowledge into any single provider means rebuilding every time something changes.
 
-With this system, you don't rebuild. You rename one file and keep going. Your vault is the constant. The AI tool is just what you plug into it today. If your company switches from ChatGPT to Claude, you rename `AGENTS.md` to `CLAUDE.md` and your new tool already knows your projects, your people, your preferences, and your entire knowledge base. If you decide to try Gemini next weekend, same thing. Five seconds and you're up and running with full context.
+With this system, you don't rebuild. Your vault is the constant. It's just folders and files sitting on your computer. The AI tool is just what you plug into it today. Your company switches tools? Everything you've built is still right there. You want to try something new next weekend? It's all still there. You want to use two different tools at the same time? They're both working from the same knowledge base. Nothing moves, nothing exports, nothing breaks. The knowledge stays put and any tool can pick it up.
 
 That's the real point of building on plain text. It's not a philosophical stance about open formats. It's practical. Your knowledge should travel with you no matter what tool you're using, what your company decides, or what comes out next. The system comes with you. Always.
+
 
 ---
 
 ## Who's This For
 
-Honestly, anyone. But that's not a useful answer, so here's what it actually looks like for different people.
+Honestly, anyone.
 
-This was built for normal people with busy lives who want AI to actually be useful for them.
+- **You're not technical and just want AI to actually be useful.** You talk, it builds. No code, no setup complexity.
+- **You have a lot going on and things slip through the cracks.** Work, family, side projects, health, finances. One system that doesn't forget.
+- **Your job runs on meetings, decisions, and documents.** Product managers, consultants, lawyers, directors. The system catches what you can't retain.
+- **You already use AI and want the next level.** You've hit the ceiling described in [What This Actually Is](#what-this-actually-is). This is what's on the other side.
+- **You're technical and want to build on this.** It's just text files. Fork it, customize it, make it yours.
 
-**You're not a tech person. You just want things to work.** You've tried ChatGPT a few times. It was fine. But you can tell there's something bigger here and nobody's shown you what it looks like in practice. This system gives you that. You talk to AI, it builds and organizes your knowledge, and the whole thing gets more helpful over time.
-
-**You have a lot going on and things slip through the cracks.** Work, family, personal projects, health stuff, finances, a house hunt, a side business, whatever. You're not looking for a productivity system with dashboards and workflows. You just want a place where the conversation with your financial advisor, the research on your kid's school options, and the details of the contractor bid all live in one searchable system that doesn't forget.
-
-**You're a knowledge worker drowning in information.** Product managers, project managers, consultants, directors, lawyers, anyone whose job is meetings, decisions, documents, and keeping track of what happened and why. You have more information flowing through your week than you can retain. If you've heard the term "personal knowledge management" (PKM), this is that. But instead of you doing the organizing, AI does it. This system catches information, structures it, links it, and gives it back to you when you need it.
-
-**You already use AI and want the next level.** You're past the basics. You've hit the ceiling described in [What This Actually Is](#what-this-actually-is). You know there's more here but the chat window isn't it. This system is what's on the other side. The difference between using AI in a chat window and using AI inside your knowledge base is the difference between asking a stranger for directions and asking someone who's walked the trail a hundred times.
-
-**You're technical and want to build on this.** Developers, engineers, technical leads. You can customize the instruction file for code review workflows, architecture decision records, sprint planning, codebase analysis. The whole thing is just text files. Fork it, modify it, make it yours.
-
-The common thread: if you've ever thought "I know I wrote this down somewhere" or "I wish AI already knew my situation," this is the fix. The system scales from five notes to five hundred. Start where you are.
+If you've ever thought "I know I wrote this down somewhere" or "why am I explaining this again," this is the fix. 
 
 ---
 
@@ -133,9 +128,9 @@ The one difference: instead of chatting with AI that can only see what you paste
 
 Same conversation. Same chat window. But now AI has your entire knowledge base behind it.
 
-**My path here:** I started with Claude in the browser. Custom instructions, projects, memory features. It was useful. But every conversation still felt like briefing a new coworker. The moment I pointed Claude at my vault folder and it could actually read my files, create notes, and trace connections between documents, everything changed. It went from "smart chatbot" to a full blown second brain. It wasn't just building my own personal Wikipedia. It was using it, making its own connections between subjects, and carrying context and themes forward in a way that made every conversation better than the last. That's when this project started taking shape.
+**My path here:** I started with Claude in the browser. Custom instructions, projects, memory features. It was useful. But every conversation still felt like briefing a new coworker. The moment I started using Claude Code and pointed Claude at my vault folder everything changed. It went from "smart chatbot" to a full blown second brain. It wasn't just building my own personal Wikipedia. It was using it, making its own connections between subjects, and carrying context and themes forward in a way that made every conversation better than the last. That's when this project started taking shape.
 
-**Here's what makes this powerful:** because your vault is just folders and text files, you're not locked into any single AI tool. Plain text and markdown are universal. If something better comes along next month, you take your entire vault and plug it into the new tool. Full context, day one. The AI is just the engine you plug in.
+**This is what we talked about above in the "Your Knowledge, Your Files" section in action.** Because your vault is just folders and text files, you're not locked into any single AI tool. If something better comes along next month, you take your entire vault and plug it into the new tool. Full context, day one. The AI is just the engine you plug in.
 
 Right now the tool I'd recommend for most people is **Claude Cowork** (from Anthropic):
 
@@ -157,7 +152,7 @@ Other AI providers are building similar tools. The specific tool doesn't matter.
 
 ### Step 4: Start using it
 
-Just start talking. That's genuinely it. You don't need to open Obsidian and create notes by hand. You don't need to set up folders or figure out an organizational scheme first. Just chat with AI the way you normally would, but now it's building your knowledge base as you go. The organization happens through links and references, not nested folders. And if you ever want to reorganize or make new connections, you just tell AI. "Connect this to my project Basecamp." "I think this relates to that meeting from last week." It's all conversational.
+Just start talking. That's genuinely it. You don't need to open Obsidian and create notes by hand. You don't need to set up folders or figure out an organizational scheme first. Just chat with AI the way you normally would, but now it's building your knowledge base as you go. Like we talked about in "Imagine a World," the organization happens through links and conversation. "Connect this to my project Basecamp." "I think this relates to that meeting from last week." That's all it takes.
 
 Start with whatever's on your mind today. Tell it about a meeting you had. Ask it to create a daily note. Give it a document you need to remember. The first few notes will feel like scattered dots. But they start connecting fast.
 
@@ -167,6 +162,31 @@ Here are some things you can try right out of the gate:
 - **"Here's a meeting I had today. Summarize it and add it to my daily note."** Paste or drop a transcript.
 - **"Create a Basecamp for [topic]."** A project you're managing, a trip you're planning, a side business you're running. Basecamps are hub notes that link to everything about a topic.
 - **Ask it something.** "What did we decide about X last month?" or "What am I working on this week?"
+
+**One thing to know: the system knows what you tell it.** It doesn't connect to your apps or pull data automatically. There's no fitness tracker sync, no calendar integration, no background magic. You give it information, and it remembers and connects it. That's by design. You control exactly what goes in.
+
+In practice, that looks like:
+
+- **Exporting data you already have.** Most apps and services let you download your own data. Your bank lets you export transactions. Apple Health lets you export your health history. Your email lets you download attachments. Save those files into the vault's `Downloads/` folder and tell AI to look at them. Now that information is part of your knowledge base forever.
+- **Just talking about your day.** "I did a 3-mile hike today, felt great, legs weren't as heavy as last week." You can type it out, paste stats from an app, or even send a screenshot. AI logs it, links it to your history, and the context builds over time.
+- **Sharing things as they come in.** A meeting transcript, a recipe you tried, a quote from a contractor, notes from a doctor's appointment. Drop it in and tell AI what it is.
+
+This sounds like more work than it is. Most of it is just talking the way you already talk to AI, except now it sticks. And the exports are a one-time thing if you want to do them at all. Say you're into fitness and want the system to know your history. You go to your fitness app, export your data, and save it to the `Downloads/` folder in your vault. You tell AI to analyze it. It'll create a Basecamp note for your fitness, pull out the highlights, and give itself a foundation to work from. From there, you just talk to it. "I did a workout today" and paste your stats or share a screenshot. It builds from there, comparing today's effort to everything it already knows about you.
+
+Or you skip the export entirely and just start telling it about your workouts from scratch. Both work. The system knows as much as you want it to.
+
+**Once the system has some weight behind it, the prompts get more interesting.** You stop asking generic questions and start asking things only your vault can answer:
+
+- **"Compare my fitness data from this month to last month. Am I overtraining?"** It has your workout logs, your heart rate trends, your training history. It answers with your data, not generic advice.
+- **"I have a standup in 20 minutes. Catch me up on everything that's happened this week."** It reads your daily notes, open tickets, and recent updates and gives you a briefing.
+- **"I'm planning a backpacking trip in August. What gear worked last time and what did I say I'd change?"** It finds your trip notes, your gear lists, that comment you made about your pack being too heavy. All of it.
+- **"Draft a status report for this week. You know the format."** It does. Because the instruction file has your format, your voice, your conventions.
+- **"I made that chocolate rub recipe last month and tweaked it. What did I change?"** It pulls up the original recipe, your notes on what you adjusted, and how it turned out. No scrolling through texts or trying to remember.
+- **"Here's a meeting transcript. Process it."** It knows what that means. Summarize, extract your action items, update the daily note, link to relevant projects, flag anything that conflicts with what's already in the vault.
+- **"When was the dog's last vet appointment and what did they say about her knee?"** It finds the note, the vet's recommendation, the follow-up timeline. The kind of thing you'd otherwise be digging through your phone trying to piece together.
+- **"How have my ruck times been trending? Am I getting faster with the same weight?"** It has months of logs with distances, times, loads, and heart rate. It spots the pattern you'd miss scrolling through an app.
+
+You don't get here on day one. But you get here faster than you'd think. Every conversation adds context, and the system gets sharper with each one.
 
 After your first conversation, switch over to Obsidian and take a look. The notes are just there. Click on one. See how it's formatted, how it links to other notes. Click a link and you're in another note. That's the Wikipedia layer.
 
@@ -188,7 +208,7 @@ None of this was planned. I just kept talking to AI and the system built itself 
 
 And for the more technical folks: I cloned my team's GitHub repos right into the vault's `repos/` folder. Claude can read the codebase and my knowledge notes at the same time. Codebase analysis, team expertise mapping, architecture decisions. It all lives in one place and cross-references naturally.
 
-AI reads your instruction file, knows your conventions, and starts working within your system from the first conversation. Everything below this point explains how it works under the hood and how to get the most out of it.
+Everything below this point explains how it works under the hood and how to get the most out of it.
 
 ---
 
@@ -254,7 +274,7 @@ If you've ever tried to organize files on your computer, you know the problem. "
 
 This system doesn't work that way. The vault is flat. Notes find each other through links and references, not folder paths. A note about your contractor quote links to your house hunt Basecamp, your budget notes, and the daily note from when you got the estimate. It doesn't need to "live" in any of those places. It's connected to all of them. That's the Wikipedia model. You navigate by following connections, and over time, every note becomes part of a web.
 
-You can absolutely organize things if you want to. But you do it by talking, not by filing. "Hey, can you connect this to my renovation Basecamp?" or "I think this ties back to that pricing discussion from February." AI makes the links, adds the references, and weaves it into what already exists. The point isn't that you can't organize. It's that organizing is a conversation, not a chore.
+You can absolutely organize things if you want to. But like we covered earlier, you do it by talking. "Hey, can you connect this to my renovation Basecamp?" or "I think this ties back to that pricing discussion from February." AI makes the links, adds the references, and weaves it into what already exists. Organizing is a conversation, not a chore.
 
 Each note has a small section at the top called the **Compass**. A few sentences to get your bearings: what is this note about, and where does it connect?
 
