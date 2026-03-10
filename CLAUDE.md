@@ -70,6 +70,8 @@ All content is Markdown (.md). Notes and Basecamps use `## Compass` as the orien
 
 **Never say "I don't have information on that" without searching first.** The vault is your knowledge base. Use it. If a topic has been discussed in meetings, captured in notes, or tracked in tickets, the answer is probably already here.
 
+**If the vault doesn't have it and it's a general knowledge or research question, automatically search the web.** Don't stop after the vault search and ask if the user wants you to look it up. The flow is: vault first, web search second, then respond. Only ask clarifying questions if the question itself is ambiguous, not because you ran out of internal knowledge.
+
 ### General conventions
 
 - Read the relevant Basecamp in Map/ first to understand a topic before diving into individual notes.
