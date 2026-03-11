@@ -5,7 +5,7 @@
 ---
 
 ## Vault Philosophy
-- Flat vault approach: notes in root, folders only for admin (Calendar, Map, Attachments, Templates, Downloads)
+- Flat vault approach: notes in root, folders only for admin (Calendar, Map, Templates, Downloads)
 - No deep folder hierarchies. Links and naming conventions do the organizational work
 - CLAUDE.md is the source of truth for vault conventions. MEMORY.md is for things AI learns over time.
 

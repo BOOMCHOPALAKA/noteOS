@@ -50,8 +50,7 @@ This is a flat, link-first Obsidian vault. Organization comes from links and nam
 
 - **Map/** — Basecamps (hub notes) only. Topic indexes and navigation hubs.
 - **Calendar/** — Daily notes, organized by month and week. Named `YYYY-MM-DD.md`.
-- **Downloads/** — Raw inputs. Meeting transcripts, PDFs, documents to process. AI processes these into structured notes.
-- **Attachments/** — Images, exports, diagrams. Non-markdown files.
+- **Downloads/** — Raw inputs and non-markdown files. Meeting transcripts, PDFs, images, exports, diagrams, documents to process.
 - **Templates/** — Reusable templates for daily notes, Basecamps, etc.
 - **Root (everything else)** — Knowledge notes, project docs, personal notes. If it's your thinking, it lives in root.
 

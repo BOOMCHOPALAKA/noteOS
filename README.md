@@ -63,9 +63,8 @@ My Vault/
 │       └── Week 1/
 │           ├── 2026-03-03.md
 │           └── 2026-03-04.md
-├── Downloads/        ← Raw inputs. Meeting transcripts, PDFs, docs,
-│                       anything you want AI to process.
-├── Attachments/      ← Images, exports, diagrams. Non-text files.
+├── Downloads/        ← Raw inputs and non-text files. Transcripts, PDFs,
+│                       images, exports, diagrams, anything to process.
 ├── Templates/        ← Instructions for AI on how to build notes.
 ├── CLAUDE.md         ← Your instruction file. AI reads this every session.
 ├── MEMORY.md         ← Things AI remembers across conversations.
@@ -172,7 +171,7 @@ Open Obsidian, select **Open folder as vault**, and point it at the folder you j
 - **An instruction file** (`CLAUDE.md`) pre-loaded with conventions for meeting processing, daily notes, linking, and more. Works out of the box.
 - **A memory file** (`MEMORY.md`) with system-level patterns that AI follows. AI adds to this over time as it learns your preferences.
 - **Templates** for daily notes, Basecamps, meeting summaries, and weekly status reports.
-- **The folder structure** already set up: Map, Calendar, Downloads, Attachments, Templates.
+- **The folder structure** already set up: Map, Calendar, Downloads, Templates.
 
 ### Step 3: Connect your AI tool
 
