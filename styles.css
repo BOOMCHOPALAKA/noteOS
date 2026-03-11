@@ -80,6 +80,13 @@ h4 {
     margin-bottom: 8px;
 }
 
+h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
 p {
     margin-bottom: 16px;
     color: var(--color-text);
@@ -297,11 +304,28 @@ p.secondary {
     color: var(--color-text);
 }
 
+.section-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: -8px;
+    margin-bottom: 24px;
+    color: var(--color-text-secondary);
+}
+
 .subsection-title-sm {
     font-size: 1rem;
     font-weight: 600;
     margin-top: 32px;
     margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.subsection-title-xs {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 10px;
     color: var(--color-text);
 }
 
@@ -657,7 +681,7 @@ kbd {
 }
 
 .faq-item.open .faq-answer {
-    max-height: 500px;
+    max-height: 1000px;
     padding-bottom: 18px;
 }
 
