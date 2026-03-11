@@ -34,7 +34,7 @@ You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you'v
 
 But there's a ceiling. The memory is shallow. A few saved facts, some conversation history. You still end up re-explaining context, pasting things in, managing what it knows and doesn't know. It's like having a really smart coworker who remembers your name and your title but nothing about what happened in last week's meetings. And when you ask "where did you get that?" the answer is vague. "Based on our previous conversations." You're trusting the AI's summary of its own reasoning with no easy way to check.
 
-This system removes that ceiling. Instead of AI that remembers fragments, you get AI that searches through a structured knowledge base of everything you've built. Your projects, your people, your decisions, your preferences. All of it lives in files you control on your computer. Plain text. Nothing proprietary. The AI reads those files, works inside them, and gets more helpful the more you add.
+This system removes that ceiling. Instead of AI that remembers fragments, you get AI that searches through a structured knowledge base of everything you've built. Your projects, your people, your decisions, your preferences. All of it lives in files you control on your computer. Plain text. Nothing proprietary. noteOS reads those files, works inside them, and gets more helpful the more you add.
 
 Think of it this way. If you had the world's best personal assistant, their value wouldn't just be their skills. It would be the six months they spent learning how you work, what you care about, and what's going on in your life. If they quit, all of that walks out the door. This system is like writing all of that down so the next assistant, or AI, can pick it up on day one. The intelligence is in the structure, not the tool.
 
@@ -81,7 +81,7 @@ The system borrows its naming from backcountry travel:
 - **Map** — The folder that holds all your Basecamps. Your territory overview.
 - **Basecamp** — A home base note for a main topic. It provides a high-level overview of whatever the subject is and then also houses links and references to other more detailed notes on the subject. 
 - **Compass** — The orientation and summary section at the top of each note. Think of it like a TL;DR that tells you what this note is about, why it's important, and what it connects to.
-- **Trails** — Curated links from a Basecamp to the notes that matter most for that topic. The AI can automatically make these connections as you build the system out for yourself.
+- **Trails** — Curated links from a Basecamp to the notes that matter most for that topic. noteOS can automatically make these connections as you build the system out for yourself.
 ##### Glossary
 
 A **note** is a single text file. A meeting summary is a note. A project overview is a note. A recipe is a note. Every piece of knowledge in the system is a note. Most notes live in the root of the folder, not buried in subfolders. This is intentional. Instead of deciding "does this go in Work or Personal? Projects or Reference?" you just create the note and let links connect it to everything related.
@@ -245,7 +245,7 @@ Here are some things you can try right out of the gate:
 
 Start with whatever's on your mind today. The first few notes will feel like scattered dots. But they start connecting fast.
 
-**You're the driver.** The AI can do a lot on its own. Point it at a task and it'll work through it, do research, build out notes, make connections. But it doesn't decide what matters to you. You do. The more intentional you are about directing it, the better the output.
+**You're the driver.** noteOS can do a lot on its own. Point it at a task and it'll work through it, do research, build out notes, make connections. But it doesn't decide what matters to you. You do. The more intentional you are about directing it, the better the output.
 
 Sometimes it will handle things automatically. It might create a note without being asked, or pause and say "this feels worth saving, want me to create a note?" But when it doesn't, a nudge goes a long way:
 
@@ -259,9 +259,9 @@ The system grows because you keep using it. You get out of it what you put in. B
 
 In practice, that looks like:
 
-- **Exporting data you already have.** Most apps let you download your own data. Export transactions from your bank, health data from Apple Health, attachments from email. Save those files into the vault's `Downloads/` folder and tell the AI within your vault to look at them.
-- **Just telling it about your day.** "I did a 3-mile hike today, felt great, legs weren't as heavy as last week." Type it out, paste stats from an app, or send a screenshot. AI logs it and the context builds over time.
-- **Sharing things as they come in.** A meeting transcript, a recipe you tried, a quote from a contractor, notes from a doctor's appointment. Drop it in and tell AI what it is.
+- **Exporting data you already have.** Most apps let you download your own data. Export transactions from your bank, health data from Apple Health, attachments from email. Save those files into the vault's `Downloads/` folder and tell the system to look at them.
+- **Just telling it about your day.** "I did a 3-mile hike today, felt great, legs weren't as heavy as last week." Type it out, paste stats from an app, or send a screenshot. noteOS logs it and the context builds over time.
+- **Sharing things as they come in.** A meeting transcript, a recipe you tried, a quote from a contractor, notes from a doctor's appointment. Drop it in and tell the system what it is.
 
 After a conversation, switch over to Obsidian and take a look. The notes are just there. Click on one. See how it's formatted, how it links to other notes. Click a link and you're in another note. That's the Wikipedia layer. A few keyboard shortcuts will make navigating Obsidian feel fast. See the [Obsidian tips and shortcuts](#obsidian-tips-and-shortcuts) section in the Reference below.
 
