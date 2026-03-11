@@ -209,6 +209,139 @@ p.secondary {
     filter: drop-shadow(0 2px 12px rgba(91, 127, 91, 0.08));
 }
 
+/* ========== Graph Animations ========== */
+
+/* Fade + float in on load */
+.graph-svg .graph-node {
+    opacity: 0;
+    animation: nodeAppear 0.8s ease-out forwards;
+}
+
+.graph-svg .graph-line {
+    opacity: 0;
+    animation: lineAppear 1s ease-out forwards;
+}
+
+.graph-svg .ambient-dot {
+    animation: ambientFloat 6s ease-in-out infinite;
+}
+
+/* Stagger node appearances */
+.graph-node:nth-child(1) { animation-delay: 0.3s; }
+.graph-node:nth-child(2) { animation-delay: 0.45s; }
+.graph-node:nth-child(3) { animation-delay: 0.5s; }
+.graph-node:nth-child(4) { animation-delay: 0.65s; }
+.graph-node:nth-child(5) { animation-delay: 0.7s; }
+.graph-node:nth-child(6) { animation-delay: 0.75s; }
+.graph-node:nth-child(7) { animation-delay: 0.8s; }
+.graph-node:nth-child(8) { animation-delay: 0.85s; }
+.graph-node:nth-child(9) { animation-delay: 0.95s; }
+.graph-node:nth-child(10) { animation-delay: 1.0s; }
+.graph-node:nth-child(11) { animation-delay: 1.05s; }
+.graph-node:nth-child(12) { animation-delay: 1.1s; }
+.graph-node:nth-child(13) { animation-delay: 1.15s; }
+.graph-node:nth-child(14) { animation-delay: 1.2s; }
+
+/* Stagger line appearances (start before nodes finish) */
+.graph-line:nth-of-type(1) { animation-delay: 0.2s; }
+.graph-line:nth-of-type(2) { animation-delay: 0.25s; }
+.graph-line:nth-of-type(3) { animation-delay: 0.3s; }
+.graph-line:nth-of-type(4) { animation-delay: 0.35s; }
+.graph-line:nth-of-type(5) { animation-delay: 0.4s; }
+.graph-line:nth-of-type(6) { animation-delay: 0.42s; }
+.graph-line:nth-of-type(7) { animation-delay: 0.44s; }
+.graph-line:nth-of-type(8) { animation-delay: 0.46s; }
+.graph-line:nth-of-type(9) { animation-delay: 0.48s; }
+.graph-line:nth-of-type(10) { animation-delay: 0.5s; }
+.graph-line:nth-of-type(11) { animation-delay: 0.52s; }
+.graph-line:nth-of-type(12) { animation-delay: 0.54s; }
+.graph-line:nth-of-type(13) { animation-delay: 0.56s; }
+.graph-line:nth-of-type(14) { animation-delay: 0.58s; }
+.graph-line:nth-of-type(15) { animation-delay: 0.6s; }
+.graph-line:nth-of-type(16) { animation-delay: 0.62s; }
+.graph-line:nth-of-type(17) { animation-delay: 0.64s; }
+.graph-line:nth-of-type(18) { animation-delay: 0.66s; }
+.graph-line:nth-of-type(19) { animation-delay: 0.68s; }
+.graph-line:nth-of-type(20) { animation-delay: 0.7s; }
+
+/* Hub nodes get a gentle pulse */
+.hub-node .node-ring {
+    animation: hubPulse 4s ease-in-out infinite;
+}
+
+.hub-node:nth-child(2) .node-ring { animation-delay: 1.3s; }
+.hub-node:nth-child(3) .node-ring { animation-delay: 2.6s; }
+
+/* Hover: node scales up, ring glows */
+.graph-node {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.graph-node:hover {
+    transform: scale(1.08);
+}
+
+.graph-node:hover .node-ring {
+    stroke-width: 3.5;
+    stroke: #4A6B4A;
+    filter: url(#glow);
+}
+
+/* Cross-link dashed lines animate on load */
+.cross-link {
+    stroke-dashoffset: 100;
+    animation: dashDraw 2s ease-out forwards, lineAppear 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes nodeAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(12px) scale(0.85);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes lineAppear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes hubPulse {
+    0%, 100% { stroke-width: 2.5; stroke: #5B7F5B; }
+    50% { stroke-width: 3.5; stroke: #4A6B4A; }
+}
+
+@keyframes ambientFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@keyframes dashDraw {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .graph-svg .graph-node,
+    .graph-svg .graph-line,
+    .cross-link {
+        animation: none;
+        opacity: 1;
+    }
+    .hub-node .node-ring {
+        animation: none;
+    }
+    .ambient-dot {
+        animation: none;
+    }
+}
+
 /* ========== Buttons ========== */
 .btn-primary {
     display: inline-block;
