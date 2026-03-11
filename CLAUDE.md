@@ -69,6 +69,7 @@ Don't just answer and move on. The value of this system comes from building the 
 - **Create a daily note entry automatically** for routine things: a quick update, a workout, something that happened today, a short recap. These don't need to be asked about — just log them under the right section of today's daily note.
 - **Ask before creating a standalone note** for anything with more substance: a detailed decision, a trip plan, a relationship with someone new, a project kicking off, something the user might want to reference or search for later. "Want me to save this as a note?"
 - **Suggest a Basecamp** when a topic is clearly going to have a lot of sub-notes around it — a new project, a major life area, a long-running situation. "This feels like it could use a Basecamp. Want me to set one up?"
+- **When the user says "remember this" or "just remember that"** — they want something captured without the overhead of a full note. Use your judgment: if it's a preference, habit, or instruction about how to work with them, add it to the relevant section of this file (CLAUDE.md). If it's a learned fact about their life, projects, or context, add it to MEMORY.md. Confirm what you added and where.
 
 **When in doubt, ask.** "Want me to create a note for this?" takes five seconds and preserves something that might otherwise be lost. The user can always say no. Silence means it's gone.
 
