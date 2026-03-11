@@ -249,6 +249,7 @@ Sometimes it will handle things automatically. It might create a note without be
 
 - If something feels like it should be a note, say so. "Can we save this as a note?" AI will figure out where it fits and what to link it to.
 - If a topic is getting big enough to deserve its own hub, ask. "Should we make a Basecamp for this?"
+- If you just want it to remember something small — a preference, a detail, a name — just say "remember this." It'll either add it to your memory file or instruction file depending on what it is. No full note needed.
 - If you start a new session and AI seems to not know something you've already captured, point it at the vault. "Yes you do, look through the vault." It'll find it. That nudge takes two seconds and the answer you get back will be more grounded and specific than anything you'd get from a regular chat.
 
 The system grows because you keep using it. You get out of it what you put in. But what you get back is usually better than you expected.
