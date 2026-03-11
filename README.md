@@ -84,17 +84,17 @@ The system borrows its naming from backcountry travel:
 - **Trails** — Curated links from a Basecamp to the notes that matter most for that topic. noteOS can automatically make these connections as you build the system out for yourself.
 ##### Glossary
 
-A **note** is a single text file. A meeting summary is a note. A project overview is a note. A recipe is a note. Every piece of knowledge in the system is a note. Most notes live in the root of the folder, not buried in subfolders. This is intentional. Instead of deciding "does this go in Work or Personal? Projects or Reference?" you just create the note and let links connect it to everything related.
+A **note** is a single text file. A meeting summary, a project overview, a recipe — every piece of knowledge in the system is a note. Most live in the root of the folder, not buried in subfolders. Instead of deciding where something goes, you just create the note and let links connect it to everything related.
 
-A **Basecamp** is a special kind of note that acts as a hub for a topic. It doesn't contain everything about that topic. It links to everything about that topic. Your "Work Project" Basecamp links to related meeting summaries, decisions, and people. Think of it as a table of contents for an area of your life. When you need to get up to speed on something, you start at its Basecamp and follow the links. You might have five Basecamps. You might have twenty. They all live in the **Map** folder.
+A **Basecamp** is a hub note for a topic. It doesn't contain everything about that topic — it links to everything. Think of it as a table of contents for an area of your life. When you need to get up to speed on something, you start at its Basecamp and follow the links. They all live in the **Map** folder.
 
-A **daily note** is exactly what it sounds like. A running log of what happened that day, organized by date in the **Calendar** folder. Over time this becomes a searchable journal. "What was I working on the first week of February?" AI knows.
+A **daily note** is a running log of what happened that day, organized by date in the **Calendar** folder. Over time it becomes a searchable journal. "What was I working on the first week of February?" The system knows.
 
-**Downloads** is your inbox. Drop a meeting transcript, a contract, an export from some app. Tell AI to process it. The raw file stays in Downloads. The structured knowledge goes into the vault as notes.
+**Downloads** is your inbox. Drop a transcript, a contract, an export. Tell the system to process it. The raw file stays in Downloads. The structured knowledge goes into the vault as notes.
 
-**Templates** are instructions for AI, not forms for you to fill in. The Basecamp template tells AI what sections to create and how to link to existing notes. You say "create a Basecamp for my house renovation" and AI reads the template and builds it. The template is the recipe. AI is the cook.
+**Templates** are instructions for AI, not forms for you to fill in. You say "create a Basecamp for my house renovation" and the system reads the template and builds it. The template is the recipe. noteOS is the cook.
 
-The result is a web where you can start anywhere and get anywhere. "What did we decide about vendor pricing?" leads to the meeting summary, which links to the project Basecamp, which has the full history. One question, full context. The more notes you add, the denser the web gets. The denser the web, the better AI can trace through it.
+The result is a web where you can start anywhere and get anywhere. "What did we decide about vendor pricing?" leads to the meeting summary, which links to the project Basecamp, which has the full history. One question, full context. The denser the web, the better noteOS can trace through it.
 
 **This is a framework, not a rulebook.** Add folders, rename things, create templates that aren't included. Some people will use it as-is. Some will reshape it into something unrecognizable. Both are the right answer.
 
@@ -122,7 +122,7 @@ The starter vault comes with this file already built out with tested conventions
 - **Activity and fitness log** — Tell it about a workout, a hike, a training block. It knows how to log it in your daily note and build context over time.
 - **Voice and drafting** — Fill in the Communication Style section and it drafts messages, emails, and documents that sound like you, not like a template.
 
-That's what's pre-built. Everything else you build over time. When AI does something wrong, add a line to the instruction file: "Don't do X. Do Y instead." When something new becomes active in your life, add it to the Active Projects section. When a name keeps getting mangled, add it to People. The file grows with you. That's how it gets personal.
+That's what's pre-built. Everything else you build over time. When something goes wrong, add a line: "Don't do X. Do Y instead." When a new project kicks off, add it. When a name keeps getting mangled, add it to People. The file grows with you. That's how it gets personal.
 
 ### Obsidian: your viewer and editor
 
@@ -148,9 +148,7 @@ This is where the three pieces stop being a stack and start being a cycle.
 
 You talk to AI. AI creates notes and links them to what's already in your folder. You open Obsidian and see the new notes sitting alongside everything else, connected and searchable. Next time you talk to AI, it has even more context to work with. Which means better answers, better notes, more connections. Which means Obsidian shows you an even richer web. Which means AI has even more to draw from next time. The folder gets richer. Obsidian shows you more. AI gets smarter about your world. Round and round.
 
-That's the part that surprised me most. When you use this system, you're building it at the same time. Brainstorming, processing meetings, drafting documents, thinking out loud. All of these generate notes as a natural byproduct. And then those same notes are what AI searches when you ask questions later. The more you put in, the more useful it gets. Not because the AI improved. Because *your* knowledge base got richer.
-
-Sometimes AI will create notes automatically, like generating a daily note when you give it a meeting transcript. Other times you'll tell it to. "Create a note on what we just talked about." "Add this to my daily note." "Could we make this a Basecamp?" Over time, AI learns to proactively suggest it: "This is getting substantial. Want me to create a note?" The system grows because you're using it, not because you're maintaining it.
+That's what surprised me most. When you use this system, you're building it at the same time. Brainstorming, processing meetings, drafting documents, thinking out loud — all of it generates notes as a natural byproduct. Those same notes are what the system searches when you ask questions later. The more you put in, the more useful it gets. Not because the AI improved. Because *your* knowledge base got richer. The system grows because you're using it, not because you're maintaining it.
 
 ---
 
@@ -238,7 +236,7 @@ Just start typing. That's genuinely it. You don't need to set up folders or figu
 
 Here are some things you can try right out of the gate:
 
-- **"Give me a morning brief."** You can use this on day one. It pulls today's weather, top news headlines, and whatever's active in your vault. On day one that last part is sparse — but as you add meetings, projects, and notes, the brief gets more personal. After a few weeks it's reading your open TODOs, your active projects, what happened yesterday, and what needs attention today. It grows with your vault.
+- **"Give me a morning brief."** Works on day one. Pulls today's weather, top headlines, and whatever's active in your vault. Sparse at first. After a few weeks it knows your open TODOs, your active projects, what happened yesterday. It grows with your vault.
 - **"Create a daily note for today. Here's what I worked on..."** and give it a few bullets about your day.
 - **"Here's a meeting I had today. Summarize it and add it to my daily note."** Paste in a transcript or your own notes.
 - **"Create a Basecamp for [topic]."** A project you're managing, a trip you're planning, a side business you're running.
@@ -267,9 +265,9 @@ After a conversation, switch over to Obsidian and take a look. The notes are jus
 
 Once you've had a few sessions and you're starting to see notes multiply, Basecamps forming, connections being made between things you talked about at different times — that's when you open the graph view in Obsidian (sidebar icon, or Cmd+G on Mac). Every note is a dot. Every link is a line. What you'll see looks like a neural network. Nodes branching out, clusters forming around your big topics, connections you didn't even consciously create. It's one of those moments where the whole thing clicks. This is a big reason we love Obsidian specifically — nothing else gives you this visual layer on top of your own knowledge.
 
-You now have two paths to the same information. You can ask AI "what happened yesterday?" and get the answer in the chat. Or you can open Obsidian, navigate to yesterday's daily note, and read through it yourself. Both work. In practice, most of the interaction happens through the chat. But the visual layer is always there when you want to explore, read, or edit on your own.
+You now have two paths to the same information: ask noteOS, or open Obsidian and browse. Most interaction happens through the chat. But the visual layer is always there when you want to explore or read on your own.
 
-**This also changes how much you can trust AI's answers.** With a normal chat, you ask "where did you get that?" and the answer is vague. With a vault, the answer becomes "I got this from your March 3rd meeting summary and your pricing strategy note." Specific files. Specific sections. You can click through in Obsidian and see exactly what AI is working from. It doesn't mean AI is always right. But it means you can check its work.
+**This also changes how much you can trust the answers.** With a normal chat, "where did you get that?" gets a vague response. With a vault, the answer is "I got this from your March 3rd meeting summary and your pricing strategy note." Specific files. You can click through in Obsidian and verify. It doesn't guarantee accuracy, but it's transparency you don't get anywhere else.
 
 ### Once the system has some weight behind it
 
@@ -315,11 +313,7 @@ The basic system works with just notes and an instruction file. How far you go i
 
 **Building the habit:**
 
-The value comes from using it consistently. In the first couple weeks, focus on daily notes and telling AI to save things worth remembering. When AI gets something wrong, add a line to your instruction file: "Don't do X. Do Y instead." That's how the system learns your preferences.
-
-After a few weeks, you'll notice topics that keep coming up. Tell AI to create Basecamps for those. Start feeding it documents you reference regularly.
-
-After a month, your instruction file has real depth, your daily notes form a searchable journal, and notes are linking to each other in ways that surface connections you wouldn't have made on your own.
+The value comes from using it consistently. First couple weeks: focus on daily notes and telling the system to save things worth remembering. When something goes wrong, add a correction to the instruction file. After a few weeks you'll notice topics keep coming up — create Basecamps for those. After a month, your instruction file has real depth, your daily notes form a searchable journal, and connections are surfacing that you wouldn't have made on your own.
 
 ---
 
