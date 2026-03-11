@@ -85,75 +85,106 @@
                 <line x1="260" y1="500" x2="280" y2="455" stroke="#5B7F5B" stroke-width="0.8" opacity="0.05"/>
 
                 <!-- ============ CONNECTIONS ============ -->
+                <!--
+                  Node positions reference:
+                  My Life: 400,65 | Work Basecamp: 175,110 | Health & Fitness: 625,100
+                  Home & Family: 400,330 | Today's Daily Note: 400,185
+                  Monday Standup: 70,185 | Contractor Quote: 260,195
+                  Dr. Patel Visit: 540,195 | Alps Ski Trip: 725,180
+                  Budget Tracker: 70,290 | Q3 Roadmap: 120,290
+                  Knee Recovery: 290,310 | Gear List: 510,310
+                  Hotel a Friend Recommended: 645,295 | Heart Rate Trends: 730,295
+                  Trail Run Log: 160,395 | Dog's Vet Appointment: 290,420
+                  Cooking Class Recipe: 510,420 | Italy Vacation: 640,400
+                -->
 
                 <!-- Hub-to-hub (thickest) -->
+                <!-- My Life → Work Basecamp -->
                 <line x1="400" y1="65" x2="175" y2="110" stroke="#5B7F5B" stroke-width="2.2" opacity="0.35" class="graph-line"/>
+                <!-- My Life → Health & Fitness -->
                 <line x1="400" y1="65" x2="625" y2="100" stroke="#5B7F5B" stroke-width="2.2" opacity="0.35" class="graph-line"/>
+                <!-- My Life → Today's Daily Note -->
                 <line x1="400" y1="65" x2="400" y2="185" stroke="#5B7F5B" stroke-width="2" opacity="0.3" class="graph-line"/>
+                <!-- My Life → Home & Family -->
                 <line x1="400" y1="65" x2="400" y2="330" stroke="#5B7F5B" stroke-width="1.5" opacity="0.18" class="graph-line"/>
 
                 <!-- Work cluster -->
+                <!-- Work → Monday Standup -->
                 <line x1="175" y1="110" x2="70" y2="185" stroke="#5B7F5B" stroke-width="1.8" opacity="0.3" class="graph-line"/>
+                <!-- Work → Contractor Quote -->
                 <line x1="175" y1="110" x2="260" y2="195" stroke="#5B7F5B" stroke-width="1.8" opacity="0.3" class="graph-line"/>
+                <!-- Work → Today's Daily Note -->
                 <line x1="175" y1="110" x2="400" y2="185" stroke="#5B7F5B" stroke-width="1.5" opacity="0.22" class="graph-line"/>
+                <!-- Work → Q3 Roadmap -->
                 <line x1="175" y1="110" x2="120" y2="290" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
+                <!-- Work → Budget Tracker -->
                 <line x1="175" y1="110" x2="70" y2="290" stroke="#5B7F5B" stroke-width="1" opacity="0.12" class="graph-line"/>
+                <!-- Monday Standup → Q3 Roadmap (discussed at standup) -->
                 <line x1="70" y1="185" x2="120" y2="290" stroke="#5B7F5B" stroke-width="1.5" opacity="0.25" class="graph-line"/>
+                <!-- Monday Standup → Contractor Quote (office renovation update) -->
                 <line x1="70" y1="185" x2="260" y2="195" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
+                <!-- Monday Standup → Budget Tracker (budget review in standup) -->
                 <line x1="70" y1="185" x2="70" y2="290" stroke="#5B7F5B" stroke-width="1.2" opacity="0.18" class="graph-line"/>
-                <line x1="260" y1="195" x2="120" y2="290" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-                <line x1="260" y1="195" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
+                <!-- Budget Tracker → Q3 Roadmap (budget informs roadmap) -->
                 <line x1="70" y1="290" x2="120" y2="290" stroke="#5B7F5B" stroke-width="1.2" opacity="0.18" class="graph-line"/>
-                <line x1="70" y1="290" x2="160" y2="395" stroke="#5B7F5B" stroke-width="1" opacity="0.12" class="graph-line"/>
 
-                <!-- Health/life cluster -->
+                <!-- Health & Fitness cluster -->
+                <!-- Health → Alps Ski Trip -->
                 <line x1="625" y1="100" x2="725" y2="180" stroke="#5B7F5B" stroke-width="1.8" opacity="0.3" class="graph-line"/>
+                <!-- Health → Dr. Patel Visit -->
                 <line x1="625" y1="100" x2="540" y2="195" stroke="#5B7F5B" stroke-width="1.8" opacity="0.3" class="graph-line"/>
+                <!-- Health → Today's Daily Note -->
                 <line x1="625" y1="100" x2="400" y2="185" stroke="#5B7F5B" stroke-width="1.5" opacity="0.22" class="graph-line"/>
-                <line x1="625" y1="100" x2="645" y2="295" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-                <line x1="625" y1="100" x2="730" y2="295" stroke="#5B7F5B" stroke-width="1" opacity="0.12" class="graph-line"/>
-                <line x1="725" y1="180" x2="645" y2="295" stroke="#5B7F5B" stroke-width="1.5" opacity="0.25" class="graph-line"/>
-                <line x1="725" y1="180" x2="540" y2="195" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-                <line x1="725" y1="180" x2="730" y2="295" stroke="#5B7F5B" stroke-width="1.2" opacity="0.18" class="graph-line"/>
-                <line x1="540" y1="195" x2="645" y2="295" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-                <line x1="540" y1="195" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-                <line x1="730" y1="295" x2="645" y2="295" stroke="#5B7F5B" stroke-width="1.2" opacity="0.18" class="graph-line"/>
-                <line x1="730" y1="295" x2="640" y2="400" stroke="#5B7F5B" stroke-width="1" opacity="0.12" class="graph-line"/>
+                <!-- Health → Heart Rate Trends -->
+                <line x1="625" y1="100" x2="730" y2="295" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
+                <!-- Health → Trail Run Log -->
+                <line x1="625" y1="100" x2="160" y2="395" stroke="#5B7F5B" stroke-width="1" opacity="0.12" class="graph-line"/>
+                <!-- Trail Run Log → Heart Rate Trends (HR data from runs) -->
+                <line x1="160" y1="395" x2="730" y2="295" stroke="#5B7F5B" stroke-width="1" opacity="0.1" class="graph-line"/>
+                <!-- Alps Ski Trip → Gear List (packing for the trip) -->
+                <line x1="725" y1="180" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.5" opacity="0.25" class="graph-line"/>
+                <!-- Alps Ski Trip → Hotel a Friend Recommended (friend's tip for the trip) -->
+                <line x1="725" y1="180" x2="645" y2="295" stroke="#5B7F5B" stroke-width="1.2" opacity="0.18" class="graph-line"/>
+                <!-- Heart Rate Trends → Dr. Patel Visit (shared health data at appointment) -->
+                <line x1="730" y1="295" x2="540" y2="195" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
 
                 <!-- Center / daily note connections -->
+                <!-- Today's Daily Note → Contractor Quote -->
                 <line x1="400" y1="185" x2="260" y2="195" stroke="#5B7F5B" stroke-width="1.8" opacity="0.28" class="graph-line"/>
+                <!-- Today's Daily Note → Dr. Patel Visit -->
                 <line x1="400" y1="185" x2="540" y2="195" stroke="#5B7F5B" stroke-width="1.8" opacity="0.28" class="graph-line"/>
+                <!-- Today's Daily Note → Knee Recovery -->
                 <line x1="400" y1="185" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1.5" opacity="0.22" class="graph-line"/>
-                <line x1="400" y1="185" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.5" opacity="0.22" class="graph-line"/>
+                <!-- Today's Daily Note → Home & Family -->
                 <line x1="400" y1="185" x2="400" y2="330" stroke="#5B7F5B" stroke-width="1.2" opacity="0.18" class="graph-line"/>
 
                 <!-- Home & Family hub -->
-                <line x1="400" y1="330" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1.8" opacity="0.28" class="graph-line"/>
-                <line x1="400" y1="330" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.8" opacity="0.28" class="graph-line"/>
-                <line x1="400" y1="330" x2="290" y2="420" stroke="#5B7F5B" stroke-width="1.5" opacity="0.22" class="graph-line"/>
-                <line x1="400" y1="330" x2="510" y2="420" stroke="#5B7F5B" stroke-width="1.5" opacity="0.22" class="graph-line"/>
-                <line x1="400" y1="330" x2="160" y2="395" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
+                <!-- Home & Family → Dog's Vet Appointment -->
+                <line x1="400" y1="330" x2="290" y2="420" stroke="#5B7F5B" stroke-width="1.8" opacity="0.28" class="graph-line"/>
+                <!-- Home & Family → Cooking Class Recipe -->
+                <line x1="400" y1="330" x2="510" y2="420" stroke="#5B7F5B" stroke-width="1.8" opacity="0.28" class="graph-line"/>
+                <!-- Home & Family → Contractor Quote (home renovation) -->
+                <line x1="400" y1="330" x2="260" y2="195" stroke="#5B7F5B" stroke-width="1.5" opacity="0.22" class="graph-line"/>
+                <!-- Home & Family → Italy Vacation -->
                 <line x1="400" y1="330" x2="640" y2="400" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
+                <!-- Home & Family → Gear List -->
+                <line x1="400" y1="330" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
 
-                <!-- Middle tier cross -->
-                <line x1="290" y1="310" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.12" class="graph-line"/>
-                <line x1="120" y1="290" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-                <line x1="645" y1="295" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-
-                <!-- Bottom tier -->
-                <line x1="290" y1="420" x2="160" y2="395" stroke="#5B7F5B" stroke-width="1.5" opacity="0.2" class="graph-line"/>
-                <line x1="290" y1="420" x2="510" y2="420" stroke="#5B7F5B" stroke-width="1.2" opacity="0.15" class="graph-line"/>
-                <line x1="510" y1="420" x2="640" y2="400" stroke="#5B7F5B" stroke-width="1.5" opacity="0.2" class="graph-line"/>
-                <line x1="160" y1="395" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.12" class="graph-line"/>
-                <line x1="640" y1="400" x2="510" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.12" class="graph-line"/>
-
-                <!-- Surprise cross-connections (dashed "wow" links) -->
-                <line x1="70" y1="185" x2="540" y2="195" stroke="#5B7F5B" stroke-width="1" opacity="0.08" class="graph-line cross-link" stroke-dasharray="4 4"/>
-                <line x1="725" y1="180" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1" opacity="0.08" class="graph-line cross-link" stroke-dasharray="4 4"/>
-                <line x1="120" y1="290" x2="510" y2="310" stroke="#5B7F5B" stroke-width="0.8" opacity="0.06" class="graph-line cross-link" stroke-dasharray="4 4"/>
-                <line x1="160" y1="395" x2="640" y2="400" stroke="#5B7F5B" stroke-width="0.8" opacity="0.06" class="graph-line cross-link" stroke-dasharray="4 4"/>
-                <line x1="70" y1="290" x2="400" y2="330" stroke="#5B7F5B" stroke-width="0.8" opacity="0.06" class="graph-line cross-link" stroke-dasharray="4 4"/>
-                <line x1="730" y1="295" x2="400" y2="330" stroke="#5B7F5B" stroke-width="0.8" opacity="0.06" class="graph-line cross-link" stroke-dasharray="4 4"/>
+                <!-- Meaningful cross-connections (dashed) -->
+                <!-- Dr. Patel Visit → Knee Recovery (doctor treating the knee) -->
+                <line x1="540" y1="195" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1.2" opacity="0.12" class="graph-line cross-link" stroke-dasharray="4 4"/>
+                <!-- Alps Ski Trip → Knee Recovery (skiing injury) -->
+                <line x1="725" y1="180" x2="290" y2="310" stroke="#5B7F5B" stroke-width="1" opacity="0.1" class="graph-line cross-link" stroke-dasharray="4 4"/>
+                <!-- Cooking Class Recipe → Italy Vacation (learned to cook there) -->
+                <line x1="510" y1="420" x2="640" y2="400" stroke="#5B7F5B" stroke-width="1" opacity="0.1" class="graph-line cross-link" stroke-dasharray="4 4"/>
+                <!-- Italy Vacation → Hotel a Friend Recommended (friend's hotel for the trip) -->
+                <line x1="640" y1="400" x2="645" y2="295" stroke="#5B7F5B" stroke-width="1" opacity="0.1" class="graph-line cross-link" stroke-dasharray="4 4"/>
+                <!-- Contractor Quote → Budget Tracker (project cost tracking) -->
+                <line x1="260" y1="195" x2="70" y2="290" stroke="#5B7F5B" stroke-width="0.8" opacity="0.08" class="graph-line cross-link" stroke-dasharray="4 4"/>
+                <!-- Dog's Vet Appointment → Budget Tracker (vet bills) -->
+                <line x1="290" y1="420" x2="70" y2="290" stroke="#5B7F5B" stroke-width="0.8" opacity="0.08" class="graph-line cross-link" stroke-dasharray="4 4"/>
+                <!-- Knee Recovery → Trail Run Log (tracking recovery runs) -->
+                <line x1="290" y1="310" x2="160" y2="395" stroke="#5B7F5B" stroke-width="0.8" opacity="0.08" class="graph-line cross-link" stroke-dasharray="4 4"/>
 
                 <!-- ============ NODES ============ -->
 
