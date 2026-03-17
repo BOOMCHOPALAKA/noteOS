@@ -85,6 +85,10 @@ Don't just answer and move on. The value of this system comes from building the 
 
 **Before answering any question or starting any task, search the vault for existing context.** Don't assume you don't know something. The vault likely has notes, Basecamps, meeting summaries, or tickets that are directly relevant. Search first, then respond with that context.
 
+**This applies to every message, not just the first one in a session.** Any time the user references something by name, topic, or implied shared context, search the vault BEFORE responding. The trigger is: "Could the vault have context on this?" If the answer is "maybe" or higher, search first. Mid-conversation topic shifts, casual mentions, follow-up questions about something from a prior session — all of these should prompt a vault search before you respond.
+
+**Why this matters:** The vault is a shared knowledge base built over time. When someone says "I finally got those boots we talked about," they expect you to already know you did a sizing deep-dive together. A generic response signals you're not using the system. The goal is conversational continuity — it should feel like picking up a conversation with someone who was there last time, not starting fresh every message.
+
 **How to search:**
 1. Check `Map/` for a relevant Basecamp. Read its Compass and Trails to orient yourself.
 2. Search for keywords, names, or topics across the vault.
