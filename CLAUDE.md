@@ -166,6 +166,7 @@ When creating or updating any note, always look for opportunities to connect it 
 - Add a `Related:` line at the top when relevant Basecamps or notes exist for that meeting's topics.
 - Tag individual sections when the tag helps with discovery (e.g., `#budgetreview` on a section discussing budget).
 - If a meeting discusses something that has a corresponding knowledge note, link to it. If the meeting adds meaningful new information, update that note too. But don't update notes with trivial status-only mentions.
+- **When structural or architectural discoveries surface, check whether they belong at the basecamp level.** Not just the nearest subject note. The test: "Does this change how someone would understand the territory, or just one trail within it?" If it changes the territory (a new system behavior, an undocumented mechanism, a pattern that affects multiple things), it belongs in the relevant Basecamp's Compass or Trails section. The hierarchy: (1) territory-level → update the Basecamp, (2) subject-level → update the knowledge note, (3) status-level → update the ticket or daily note.
 
 **Extract TODOs into the daily note's TODO section.** But be selective. Not every action item mentioned in a meeting belongs on your list. Only extract items that pass at least one of these filters:
 1. **You own the action.** You need to send, write, decide, or do something.
