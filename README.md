@@ -66,11 +66,20 @@ My Vault/
 ├── Downloads/        ← Raw inputs and non-text files. Transcripts, PDFs,
 │                       images, exports, diagrams, anything to process.
 ├── Templates/        ← Instructions for AI on how to build notes.
-├── CLAUDE.md         ← Your instruction file. AI reads this every session.
+├── .github/
+│   └── copilot-instructions.md  ← Symlink → CLAUDE.md (GitHub Copilot)
+├── CLAUDE.md         ← Your instruction file. The single source of truth.
+├── GEMINI.md         ← Symlink → CLAUDE.md (Gemini CLI)
+├── AGENTS.md         ← Symlink → CLAUDE.md (OpenAI Codex, Cursor)
+├── .clinerules       ← Symlink → CLAUDE.md (Cline)
+├── .cursorrules      ← Symlink → CLAUDE.md (Cursor)
+├── .windsurfrules    ← Symlink → CLAUDE.md (Windsurf)
 ├── MEMORY.md         ← Things AI remembers across conversations.
 └── [everything else] ← Your notes. All in the root folder, not buried
                         in subfolders. Links do the organizing.
 ```
+
+Every major AI tool looks for a different instruction filename. Instead of maintaining copies, the starter vault uses **symlinks** that all point back to `CLAUDE.md`. Edit one file, every tool picks up the changes. This works out of the box on Mac and Linux. On Windows, git may need to be configured to support symlinks (run `git config core.symlinks true` before cloning).
 
 #### A few things to know
 
@@ -100,7 +109,7 @@ The result is a web where you can start anywhere and get anywhere. "What did we 
 
 #### The Instruction File
 
-This is what makes the whole thing work the way it does with AI. There's a file called `CLAUDE.md` that AI reads at the start of every conversation. Now the CLAUDE.md file is obviously specific to Claude but other systems use similar files (we talk about using other AI tools below in Getting Started).
+This is what makes the whole thing work the way it does with AI. There's a file called `CLAUDE.md` that AI reads at the start of every conversation. It's called CLAUDE.md because that's what Claude auto-discovers, but the starter vault includes symlinks so every major AI tool finds it automatically. More on that in Getting Started.
 
 Think of it as a briefing document. If you've used Claude's project instructions or ChatGPT's custom instructions, it's the same idea, except it lives in your folder instead of inside the AI app.
 
@@ -217,16 +226,19 @@ This system is designed to be portable. It's just folders and text files. Any AI
 
 This is moving fast. Any of these providers could ship a Cowork-equivalent tomorrow. When they do, your vault works with them immediately. No migration, no export, no starting over. That's the whole point.
 
-**Using a different AI tool?** The starter vault comes with `CLAUDE.md` because that's what Claude auto-discovers. Just rename or copy the file to match what your tool expects:
+**Using a different AI tool?** The starter vault already includes symlinks for every major AI tool. You don't need to rename or copy anything. Just open your preferred tool and point it at the vault folder. It will find its instruction file automatically because they all point back to the same `CLAUDE.md`.
 
-| Tool | Instruction file it reads |
-|---|---|
-| Claude Code / Claude Cowork | `CLAUDE.md` (auto-discovered) |
-| GitHub Copilot | `.github/copilot-instructions.md` |
-| Cursor | `.cursor/rules/*.mdc` or `AGENTS.md` |
-| OpenAI Codex CLI | `AGENTS.md` |
-| Gemini CLI | `GEMINI.md` |
-| Windsurf | `.windsurfrules` |
+| Tool | File it reads | Included in vault |
+|---|---|---|
+| Claude Code / Claude Cowork | `CLAUDE.md` | Source file |
+| GitHub Copilot | `.github/copilot-instructions.md` | Symlink → CLAUDE.md |
+| Cursor | `.cursorrules` or `AGENTS.md` | Symlinks → CLAUDE.md |
+| OpenAI Codex CLI | `AGENTS.md` | Symlink → CLAUDE.md |
+| Gemini CLI | `GEMINI.md` | Symlink → CLAUDE.md |
+| Windsurf | `.windsurfrules` | Symlink → CLAUDE.md |
+| Cline | `.clinerules` | Symlink → CLAUDE.md |
+
+One file to maintain. Every tool picks it up. If you ever need to give a specific tool different instructions, just replace its symlink with a real file.
 
 ---
 

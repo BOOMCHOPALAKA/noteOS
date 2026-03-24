@@ -2,7 +2,7 @@
 
 > **This is a working system you can use out of the box.** Every convention below was developed through months of real daily use. The system conventions, meeting processing rules, TODO filtering, daily note structure, and linking patterns all work as-is. Just fill in the personal sections (About Me, Active Projects, People) and start using it. Or just start talking to AI and have it fill them in for you based on your conversations. Customize everything over time as you develop your own preferences.
 
-**Why is this called CLAUDE.md?** Claude Code auto-discovers this filename. If you're using a different AI tool, rename or copy this file to match what your tool expects (e.g., `AGENTS.md` for Codex/Cursor, `GEMINI.md` for Gemini CLI, `.github/copilot-instructions.md` for GitHub Copilot). The instructions inside work the same regardless of the filename.
+**Why is this called CLAUDE.md?** Claude Code auto-discovers this filename. The starter vault includes symlinks (`GEMINI.md`, `AGENTS.md`, `.cursorrules`, `.windsurfrules`, `.clinerules`, `.github/copilot-instructions.md`) that all point back to this file. Every major AI tool finds its expected instruction file automatically. One file to maintain, every tool picks it up. If you need tool-specific instructions, replace the symlink with a real file.
 
 ---
 
