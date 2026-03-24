@@ -379,10 +379,18 @@
 &#9500;&#9472;&#9472; Downloads/        &#8592; Raw inputs and non-text files. Transcripts, PDFs,
 &#9474;                       images, exports, diagrams, anything to process.
 &#9500;&#9472;&#9472; Templates/        &#8592; Instructions for AI on how to build notes.
-&#9500;&#9472;&#9472; CLAUDE.md         &#8592; Your instruction file. AI reads this every session.
+&#9500;&#9472;&#9472; .github/
+&#9474;   &#9492;&#9472;&#9472; copilot-instructions.md  &#8592; Symlink &#8594; CLAUDE.md (GitHub Copilot)
+&#9500;&#9472;&#9472; CLAUDE.md         &#8592; Your instruction file. The single source of truth.
+&#9500;&#9472;&#9472; GEMINI.md         &#8592; Symlink &#8594; CLAUDE.md (Gemini CLI)
+&#9500;&#9472;&#9472; AGENTS.md         &#8592; Symlink &#8594; CLAUDE.md (OpenAI Codex, Cursor)
+&#9500;&#9472;&#9472; .clinerules       &#8592; Symlink &#8594; CLAUDE.md (Cline)
+&#9500;&#9472;&#9472; .cursorrules      &#8592; Symlink &#8594; CLAUDE.md (Cursor)
+&#9500;&#9472;&#9472; .windsurfrules    &#8592; Symlink &#8594; CLAUDE.md (Windsurf)
 &#9500;&#9472;&#9472; MEMORY.md         &#8592; Things AI remembers across conversations.
 &#9492;&#9472;&#9472; [everything else] &#8592; Your notes. All in the root folder, not buried
                         in subfolders. Links do the organizing.</code></pre>
+            <p>Every major AI tool looks for a different instruction filename. Instead of maintaining copies, the starter vault uses <strong>symlinks</strong> that all point back to <code>CLAUDE.md</code>. Edit one file, every tool picks up the changes. Works out of the box on Mac and Linux. On Windows, git may need <code>git config core.symlinks true</code> before cloning.</p>
             </div>
 
             <h4 class="subsection-title-sm">A few things to know</h4>
@@ -421,7 +429,7 @@
 
             <!-- The Instruction File -->
             <h4 class="subsection-title" id="instruction-file">The Instruction File</h4>
-            <p>This is what makes the whole thing work the way it does with AI. There's a file called <code>CLAUDE.md</code> that AI reads at the start of every conversation. Now the CLAUDE.md file is obviously specific to Claude but other systems use similar files (we talk about using other AI tools below in <a href="#getting-started">Getting Started</a>).</p>
+            <p>This is what makes the whole thing work the way it does with AI. There's a file called <code>CLAUDE.md</code> that AI reads at the start of every conversation. It's called CLAUDE.md because that's what Claude auto-discovers, but the starter vault includes symlinks so every major AI tool finds it automatically. More on that in <a href="#getting-started">Getting Started</a>.</p>
             <p>Think of it as a briefing document. If you've used Claude's project instructions or ChatGPT's custom instructions, it's the same idea, except it lives in your folder instead of inside the AI app.</p>
             <ul class="clean-list">
                 <li>Here's who I am and what I'm focused on</li>
@@ -549,26 +557,29 @@
                     </ul>
                     <p>This is moving fast. Any of these providers could ship a Cowork-equivalent tomorrow. When they do, your vault works with them immediately. No migration, no export, no starting over. That's the whole point.</p>
 
-                    <p><strong>Using a different AI tool?</strong> The starter vault comes with <code>CLAUDE.md</code> because that's what Claude auto-discovers. Just rename or copy the file to match what your tool expects:</p>
+                    <p><strong>Using a different AI tool?</strong> The starter vault already includes symlinks for every major AI tool. You don't need to rename or copy anything. Just open your preferred tool and point it at the vault folder. It will find its instruction file automatically because they all point back to the same <code>CLAUDE.md</code>. One file to maintain, every tool picks it up.</p>
 
                     <div class="table-wrap">
                         <table class="clean-table">
                             <thead>
                                 <tr>
                                     <th>Tool</th>
-                                    <th>Instruction file it reads</th>
+                                    <th>File it reads</th>
+                                    <th>Included in vault</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>Claude Code / Claude Cowork</td><td><code>CLAUDE.md</code> (auto-discovered)</td></tr>
-                                <tr><td>GitHub Copilot</td><td><code>.github/copilot-instructions.md</code></td></tr>
-                                <tr><td>Cursor</td><td><code>.cursor/rules/*.mdc</code> or <code>AGENTS.md</code></td></tr>
-                                <tr><td>OpenAI Codex CLI</td><td><code>AGENTS.md</code></td></tr>
-                                <tr><td>Gemini CLI</td><td><code>GEMINI.md</code></td></tr>
-                                <tr><td>Windsurf</td><td><code>.windsurfrules</code></td></tr>
+                                <tr><td>Claude Code / Claude Cowork</td><td><code>CLAUDE.md</code></td><td>Source file</td></tr>
+                                <tr><td>GitHub Copilot</td><td><code>.github/copilot-instructions.md</code></td><td>Symlink &rarr; CLAUDE.md</td></tr>
+                                <tr><td>Cursor</td><td><code>.cursorrules</code> or <code>AGENTS.md</code></td><td>Symlinks &rarr; CLAUDE.md</td></tr>
+                                <tr><td>OpenAI Codex CLI</td><td><code>AGENTS.md</code></td><td>Symlink &rarr; CLAUDE.md</td></tr>
+                                <tr><td>Gemini CLI</td><td><code>GEMINI.md</code></td><td>Symlink &rarr; CLAUDE.md</td></tr>
+                                <tr><td>Windsurf</td><td><code>.windsurfrules</code></td><td>Symlink &rarr; CLAUDE.md</td></tr>
+                                <tr><td>Cline</td><td><code>.clinerules</code></td><td>Symlink &rarr; CLAUDE.md</td></tr>
                             </tbody>
                         </table>
                     </div>
+                    <p>If you ever need to give a specific tool different instructions, just replace its symlink with a real file.</p>
                 </div>
             </div>
         </div>
