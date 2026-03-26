@@ -1,8 +1,19 @@
 # noteOS — Your Instruction File
 
-> **This is a working system you can use out of the box.** Every convention below was developed through months of real daily use. The system conventions, meeting processing rules, TODO filtering, daily note structure, and linking patterns all work as-is. Just fill in the personal sections (About Me, Active Projects, People) and start using it. Or just start talking to AI and have it fill them in for you based on your conversations. Customize everything over time as you develop your own preferences.
+> **This is a working system you can use out of the box.** Every convention below was developed through months of real daily use. Just fill in the personal sections (About Me, Active Projects, People) and start using it. Or just start talking to AI and have it fill them in for you based on your conversations. Customize everything over time as you develop your own preferences.
 
 **Why is this called CLAUDE.md?** Claude Code auto-discovers this filename. The starter vault includes symlinks (`GEMINI.md`, `AGENTS.md`, `.cursorrules`, `.windsurfrules`, `.clinerules`, `.github/copilot-instructions.md`) that all point back to this file. Every major AI tool finds its expected instruction file automatically. One file to maintain, every tool picks it up. If you need tool-specific instructions, replace the symlink with a real file.
+
+---
+
+## Core Behaviors
+
+These are the non-negotiable habits that make the system work. Follow these on every message, every task, every note.
+
+1. **Search the vault before responding.** Before answering any question or starting any task, search for existing context. Check Map/ for a relevant Basecamp, search keywords across the vault, follow links from what you find. Never say "I don't have information on that" without searching first.
+2. **Link every note to the web.** Before finishing any note creation or update, verify: does this note link to at least one existing Basecamp or related note? If not, search the vault for connections before saving. No orphan notes.
+3. **Persist everything that matters.** Every session should leave the vault richer than it started. If something substantive was discussed and nothing was written down, something went wrong. When in doubt about whether to save something, ask. Never default to doing nothing.
+4. **Ask before making large changes.** Don't rewrite documents, restructure notes, or make sweeping edits unless explicitly asked. When given a small task, make a small change. When uncertain about scope, ask.
 
 ---
 
@@ -56,32 +67,24 @@ This is a flat, link-first Obsidian vault. Organization comes from links and nam
 
 All content is Markdown (.md). Notes and Basecamps use `## Compass` as the orientation section at the top.
 
-## When Helping With This Vault
+---
 
-### Always think: should this become a note?
+## Searching the Vault
 
-**After any substantive input — a meeting recap, a decision, a document, a conversation, a workout, anything worth remembering — pause and ask whether it should be saved.**
+**This applies to every message, not just the first one in a session.** Any time the user references something by name, topic, or implied shared context, search the vault BEFORE responding. The trigger is: "Could the vault have context on this?" If the answer is "maybe" or higher, search first.
 
-Don't just answer and move on. The value of this system comes from building the vault over time. A response that disappears when the chat ends is a missed opportunity.
+**How to search:**
+1. Check `Map/` for a relevant Basecamp. Read its Compass and Trails to orient yourself.
+2. Search for keywords, names, or topics across the vault.
+3. Follow links from what you find to build fuller context.
 
-**How to decide:**
+**Why this matters:** The vault is a shared knowledge base built over time. When someone says "I finally got those boots we talked about," they expect you to already know you did a sizing deep-dive together. A generic response signals you're not using the system. The goal is conversational continuity. It should feel like picking up a conversation with someone who was there last time, not starting fresh every message.
 
-- **Create a daily note entry automatically** for routine things: a quick update, a workout, something that happened today, a short recap. These don't need to be asked about — just log them under the right section of today's daily note.
-- **Ask before creating a standalone note** for anything with more substance: a detailed decision, a trip plan, a relationship with someone new, a project kicking off, something the user might want to reference or search for later. "Want me to save this as a note?"
-- **Suggest a Basecamp** when a topic is clearly going to have a lot of sub-notes around it — a new project, a major life area, a long-running situation. "This feels like it could use a Basecamp. Want me to set one up?"
-- **When the user says "remember this" or "just remember that"** — they want something captured without the overhead of a full note. Use your judgment: if it's a preference, habit, or instruction about how to work with them, add it to the relevant section of this file (CLAUDE.md). If it's a learned fact about their life, projects, or context, add it to MEMORY.md. Confirm what you added and where.
-
-**When in doubt, ask.** "Want me to create a note for this?" takes five seconds and preserves something that might otherwise be lost. The user can always say no. Silence means it's gone.
-
-**Examples:**
-- User pastes a meeting transcript → process it, create the summary, add to daily note. No need to ask.
-- User describes a conversation with a contractor about renovating their kitchen → "Want me to save this as a note? I can link it to a Home Renovation Basecamp if you have one, or create one."
-- User shares thoughts on a decision they made → "This feels worth capturing. Want me to create a decision note so you can reference the reasoning later?"
-- User mentions a new person who's going to come up a lot → "Sounds like [Name] is going to come up again. Want me to add them to your People section in the instruction file?"
+**If the vault doesn't have it and it's a general knowledge or research question, automatically search the web.** Don't stop after the vault search and ask if the user wants you to look it up. The flow is: vault first, web search second, then respond. Only ask clarifying questions if the question itself is ambiguous, not because you ran out of internal knowledge.
 
 ---
 
-### Don't let context die in the chat
+## Persisting Knowledge
 
 The vault only works if things actually get written to it. Don't wait for the user to remember to say "save that." Be proactive about persistence at three levels:
 
@@ -89,59 +92,48 @@ The vault only works if things actually get written to it. Don't wait for the us
 - Workouts, activities, fitness data
 - Gear/purchases that arrived (especially if there's an existing note to update)
 - Quick personal updates
-- Meeting summaries and transcript processing (already covered by meeting conventions)
+- Meeting summaries and transcript processing
 
-When something in Tier 1 comes up in conversation, write it to the daily note as part of your response. Don't ask, don't wait, don't batch it for later. If the user says "I just did a 3 mile run," that goes in the daily note immediately.
+When something in Tier 1 comes up in conversation, write it to the daily note as part of your response. Don't ask, don't wait, don't batch it for later. Daily note Body sections (Work, Personal) only. Never Recap.
 
 **Tier 2: Nudge in the moment (flag it, let the user decide)**
 - Decisions or conclusions reached during discussion
 - Research findings or recommendations
 - New information about people, projects, or relationships
 - Plans or intentions ("I think I'm going to..." or "We should probably...")
-- Updates to existing knowledge notes (new info that changes or adds to what's already captured)
+- Updates to existing knowledge notes
 
-When something in Tier 2 comes up, flag it right then: "Want me to capture this in [specific place]?" or "This updates what we have in [note name], want me to add it?" Don't wait until the end of the session. The longer you wait, the more likely it gets lost.
+When something in Tier 2 comes up, flag it right then: "Want me to capture this in [specific place]?" or "This updates what we have in [note name], want me to add it?" Don't wait until the end of the session.
 
 **Tier 3: End-of-session sweep (catch what fell through)**
-- When the conversation is winding down, or the user signals they're wrapping up, or there's a natural stopping point after a long session: review what was discussed and surface anything substantive that hasn't been persisted yet.
-- Be specific: "We covered X, Y, and Z today. X is already in the daily note. Want me to capture Y as a note? Z might be worth adding to [existing note]."
-- This is the safety net, not the primary mechanism. Most things should be caught by Tier 1 and Tier 2.
+- When the conversation is winding down or there's a natural stopping point after a long session: review what was discussed and surface anything substantive that hasn't been persisted yet.
+- Be specific: "We covered X, Y, and Z today. X is already in the daily note. Want me to capture Y as a note?"
+- This is the safety net, not the primary mechanism.
 
-**The principle:** Every session should leave the vault richer than it started. If the user and AI had a 30-minute conversation about a topic and nothing was written down, something went wrong. The chat disappears. The vault doesn't.
+**When in doubt about which tier, default to Tier 2 (ask). Never default to doing nothing.**
+
+### Should this become a note?
+
+After any substantive input, pause and consider:
+
+- **Daily note entry** — for routine things: a quick update, a workout, something that happened today. Just log it. No need to ask.
+- **Standalone note** — for anything with more substance: a detailed decision, a trip plan, a project kicking off. Ask first: "Want me to save this as a note?"
+- **Basecamp** — when a topic is clearly going to have a lot of sub-notes around it. "This feels like it could use a Basecamp. Want me to set one up?"
+- **"Remember this"** — when the user says "remember this" or "just remember that," they want something captured without overhead. If it's a preference or instruction, add it to this file. If it's a learned fact, add it to MEMORY.md. Confirm what you added and where.
+
+**Examples:**
+- User pastes a meeting transcript → process it, create the summary, add to daily note. No need to ask.
+- User describes a conversation with a contractor → "Want me to save this as a note? I can link it to a Home Renovation Basecamp if you have one, or create one."
+- User shares thoughts on a decision → "This feels worth capturing. Want me to create a decision note so you can reference the reasoning later?"
+- User mentions a new person who's going to come up a lot → "Sounds like [Name] is going to come up again. Want me to add them to your People section?"
 
 ---
 
-### Search the vault before responding
+## Linking
 
-**Before answering any question or starting any task, search the vault for existing context.** Don't assume you don't know something. The vault likely has notes, Basecamps, meeting summaries, or tickets that are directly relevant. Search first, then respond with that context.
+**Links are the backbone of this vault.** There are no deep folder hierarchies. Links do the organizing. Every link makes the vault more navigable and strengthens the knowledge graph. A note with no links is an orphan that may never be found again.
 
-**This applies to every message, not just the first one in a session.** Any time the user references something by name, topic, or implied shared context, search the vault BEFORE responding. The trigger is: "Could the vault have context on this?" If the answer is "maybe" or higher, search first. Mid-conversation topic shifts, casual mentions, follow-up questions about something from a prior session — all of these should prompt a vault search before you respond.
-
-**Why this matters:** The vault is a shared knowledge base built over time. When someone says "I finally got those boots we talked about," they expect you to already know you did a sizing deep-dive together. A generic response signals you're not using the system. The goal is conversational continuity — it should feel like picking up a conversation with someone who was there last time, not starting fresh every message.
-
-**How to search:**
-1. Check `Map/` for a relevant Basecamp. Read its Compass and Trails to orient yourself.
-2. Search for keywords, names, or topics across the vault.
-3. Follow links from what you find to build fuller context.
-
-**Never say "I don't have information on that" without searching first.** The vault is your knowledge base. Use it. If a topic has been discussed in meetings, captured in notes, or tracked in tickets, the answer is probably already here.
-
-**If the vault doesn't have it and it's a general knowledge or research question, automatically search the web.** Don't stop after the vault search and ask if the user wants you to look it up. The flow is: vault first, web search second, then respond. Only ask clarifying questions if the question itself is ambiguous, not because you ran out of internal knowledge.
-
-### General conventions
-
-- Read the relevant Basecamp in Map/ first to understand a topic before diving into individual notes.
-- If adding a new note, place it in root unless it's a Basecamp (Map/) or template (Templates/).
-- Preserve existing link structures. Obsidian relies on `[[wiki links]]`.
-- **Always link aggressively when creating or updating notes.** Link to every relevant existing note and Basecamp on first mention. Every note should be woven into the existing vault, not dropped in as an island.
-- **Basecamps use a Trails section** (not "Related") for curated outbound links. Trails are the paths worth taking from that Basecamp. Not everything that mentions the topic, just the notes that genuinely matter if you're exploring that territory. Every link should earn its spot.
-- **Use internal anchor links within long notes.** Summary sections should link down to detail sections using `[[#Heading Text|display text]]`. Detail sections should link back up. **Always use `[[#Heading]]` syntax, never markdown-style `[text](#slug)` anchors** — Obsidian's slug generation is unreliable with special characters.
-
-### Linking Principles
-
-**Links are the backbone of this vault.** There are no deep folder hierarchies. Links do the organizing. Every link makes the vault more navigable, makes backlinks more useful, and strengthens the knowledge graph. A note with no links is an orphan that may never be found again.
-
-When creating or updating any note, always look for opportunities to connect it to what already exists. Check the vault for related notes and Basecamps before writing.
+**Before finishing any note creation or update:** search the vault for related notes and Basecamps. On first mention of any topic that has an existing note or Basecamp, link to it. If you can't find any connections, say so. Don't silently create an unconnected note.
 
 **When to link:**
 1. **Cross-vault connections** — Link to Basecamps, related notes, and source documents
@@ -151,35 +143,50 @@ When creating or updating any note, always look for opportunities to connect it 
 
 **How to link smartly:**
 - Use descriptive link text: `[[Project X Basecamp|Project X]]` not bare `[[Project X Basecamp]]`
-- In Basecamps, use the "Trails" section for curated outbound links. In regular notes, use "Related" or "See also" sections to group links without interrupting flow
+- In Basecamps, use the "Trails" section for curated outbound links. In regular notes, use "Related" or "See also" sections
 - Don't over-link: first mention gets a link. Repeated mentions in the same section don't need links
 - Link to context, not just keywords. Link when it adds understanding, not just because words match
+- **Always use `[[#Heading]]` syntax for same-note links, never markdown-style `[text](#slug)` anchors** — Obsidian's slug generation is unreliable with special characters
 
 **Hashtag usage:**
 - Use hashtags for filtering and discovery: `#work #meetings #decisions`
 - Keep tags consistent across related notes
 - Don't hashtag everything. Use them where they help organize or surface content
 
-### Meeting Summary Conventions
+---
 
-- Before writing, check the vault for existing notes related to the meeting topics. Link to them.
+## General Conventions
+
+- Read the relevant Basecamp in Map/ first to understand a topic before diving into individual notes.
+- If adding a new note, place it in root unless it's a Basecamp (Map/) or template (Templates/).
+- Preserve existing link structures. Obsidian relies on `[[wiki links]]`.
+- Basecamps use a **Trails** section (not "Related") for curated outbound links. Trails are the paths worth taking from that Basecamp. Not everything that mentions the topic, just the notes that genuinely matter if you're exploring that territory. Every link should earn its spot.
+
+---
+
+## Meeting Summary Conventions
+
+**Before writing any meeting summary, search the vault for existing notes related to the meeting topics. Link to them.**
+
 - Add a `Related:` line at the top when relevant Basecamps or notes exist for that meeting's topics.
 - Tag individual sections when the tag helps with discovery (e.g., `#budgetreview` on a section discussing budget).
 - If a meeting discusses something that has a corresponding knowledge note, link to it. If the meeting adds meaningful new information, update that note too. But don't update notes with trivial status-only mentions.
-- **When structural or architectural discoveries surface, check whether they belong at the basecamp level.** Not just the nearest subject note. The test: "Does this change how someone would understand the territory, or just one trail within it?" If it changes the territory (a new system behavior, an undocumented mechanism, a pattern that affects multiple things), it belongs in the relevant Basecamp's Compass or Trails section. The hierarchy: (1) territory-level → update the Basecamp, (2) subject-level → update the knowledge note, (3) status-level → update the ticket or daily note.
+- **When structural discoveries surface, check whether they belong at the basecamp level.** The test: "Does this change how someone would understand the territory, or just one trail within it?" If it changes the territory, it belongs in the Basecamp's Compass or Trails. The hierarchy: (1) territory-level → update the Basecamp, (2) subject-level → update the knowledge note, (3) status-level → update the daily note.
 
-**Extract TODOs into the daily note's TODO section.** But be selective. Not every action item mentioned in a meeting belongs on your list. Only extract items that pass at least one of these filters:
+**Extract TODOs into the daily note's TODO section.** But be selective. Only extract items that pass at least one of these filters:
 1. **You own the action.** You need to send, write, decide, or do something.
 2. **You're the bottleneck.** Someone is waiting on you before they can move forward.
 3. **You need to follow up with someone you manage or coordinate with.**
 4. **You're accountable if it drops.** If it falls through, you're the one explaining why.
 
-Items that do NOT pass these filters: other teams' internal work, things other people are investigating on their own, operational tasks that belong to someone else. You get visibility in the meeting. That's enough. Don't create TODOs for things you have no reason to follow up on.
+Items that do NOT pass these filters: other teams' internal work, things other people are investigating on their own, operational tasks that belong to someone else. Don't create TODOs for things you have no reason to follow up on.
 
 Write TODOs as short checkbox items with anchor links back to the meeting context:
 `- [ ] Follow up with Anton on the API fix — see [[#Dev Standup]]`
 
-### Daily Note Structure
+---
+
+## Daily Note Structure
 
 **TODO section:**
 - `**From today's meetings:**` — short checkbox items with `[[#Heading]]` links to meeting detail
@@ -198,7 +205,9 @@ Write TODOs as short checkbox items with anchor links back to the meeting contex
 - Lead with what matters most, not chronological order.
 - Don't repeat TODO items. The recap captures what happened, not what's pending.
 
-### Activity & Fitness Log
+---
+
+## Activity & Fitness Log
 
 Log workouts and activities in the daily note Body under `## Personal`:
 ```
@@ -215,6 +224,8 @@ Felt strong through mile 6, legs got heavy on the last hill. Need to fuel better
 - The subjective feel line is the most valuable part. "Felt easy" vs "legs were heavy" tracks adaptation over time.
 - Link to your fitness Basecamp only when the activity is noteworthy (PR, milestone, injury). Don't link on routine entries.
 - Tag with `#fitness` for discovery.
+
+---
 
 ## Morning Brief
 
@@ -284,6 +295,8 @@ When a weekly update or status report is requested for any project:
 - Don't sound alarmist unless the situation actually warrants it. State facts, note risks, move on.
 - Never reference vault-internal work (note creation, knowledge builds) in these reports. They're for people who don't have access to the vault.
 
+---
+
 ## Communication Style
 
 <!-- The rules below establish a baseline voice. Adjust them to match how YOU actually communicate. -->
@@ -307,6 +320,8 @@ When a weekly update or status report is requested for any project:
 - No walls of text without structure
 - Don't agree just to be agreeable. Push back when something seems off.
 - Don't over-explain. If the point is made, move on.
+
+---
 
 ## Memory
 
