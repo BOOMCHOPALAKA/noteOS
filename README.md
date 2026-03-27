@@ -30,11 +30,11 @@ The whole thing runs on plain text files and a free app. No code. No databases. 
 
 ## What This Actually Is
 
-You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you've had it help draft an email, summarize a meeting, explain something complicated. Maybe you've even set up custom instructions or used the memory features.
+You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you've had it help draft an email, summarize a meeting, do some research. Maybe you've even set up custom instructions or used the memory features.
 
-But there's a ceiling. And if you've used AI enough, you've felt it.
+But there's a ceiling. And if you've used these various AI chatbots enough, you've hit your head on it. Carrying on a conversation in one chat, then moving to another session and bringing something up expecting it to just know. But it acts like it doesn't have the slightest clue. Or constantly having to give it background info on something for the umpteenth time.
 
-That's the personal operating system. Your own Wikipedia that you're both the editor and reader of, with AI as the engine that helps you build and search through it. Your projects, your ideas, your info, your plans, your decisions, your preferences, your life. All in files you control on your computer. Plain text. Nothing proprietary. It gets more useful the more you put into it.
+That's where this idea of a personal operating system comes in. Your own Wikipedia that you're both the editor and reader of, with AI as the engine that helps you build and search through it all. Your projects, your ideas, your info, your plans, your decisions, your preferences, your life. All in files you control on your computer. Plain text. Nothing proprietary. It gets more useful the more you put into it. That's noteOS.
 
 ### Things You Won't Have to Do Anymore
 
