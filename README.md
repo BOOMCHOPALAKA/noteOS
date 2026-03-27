@@ -34,7 +34,7 @@ You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you'v
 
 But there's a ceiling. And if you've used AI enough, you've felt it.
 
-noteOS is a starter kit of folders, text files, and an instruction file that turns AI into something that actually knows you. Your projects, your people, your decisions, your preferences. All of it lives in files you control on your computer. Plain text. Nothing proprietary. AI reads those files, works inside them, and gets more helpful the more you add.
+That's the personal operating system. Your own Wikipedia that you're both the editor and reader of, with AI as the engine that helps you build and search through it. Your projects, your ideas, your info, your plans, your decisions, your preferences, your life. All in files you control on your computer. Plain text. Nothing proprietary. It gets more useful the more you put into it.
 
 ### Things You Won't Have to Do Anymore
 
