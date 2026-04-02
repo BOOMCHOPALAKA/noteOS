@@ -451,6 +451,8 @@
 &#9500;&#9472;&#9472; Downloads/        &#8592; Raw inputs and non-text files. Transcripts, PDFs,
 &#9474;                       images, exports, diagrams, anything to process.
 &#9500;&#9472;&#9472; Templates/        &#8592; Instructions for AI on how to build notes.
+&#9500;&#9472;&#9472; skills/           &#8592; On-demand workflow guides. Meeting processing,
+&#9474;                       analysis, drafting, and more. Load when needed.
 &#9500;&#9472;&#9472; .github/
 &#9474;   &#9492;&#9472;&#9472; copilot-instructions.md  &#8592; Symlink &#8594; CLAUDE.md (GitHub Copilot)
 &#9500;&#9472;&#9472; CLAUDE.md         &#8592; Your instruction file. The single source of truth.
@@ -733,6 +735,14 @@
                 <li>Share your writing samples and let it learn your voice. Once it understands how you communicate, it can draft things that sound like you.</li>
                 <li>Build out Basecamps with curated links for your most active areas. The more structured your hubs, the better AI navigates between topics.</li>
             </ul>
+
+            <h3 class="subsection-title">Skills: teaching AI how you work</h3>
+            <p>Here's something I noticed after a few months. I'd process a meeting transcript and AI would nail it. Speaker identification, TODO extraction, vault linking, the whole thing. Then a week later I'd process another one in a new session and it would miss half the steps. Not because it forgot. Because the instruction file had a condensed version and the new session interpreted it differently.</p>
+            <p>The fix was obvious once I saw it. Take the full workflow and put it in its own file. Not in the instruction file that loads every conversation. In a separate file that only loads when you're actually doing that specific thing. That's what skills are.</p>
+            <p>The starter vault has a <code>skills/</code> folder with a bunch of these already built. Meeting processing, morning briefs, weekly status reports, deep analysis, drafting in your voice, and more. Each one walks AI through a proven workflow step by step. Consistent results, every session.</p>
+            <p>If you're using <strong>Claude Code</strong>, skills just work. It discovers them automatically when the task matches. One setup command and you're done. If you're using <strong>anything else</strong>, just tell your AI "read <code>skills/meeting-processing/SKILL.md</code> and follow it." They're just files. Any tool can read a file.</p>
+            <p>And the instruction file still works on its own. Every workflow section has a quick version inline. If your AI tool doesn't load skills, it still gets enough to do a decent job. The skill is the full playbook. The instruction file is the cheat sheet.</p>
+            <p>As you develop workflows that click, capture them. Create a folder in <code>skills/</code>, write a <code>SKILL.md</code> that describes what you do and how. AI learns the process once and follows it every time. The skills you build become part of your system. They travel with your vault. They work with whatever AI tool you're using.</p>
 
             <h3 class="subsection-title">Building the habit:</h3>
             <p>The value comes from using it consistently. First couple weeks: focus on daily notes and telling the system to save things worth remembering. When something goes wrong, add a correction to the instruction file. After a few weeks you'll notice topics keep coming up - create Basecamps for those. After a month, your instruction file has real depth, your daily notes form a searchable journal, and connections are surfacing that you wouldn't have made on your own.</p>
