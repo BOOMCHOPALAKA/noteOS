@@ -46,7 +46,7 @@ That's where this idea of a personal operating system comes in. Your own Wikiped
 
 **Treat every conversation as an island.** Notes link to other notes. AI searches your vault before answering. The denser the web gets, the better it navigates. You build that density just by using it.
 
-**Re-type the same prompts.** The instruction file ships with tested conventions for meeting processing, daily notes, TODO filtering, and more. Works on the first conversation. You customize over time.
+**Re-type the same prompts.** The instruction file and skills folder ship with tested workflows for meeting processing, daily notes, TODO filtering, deep analysis, and more. Works on the first conversation. You customize over time.
 
 Think of it this way. If you had the world's best personal assistant, their value wouldn't just be their skills. It would be the six months they spent learning how you work, what you care about, and what's going on in your life. If they quit, all of that walks out the door. This system is like writing all of that down so the next assistant, or AI, can pick it up on day one. The intelligence is in the structure, not the tool.
 
@@ -78,6 +78,8 @@ My Vault/
 ├── Downloads/        ← Raw inputs and non-text files. Transcripts, PDFs,
 │                       images, exports, diagrams, anything to process.
 ├── Templates/        ← Instructions for AI on how to build notes.
+├── skills/           ← On-demand workflow guides. Meeting processing,
+│                       analysis, drafting, and more. Load when needed.
 ├── .github/
 │   └── copilot-instructions.md  ← Symlink → CLAUDE.md (GitHub Copilot)
 ├── CLAUDE.md         ← Your instruction file. The single source of truth.
@@ -199,7 +201,8 @@ Open Obsidian, select **Open folder as vault**, and point it at the folder you j
 - **An instruction file** (`CLAUDE.md`) pre-loaded with conventions for meeting processing, daily notes, linking, and more. Works out of the box.
 - **A memory file** (`MEMORY.md`) with system-level patterns that AI follows. AI adds to this over time as it learns your preferences.
 - **Templates** for daily notes, Basecamps, meeting summaries, and weekly status reports.
-- **The folder structure** already set up: Map, Calendar, Downloads, Templates.
+- **Skills** for meeting processing, deep analysis, drafting, weekly reports, and more. Detailed workflow guides that load when you need them.
+- **The folder structure** already set up: Map, Calendar, Downloads, Templates, skills.
 
 ### Step 3: Connect your AI tool
 
@@ -335,6 +338,44 @@ The basic system works with just notes and an instruction file. How far you go i
 - Feed it documents from your life. Contracts, proposals, reports, recipes, research. Drop them in Downloads and tell AI to process them.
 - Share your writing samples and let it learn your voice. Once it understands how you communicate, it can draft things that sound like you.
 - Build out Basecamps with curated links for your most active areas. The more structured your hubs, the better AI navigates between topics.
+
+### Skills: teaching AI how you work
+
+Here's something I noticed after a few months of using this system. I'd process a meeting transcript and AI would nail it. Speaker identification, TODO extraction, linking to existing tickets, the whole thing. Then a week later I'd process another one in a new session and it would miss half the steps. Not because it forgot. Because the instruction file had a condensed version of the workflow and the new session interpreted it differently.
+
+The fix was obvious once I saw it. Take the full workflow and put it in its own file. Not in the instruction file that loads every conversation. In a separate file that only loads when you're actually doing that specific thing. That's what skills are.
+
+The starter vault has a `skills/` folder with a bunch of these already built. Meeting processing, morning briefs, weekly status reports, deep analysis, drafting in your voice, and more. Each one is just a markdown file that walks AI through a proven workflow step by step.
+
+**What this actually looks like in practice:** You drop a meeting transcript in chat. AI recognizes what you're doing, finds the meeting processing skill, and follows it. Identifies the speakers, presents a mapping for you to confirm before writing anything, searches the vault for related notes, writes the summary, extracts only the TODOs you're actually responsible for, and then gives you the "so what" layer in chat. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. All of that is in the skill. Every session. Consistent.
+
+**Why not just put all of that in the instruction file?** Because the instruction file loads on every conversation. When you're asking about your ski trip or drafting an email, you don't need 100 lines of meeting processing instructions taking up space. Skills load when they're relevant and stay out of the way when they're not.
+
+**How you use them depends on your AI tool:**
+
+If you're using **Claude Code**, skills just work. It discovers them automatically when the task matches. To connect your vault's skills, one command: `ln -s /path/to/your/vault/skills ~/.claude/skills`. Done.
+
+If you're using **anything else**, you can still use them. Just tell your AI tool "read `skills/meeting-processing/SKILL.md` and follow it." They're just files. Any tool can read a file when you point it there.
+
+And the instruction file still works on its own. Every workflow section has a quick version inline. If your AI tool doesn't load skills, it still gets enough to do a decent job. The skill is the full playbook. The instruction file is the cheat sheet.
+
+**What's included:**
+
+| Skill | What it does |
+|---|---|
+| `meeting-processing` | Speaker ID, structured summaries, TODO extraction, vault linking, takeaway analysis |
+| `morning-brief` | Daily briefing with vault state, weather, and news |
+| `weekly-status-report` | Sourcing, structure, and external sharing format |
+| `activity-logging` | Fitness and activity logging to daily notes |
+| `drafting-voice` | Learns how you write and drafts messages in your voice |
+| `deep-analysis` | Thinking partner for decisions. Pushes back, stress-tests assumptions, steelmans the other side |
+| `situation-assessment` | Paste a messy email thread or ticket history, get a clear picture of what's actually going on |
+| `session-handoff` | Captures what happened in a session so nothing falls through the cracks between conversations |
+| `ticket-creation` | Scannable dev tickets that people actually read |
+| `codebase-investigation` | Systematic debugging. Traces code paths, checks the vault for prior context, documents findings |
+| `codebase-team-assessment` | Analyzes a repo's commit history, maps who knows what, flags knowledge gaps and bus-factor risks |
+
+**Building your own:** This is where it gets personal. As you develop workflows that click, capture them. Create a folder in `skills/`, write a `SKILL.md` that describes what you do and how. AI learns the process once and follows it every time after that. The skills you build become part of your system. They travel with your vault. They work with whatever AI tool you're using. And if you ever share your vault with someone, they get your workflows too.
 
 **Building the habit:**
 

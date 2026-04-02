@@ -166,23 +166,9 @@ After any substantive input, pause and consider:
 
 ## Meeting Summary Conventions
 
-**Before writing any meeting summary, search the vault for existing notes related to the meeting topics. Link to them.**
+For the full workflow (speaker ID, TODO extraction, vault linking, takeaway analysis), see `skills/meeting-processing/SKILL.md`.
 
-- Add a `Related:` line at the top when relevant Basecamps or notes exist for that meeting's topics.
-- Tag individual sections when the tag helps with discovery (e.g., `#budgetreview` on a section discussing budget).
-- If a meeting discusses something that has a corresponding knowledge note, link to it. If the meeting adds meaningful new information, update that note too. But don't update notes with trivial status-only mentions.
-- **When structural discoveries surface, check whether they belong at the basecamp level.** The test: "Does this change how someone would understand the territory, or just one trail within it?" If it changes the territory, it belongs in the Basecamp's Compass or Trails. The hierarchy: (1) territory-level → update the Basecamp, (2) subject-level → update the knowledge note, (3) status-level → update the daily note.
-
-**Extract TODOs into the daily note's TODO section.** But be selective. Only extract items that pass at least one of these filters:
-1. **You own the action.** You need to send, write, decide, or do something.
-2. **You're the bottleneck.** Someone is waiting on you before they can move forward.
-3. **You need to follow up with someone you manage or coordinate with.**
-4. **You're accountable if it drops.** If it falls through, you're the one explaining why.
-
-Items that do NOT pass these filters: other teams' internal work, things other people are investigating on their own, operational tasks that belong to someone else. Don't create TODOs for things you have no reason to follow up on.
-
-Write TODOs as short checkbox items with anchor links back to the meeting context:
-`- [ ] Follow up with Anton on the API fix — see [[#Dev Standup]]`
+Search the vault for existing notes on the meeting topics before writing. Link to them. Extract TODOs only for items you own, are the bottleneck on, need to chase someone about, or are accountable for. Other teams' internal work stays off your TODO list. Always identify speakers and get sign-off before writing the summary.
 
 ---
 
@@ -209,116 +195,39 @@ Write TODOs as short checkbox items with anchor links back to the meeting contex
 
 ## Activity & Fitness Log
 
-Log workouts and activities in the daily note Body under `## Personal`:
-```
-#### [Activity Name]
-[Load/gear] | [distance] | [time] | [elevation] | Avg HR [bpm]
-[Brief note on how it felt]
-```
-Example:
-```
-#### Morning Trail Run
-8.2 mi | 1:02:15 | 340 ft | Avg HR 148
-Felt strong through mile 6, legs got heavy on the last hill. Need to fuel better.
-```
-- The subjective feel line is the most valuable part. "Felt easy" vs "legs were heavy" tracks adaptation over time.
-- Link to your fitness Basecamp only when the activity is noteworthy (PR, milestone, injury). Don't link on routine entries.
-- Tag with `#fitness` for discovery.
+For the full format and rules, see `skills/activity-logging/SKILL.md`.
+
+Log workouts under `## Personal` in the daily note Body. One line of stats, one line of how it felt. The subjective feel line is the most valuable part. Tag `#fitness`.
 
 ---
 
 ## Morning Brief
 
-When asked for a morning brief (or "morning update," "start my day," etc.), generate a structured daily briefing and do two things: write it into the daily note as a `## Morning Brief` section at the bottom of the `# Body`, AND output the full brief in the chat so it's readable without opening the file.
+For the full briefing structure and customization, see `skills/morning-brief/SKILL.md`.
 
-**What to include:**
-
-**1. Vault — State of Things**
-Read today's daily note and the previous day's note. Summarize what's active, what moved yesterday, and what needs attention today. Pull from open TODOs, recent meeting notes, and any carried items. This section gets richer the more the vault has in it. On day one it'll be sparse. After a few weeks, it'll know your projects, your open threads, and your priorities.
-
-- 3-5 focus items for today. Not a rehash of every TODO, just the things that actually matter.
-- Note anything that's been sitting too long, blocked, or approaching a deadline.
-
-**2. Weather**
-Run `curl -s "wttr.in/?format=3"` to get today's weather forecast. Include it as a single line. Location is approximate (IP-based) — if it's wrong, add your city to the command: `curl -s "wttr.in/Seattle?format=3"`.
-
-**3. News**
-Search the web for today's top headlines. Cover whatever's most relevant to the user based on what's in their vault (ongoing situations, relevant industries, topics they've been tracking). At minimum: major world news, any AI/tech news, and anything that might affect their work or projects. 2-3 sentences per story with a source link. Keep it scannable, not comprehensive.
-
-**Format:**
-
-```
-## Morning Brief
-
-### State of Things
-[Vault summary — active threads, what moved yesterday, open questions]
-
-**Focus today:**
-- [Item 1]
-- [Item 2]
-- [Item 3]
-
-### Weather
-[Single line from wttr.in]
-
-### News
-#### [Headline]
-[2-3 sentences + source link]
-
-#### [Headline]
-[2-3 sentences + source link]
-```
-
-**At the end of the brief, add:**
-> Want to customize this? Tell me what to add, remove, or change — more detail on a project, different news categories, fitness recap, anything. The brief grows with your vault.
-
-**Notes:**
-- Don't write to the Recap section of the daily note. The brief goes in `## Morning Brief` under `# Body`.
-- The brief is meant to be generated fresh each morning, not updated throughout the day.
-- If the vault is new and sparse, lead with news and weather and note that the vault section will fill in as they add more content.
+When asked for a morning brief, generate a structured daily briefing covering: vault state of things (what's active, focus items for today), weather, and news. Write it to the daily note as `## Morning Brief` under `# Body` AND output in chat. The brief grows richer as the vault fills in. On day one it's mostly news and weather.
 
 ---
 
 ## Weekly Status Reports
 
-When a weekly update or status report is requested for any project:
-1. **COMPLETED** — Bold headers per item with dates. 1-2 sentences max.
-2. **IN PROGRESS** — Critical/blocking items first as their own sections. Group smaller items under "Other In Progress."
-3. **DECISIONS** — Bullet list. Include who made the call when relevant.
-4. **UPCOMING** — Bullet list with dates.
-5. **NOTES** — Only standout callouts: exceptional work, biggest risks, systemic issues.
+For the full workflow (sourcing, structure, external sharing format), see `skills/weekly-status-report/SKILL.md`.
 
-**Style:**
-- Informative and succinct. No filler.
-- Bold item headers, short descriptions.
-- Plain language. No corporate buzzwords ("synergy," "mission-critical," "leverage"). Just say what the problem is in normal words.
-- Don't sound alarmist unless the situation actually warrants it. State facts, note risks, move on.
-- Never reference vault-internal work (note creation, knowledge builds) in these reports. They're for people who don't have access to the vault.
+When asked for a weekly report: COMPLETED, IN PROGRESS, DECISIONS, UPCOMING, NOTES. Informative and succinct. Plain language, no buzzwords. Never reference vault-internal work. These are for people who don't have vault access.
 
 ---
 
 ## Communication Style
 
-<!-- The rules below establish a baseline voice. Adjust them to match how YOU actually communicate. -->
-<!-- Over time, share writing samples (emails, messages) so AI learns your specific voice. -->
+For the full drafting framework (voice calibration, pre-draft protocol, context-specific registers), see `skills/drafting-voice/SKILL.md`.
 
-**General voice:**
+<!-- Customize the baseline below to match how YOU actually communicate. -->
+<!-- Share writing samples (emails, messages) so AI learns your specific voice over time. -->
+
+**Always-on rules (apply to all output, not just drafting):**
 - Conversational and direct. Plain language over jargon.
-- Short sentences mixed with longer ones for pacing. Fragments are fine.
-- Warm but not soft. Genuine without being performative.
-- Lead with what matters most, then offer flexibility or alternatives.
-- One idea per paragraph. Paragraph breaks for pacing.
-
-**Email drafting:**
-- Inviting asks, not directives. "Is this something you could help with?" not "Can you send me the files?"
-- Specific references. Name the actual meeting, the actual document, the actual date.
-- Light on technical prescriptions. Keep it conversational.
-- Skip pleasantries when substance is the point. Go straight to the update.
-
-**What NOT to do:**
-- No corporate buzzwords
-- No walls of text without structure
 - Don't agree just to be agreeable. Push back when something seems off.
+- No corporate buzzwords. No walls of text without structure.
 - Don't over-explain. If the point is made, move on.
 
 ---
