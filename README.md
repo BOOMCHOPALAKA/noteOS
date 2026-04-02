@@ -1,6 +1,13 @@
 # noteOS - Your Personal Operating System. Powered by Simple Text Files, Supercharged by AI.
 *All your knowledge. Documented. Connected. Searchable. Conversational.*
 
+## What's New
+
+**April 2026 — Skills System**
+The vault now ships with a `skills/` folder containing 11 on-demand workflow guides. Meeting processing, deep analysis, drafting in your voice, weekly reports, and more. Each one is a markdown file that walks AI through a proven workflow step by step. They load when relevant and stay out of the way when they're not. The instruction file (`CLAUDE.md`) has been trimmed to take advantage of this. Conventions that apply to every conversation stay inline. Multi-step workflows that only apply in specific contexts moved to skills, which keeps the instruction file lighter and gives AI more room to work with your actual content. [Read more about skills.](#skills-teaching-ai-how-you-work)
+
+---
+
 ## Table of Contents
 - [Imagine a World...](#imagine-a-world)
 - [What This Actually Is](#what-this-actually-is)
