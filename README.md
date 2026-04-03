@@ -4,7 +4,7 @@
 ## What's New
 
 **April 2026 — Skills System**
-The vault now ships with a `skills/` folder containing 15 on-demand workflow guides. Meeting processing, deep analysis, session capture, drafting in your voice, weekly reports, and more. Each one is a markdown file that walks AI through a proven workflow step by step. They load when relevant and stay out of the way when they're not. The instruction file (`CLAUDE.md`) has been trimmed to take advantage of this. Conventions that apply to every conversation stay inline. Multi-step workflows that only apply in specific contexts moved to skills, which keeps the instruction file lighter and gives AI more room to work with your actual content. [Read more about skills.](#skills-teaching-ai-how-you-work)
+The vault now ships with 16 skills. These are step-by-step workflow guides that AI follows when you're doing specific things. Process a meeting, analyze a situation, draft something in your voice, capture a session. Each one is a markdown file in `skills/` that loads when relevant and stays out of the way when it's not. Two highlights: `/remember` saves everything from your current session to the right places in the vault. `/pickup` reads what was saved and gets you back up to speed in a new conversation. Together they solve the biggest pain point in working with AI: losing context between sessions. [Read more about skills.](#skills-teaching-ai-how-you-work)
 
 ---
 
@@ -352,15 +352,31 @@ The basic system works with just notes and an instruction file. How far you go i
 
 ### Skills: teaching AI how you work
 
-Here's something I noticed after a few months of using this system. I'd process a meeting transcript and AI would nail it. Speaker identification, TODO extraction, linking to existing tickets, the whole thing. Then a week later I'd process another one in a new session and it would miss half the steps. Not because it forgot. Because the instruction file had a condensed version of the workflow and the new session interpreted it differently.
+Here's the problem skills solve. You have a great conversation with AI. You process a meeting transcript and it nails it. Speaker identification, TODO extraction, linking to existing notes. Perfect. Then a week later you process another transcript in a new session and it misses half the steps. Not because it forgot. Because the instruction file had a condensed version of the workflow and the new session interpreted it differently.
 
-The fix was obvious once I saw it. Take the full workflow and put it in its own file. Not in the instruction file that loads every conversation. In a separate file that only loads when you're actually doing that specific thing. That's what skills are.
+The fix was obvious once I saw it. Take the full workflow and put it in its own file. Not in the instruction file that loads every conversation. In a separate file that only loads when you're actually doing that specific thing. That's what skills are. Markdown files that walk AI through a proven workflow step by step. Consistent results, every session, no matter how long it's been since the last time you did that specific thing.
 
-The starter vault has a `skills/` folder with these already built. Each one is just a markdown file that walks AI through a proven workflow step by step.
+**Why this matters more than it sounds.** The instruction file tells AI who you are and how you work. Skills tell AI how to do specific things for you. The instruction file is always loaded. Skills load on demand. That's what makes the whole system scale. Your instruction file stays lean. Your skills get as detailed as they need to be. And AI only pulls in what's relevant to what you're actually doing right now.
 
-**What this actually looks like in practice:** You drop a meeting transcript in chat. AI recognizes what you're doing, finds the meeting processing skill, and follows it. Identifies the speakers, presents a mapping for you to confirm before writing anything, searches the vault for related notes, writes the summary, extracts only the TODOs you're actually responsible for, and then gives you the "so what" layer in chat. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. All of that is in the skill. Every session. Consistent.
+Think of it this way. The instruction file is like briefing a new assistant on your preferences. Skills are like handing them your playbook for specific tasks. "Here's exactly how I process meetings. Here's how I like my status reports structured. Here's how I want you to handle it when I say 'save this.'" The assistant doesn't need to memorize all of that on day one. They just need to know where the playbook is when the task comes up.
 
-**Why not just put all of that in the instruction file?** Because the instruction file loads on every conversation. When you're asking about your ski trip or drafting an email, you don't need 100 lines of meeting processing instructions taking up space. Skills load when they're relevant and stay out of the way when they're not.
+#### Session continuity: never lose context again
+
+The two most powerful skills in the vault are `remember` and `pickup`. They solve the single biggest frustration with AI: losing everything when you close the chat window.
+
+**`/remember`** is the save. You type it (or say "log this chat") and AI assesses everything substantive from your conversation. What decisions were made, what new information surfaced, what's still open. Then it figures out where each piece goes. Daily note, project notes, your cross-session context file, your chat log. You don't have to explain what to save or where. It reads the conversation, reads the vault, and connects the dots. It also nudges you at natural breakpoints. After a big decision, after processing a batch of meeting transcripts, after any substantial block of work. "Want me to log this session? We covered X, Y, and Z."
+
+**`/pickup`** is the load. You start a new session and type it. AI reads what was saved, traces the links to the relevant notes, and gives you a concise briefing. Where you left off. What's active. What's waiting on someone else. What needs attention. Then it asks "Where do you want to pick up from?" with a few options drawn from your active threads. You pick one and you're back in it. No re-explaining. No "so last time we were talking about..." Just pick up and go.
+
+These two work together. The quality of the pickup depends entirely on the quality of what remember saved. And remember is designed to write for continuation. Not just "what happened" but "where things stand, what's next, and what to read to get the full picture." Every entry includes links to the specific notes and sections that have the details. Your chat log becomes a running record of every session, what was discussed, and what made it into the vault. It's a trail of breadcrumbs you can trace back anytime.
+
+#### What skills look like in practice
+
+You drop a meeting transcript in chat. AI recognizes what you're doing, loads the meeting processing skill, and follows it. Identifies the speakers, presents a mapping for you to confirm before writing anything, searches the vault for related notes, writes the summary, extracts only the TODOs you're actually responsible for, and then gives you the "so what" layer in chat. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. All of that is in the skill. Every session. Consistent.
+
+You need to make a tough call. You ask AI to help you think through it. The deep analysis skill kicks in. It doesn't just list pros and cons. It challenges your assumptions, steelmans the other side, separates what you actually know from what you're inferring, and makes the tradeoffs explicit. It pushes back when you're rationalizing. It tells you what it doesn't know. The instruction file can't hold that level of detail for every workflow. But a skill can.
+
+You're done for the day. You type `/remember`. Everything gets saved, linked, timestamped. Tomorrow you type `/pickup`. You're caught up in 30 seconds and working again.
 
 **How you use them depends on your AI tool:**
 
@@ -370,42 +386,37 @@ If you're using **anything else**, you can still use them. Just tell your AI too
 
 And the instruction file still works on its own. Every workflow section has a quick version inline. If your AI tool doesn't load skills, it still gets enough to do a decent job. The skill is the full playbook. The instruction file is the cheat sheet.
 
-**What's included:**
+#### What's included
+
+The starter vault ships with 16 skills:
 
 | Skill | What it does |
 |---|---|
+| `remember` | On-demand session capture. Type `/remember` and AI figures out what to save and where. Updates your notes, context file, and chat log. Nudges proactively at natural breakpoints |
+| `pickup` | Resume where you left off. Type `/pickup` and AI reads your last session's context, briefs you, and asks where you want to pick up from |
 | `meeting-processing` | Speaker ID, structured summaries, TODO extraction, vault linking, takeaway analysis |
-| `morning-brief` | Daily briefing with vault state, weather, and news |
-| `weekly-status-report` | Sourcing, structure, and external sharing format |
-| `activity-logging` | Fitness and activity logging to daily notes |
-| `drafting-voice` | Learns how you write and drafts messages in your voice |
 | `deep-analysis` | Thinking partner for decisions. Pushes back, stress-tests assumptions, steelmans the other side |
 | `situation-assessment` | Paste a messy email thread or ticket history, get a clear picture of what's actually going on |
 | `next-steps` | Crystallizes "what now" after any discussion. Concrete actions, open questions, and softer suggestions |
-| `remember` | On-demand session capture. Type `/remember` (or "log this chat") and AI figures out what to save and where. Also nudges proactively at natural breakpoints |
-| `pickup` | Resume where you left off. Type `/pickup` and AI reads your last session's context and orients you on what's active, what's next, and what to read |
-| `skill-creation` | Guided intake for building new skills. Asks the right questions before writing anything |
+| `drafting-voice` | Learns how you write and drafts messages in your voice |
+| `morning-brief` | Daily briefing with vault state, weather, and news |
+| `weekly-status-report` | Sourcing, structure, and external sharing format |
+| `activity-logging` | Fitness and activity logging to daily notes |
+| `session-handoff` | Proactive end-of-session context preservation. The nudge layer that works alongside remember |
+| `skill-creation` | Guided intake for building new skills. Walks you through the right questions before writing anything |
 | `ticket-creation` | Scannable dev tickets that people actually read |
 | `codebase-investigation` | Systematic debugging. Traces code paths, checks the vault for prior context, documents findings |
 | `codebase-team-assessment` | Analyzes a repo's commit history, maps who knows what, flags knowledge gaps and bus-factor risks |
 
-**Building your own:** This is where it gets personal. As you develop workflows that click, capture them. Create a folder in `skills/`, write a `SKILL.md` that describes what you do and how. AI learns the process once and follows it every time after that. The skills you build become part of your system. They travel with your vault. They work with whatever AI tool you're using. And if you ever share your vault with someone, they get your workflows too.
+#### Building your own
+
+This is where it gets personal. As you develop workflows that click, capture them. There's even a skill for that. The `skill-creation` skill walks you through a structured intake. What's the problem? What triggers it? What does good output look like? What are the hard rules? It asks the questions before writing anything.
+
+Create a folder in `skills/`, write a `SKILL.md` that describes what you do and how. AI learns the process once and follows it every time after that. The skills you build become part of your system. They travel with your vault. They work with whatever AI tool you're using. And if you ever share your vault with someone, they get your workflows too.
 
 **Building the habit:**
 
-The value comes from using it consistently. First couple weeks: focus on daily notes and telling the system to save things worth remembering. When something goes wrong, add a correction to the instruction file. After a few weeks you'll notice topics keep coming up - create Basecamps for those. After a month, your instruction file has real depth, your daily notes form a searchable journal, and connections are surfacing that you wouldn't have made on your own.
-
-**Log your chats:**
-
-Here's something that will happen: you'll have a great conversation with AI. You'll figure something out, make a decision, talk through a problem. Then you close the chat window. And ten minutes later you realize none of it made it into the vault. The conversation is gone.
-
-The fix is simple. Keep a chat log. It's a single note in your vault that tracks your sessions. Date, what you covered, what got saved, and the stuff that's hardest to reconstruct later. Think of it like saving a document. You don't save after every keystroke, but you develop an instinct for when something has enough weight that you don't want to lose it. Same thing here. When a session feels like it had substance, say "log this chat" and AI captures it.
-
-Over time, AI gets better at recognizing those moments too. After you process a batch of meeting transcripts, create a few notes, or work through a tough decision, it'll ask: "Want me to log this session?" It's like autosave catching the things you forget to save manually. But the habit of consciously logging is still worth building. AI catches what slips through. You catch what matters most.
-
-The log isn't detailed notes. Those live in the vault as their own notes. The log is a trail of breadcrumbs. "March 12: planned the kitchen renovation, created the contractor comparison note, decided to go with Option B." Enough that if you come back two weeks later and think "when did we figure that out?" you can trace it. Enough that if you closed a session without saving something, you can see what was discussed and recover it.
-
-It's a small practice that prevents a real problem. The best knowledge system in the world doesn't help if the knowledge never makes it in.
+The value comes from using it consistently. First couple weeks: focus on daily notes and telling the system to save things worth remembering. When something goes wrong, add a correction to the instruction file. After a few weeks you'll notice topics keep coming up. Create Basecamps for those. After a month, your instruction file has real depth, your daily notes form a searchable journal, and connections are surfacing that you wouldn't have made on your own.
 
 ---
 
