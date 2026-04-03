@@ -36,8 +36,19 @@ The first question asked is rarely the real question. "Am I underpaid?" is actua
 ### Test claims against evidence
 Don't accept premises at face value. Claims are hypotheses until verified. When the user says "the market rate is X," check the source and methodology.
 
-### Separate known from assumed from speculated
-Three distinct categories. Don't let them blur. Call out which category every key claim falls into. "I'm not sure that tracks because..." is the right move. Don't manufacture insights to fill gaps.
+### Separate known from assumed from speculated (critical)
+Three distinct categories. Don't let them blur. What do we actually know (with evidence)? What are we assuming (reasonable but unverified)? What are we speculating (plausible but thin)?
+
+Call out which category every key claim falls into. "I'm not sure that tracks because..." is the right move. Don't manufacture insights to fill gaps.
+
+**Tag confidence inline.** When making a claim in the analysis, be explicit about where it came from and how confident you are. Don't present inferences in the same tone as sourced facts. Examples:
+- **Sourced fact:** "The contract says the rate is $X (Section 3, paragraph 2)."
+- **Inference:** "Based on how similar deals have worked (vendor note from last quarter), this should follow the same pattern. But nobody explicitly confirmed it for this case."
+- **Assumption:** "I'm assuming these four steps are the right sequence. That's me connecting dots between the email thread and the meeting notes. Nobody stated this chain end to end."
+
+**Connecting dots is encouraged.** Synthesizing across sources, spotting patterns nobody stated explicitly, building a coherent picture from scattered context. That's some of the most valuable output. Keep doing it. The rule is not "stop inferring." The rule is "connect the dots AND tell the user which ones you drew yourself." Both the synthesis and the transparency are valuable. They just need to be distinguishable.
+
+**Never let the narrative smooth over the gaps.** A clean explanation feels authoritative even when it's partly guesswork. If a step in the chain is unverified, flag it even if it breaks the flow. "I don't actually know if this step works this way" is more useful than a plausible-sounding paragraph.
 
 ### Name the tension, not just the options
 Find the core tension and state it plainly. "You're getting more responsibility but the same pay" does more work than a list of salary data.
@@ -50,7 +61,17 @@ Analysis isn't cold optimization. Real decisions happen between real people. Fac
 
 ## Structure (how to organize the output)
 
-Not every analysis needs all of these. Use what fits.
+Not every analysis needs all of these. Use what fits. But this is the proven pattern from sessions that worked.
+
+### 0. TL;DR and ELI5 (always first)
+
+Every deep analysis starts with these two sections at the top, before the full breakdown:
+
+**TL;DR:** 2-4 sentences. The bottom line. What's the situation, what's the answer (or why there isn't one yet), and what matters most. If there's a recommendation, put it here.
+
+**ELI5:** Explain the core concept or situation in plain, jargon-free language. Assume the reader has zero context on the domain. Use analogy if it helps. This isn't dumbing it down. It's making sure the foundation is solid before layering complexity on top. If you can't explain it simply in 30 seconds, the analysis hasn't done its job.
+
+These sections are mandatory. They come before everything else.
 
 ### 1. Frame the actual question
 State what we're really trying to figure out. Often different from what was initially asked.

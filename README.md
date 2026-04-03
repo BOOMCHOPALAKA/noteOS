@@ -4,7 +4,7 @@
 ## What's New
 
 **April 2026 — Skills System**
-The vault now ships with a `skills/` folder containing 11 on-demand workflow guides. Meeting processing, deep analysis, drafting in your voice, weekly reports, and more. Each one is a markdown file that walks AI through a proven workflow step by step. They load when relevant and stay out of the way when they're not. The instruction file (`CLAUDE.md`) has been trimmed to take advantage of this. Conventions that apply to every conversation stay inline. Multi-step workflows that only apply in specific contexts moved to skills, which keeps the instruction file lighter and gives AI more room to work with your actual content. [Read more about skills.](#skills-teaching-ai-how-you-work)
+The vault now ships with a `skills/` folder containing 16 on-demand workflow guides. Meeting processing, deep analysis, session capture, drafting in your voice, weekly reports, and more. Each one is a markdown file that walks AI through a proven workflow step by step. They load when relevant and stay out of the way when they're not. The instruction file (`CLAUDE.md`) has been trimmed to take advantage of this. Conventions that apply to every conversation stay inline. Multi-step workflows that only apply in specific contexts moved to skills, which keeps the instruction file lighter and gives AI more room to work with your actual content. [Read more about skills.](#skills-teaching-ai-how-you-work)
 
 ---
 
@@ -31,6 +31,8 @@ That's noteOS.
 
 **It builds itself while you use it.** I thought I'd spend hours setting up folders and organizing notes. I didn't. I just type. I tell it what happened in a meeting, what I'm thinking about, what I need to remember. It creates the notes, links them to everything related, and the structure emerges on its own. Everything connects through links and references, like Wikipedia. You find things by following connections, not by remembering which folder you put something in.
 
+**You get answers you can have much higher confidence in.** A regular AI chat will give you a wrong answer with complete confidence and you'd never know. It fills gaps with plausible guesses because it has nothing to check against. noteOS changes that. AI searches your vault before responding. When it tells you something, it's pulling from your notes, your meeting summaries, your project docs. You can ask "where did you get that?" and get a real answer. Specific files. Specific sections. Click through in Obsidian and verify. And the instruction file trains AI to say "I don't know" instead of guessing, to flag when it's inferring vs. stating fact, and to separate what it found from what it thinks. It's not perfect. But the confidence level is significantly higher than what you get from a blank chat window.
+
 The whole thing runs on plain text files and a free app. No code. No databases. You don't need to be technical. The system does the heavy lifting.
 
 ---
@@ -54,6 +56,8 @@ That's where this idea of a personal operating system comes in. Your own Wikiped
 **Treat every conversation as an island.** Notes link to other notes. AI searches your vault before answering. The denser the web gets, the better it navigates. You build that density just by using it.
 
 **Re-type the same prompts.** The instruction file and skills folder ship with tested workflows for meeting processing, daily notes, TODO filtering, deep analysis, and more. Works on the first conversation. You customize over time.
+
+**Wonder if the answer is made up.** Regular AI fills knowledge gaps with confident guesses. With a vault, AI checks your actual notes before responding. It tells you where it found something, flags when it's making an inference, and says "I don't know" when it doesn't know. You stop asking "is this right?" and start asking "show me where."
 
 Think of it this way. If you had the world's best personal assistant, their value wouldn't just be their skills. It would be the six months they spent learning how you work, what you care about, and what's going on in your life. If they quit, all of that walks out the door. This system is like writing all of that down so the next assistant, or AI, can pick it up on day one. The intelligence is in the structure, not the tool.
 
@@ -352,7 +356,7 @@ Here's something I noticed after a few months of using this system. I'd process 
 
 The fix was obvious once I saw it. Take the full workflow and put it in its own file. Not in the instruction file that loads every conversation. In a separate file that only loads when you're actually doing that specific thing. That's what skills are.
 
-The starter vault has a `skills/` folder with a bunch of these already built. Meeting processing, morning briefs, weekly status reports, deep analysis, drafting in your voice, and more. Each one is just a markdown file that walks AI through a proven workflow step by step.
+The starter vault has a `skills/` folder with these already built. Each one is just a markdown file that walks AI through a proven workflow step by step.
 
 **What this actually looks like in practice:** You drop a meeting transcript in chat. AI recognizes what you're doing, finds the meeting processing skill, and follows it. Identifies the speakers, presents a mapping for you to confirm before writing anything, searches the vault for related notes, writes the summary, extracts only the TODOs you're actually responsible for, and then gives you the "so what" layer in chat. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. All of that is in the skill. Every session. Consistent.
 
@@ -377,7 +381,11 @@ And the instruction file still works on its own. Every workflow section has a qu
 | `drafting-voice` | Learns how you write and drafts messages in your voice |
 | `deep-analysis` | Thinking partner for decisions. Pushes back, stress-tests assumptions, steelmans the other side |
 | `situation-assessment` | Paste a messy email thread or ticket history, get a clear picture of what's actually going on |
-| `session-handoff` | Captures what happened in a session so nothing falls through the cracks between conversations |
+| `next-steps` | Crystallizes "what now" after any discussion. Concrete actions, open questions, and softer suggestions |
+| `remember` | On-demand session capture. Type `/remember` and AI figures out what to save and where. Logs everything to the right notes and keeps a running session log |
+| `pickup` | Resume where you left off. Type `/pickup` and AI reads your last session's context and orients you on what's active, what's next, and what to read |
+| `session-handoff` | Proactive end-of-session context preservation. Nudges you to save before things fall through the cracks |
+| `skill-creation` | Guided intake for building new skills. Asks the right questions before writing anything |
 | `ticket-creation` | Scannable dev tickets that people actually read |
 | `codebase-investigation` | Systematic debugging. Traces code paths, checks the vault for prior context, documents findings |
 | `codebase-team-assessment` | Analyzes a repo's commit history, maps who knows what, flags knowledge gaps and bus-factor risks |

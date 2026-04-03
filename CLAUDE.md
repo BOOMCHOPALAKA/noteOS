@@ -10,10 +10,11 @@
 
 These are the non-negotiable habits that make the system work. Follow these on every message, every task, every note.
 
-1. **Search the vault before responding.** Before answering any question or starting any task, search for existing context. Check Map/ for a relevant Basecamp, search keywords across the vault, follow links from what you find. Never say "I don't have information on that" without searching first.
-2. **Link every note to the web.** Before finishing any note creation or update, verify: does this note link to at least one existing Basecamp or related note? If not, search the vault for connections before saving. No orphan notes.
-3. **Persist everything that matters.** Every session should leave the vault richer than it started. If something substantive was discussed and nothing was written down, something went wrong. When in doubt about whether to save something, ask. Never default to doing nothing.
-4. **Ask before making large changes.** Don't rewrite documents, restructure notes, or make sweeping edits unless explicitly asked. When given a small task, make a small change. When uncertain about scope, ask.
+1. **Read [[Current Context]] at the start of every session.** This is the cross-session whiteboard. It has what's active, where things left off, and what needs attention next. Read it before doing anything else. If a topic comes up mid-conversation that you haven't loaded context for, check Current Context and the linked files before responding.
+2. **Search the vault before responding.** Before answering any question or starting any task, search for existing context. Check Map/ for a relevant Basecamp, search keywords across the vault, follow links from what you find. Never say "I don't have information on that" without searching first.
+3. **Link every note to the web.** Before finishing any note creation or update, verify: does this note link to at least one existing Basecamp or related note? If not, search the vault for connections before saving. No orphan notes.
+4. **Persist everything that matters.** Every session should leave the vault richer than it started. If something substantive was discussed and nothing was written down, something went wrong. When in doubt about whether to save something, ask. Never default to doing nothing.
+5. **Ask before making large changes.** Don't rewrite documents, restructure notes, or make sweeping edits unless explicitly asked. When given a small task, make a small change. When uncertain about scope, ask.
 
 ---
 
@@ -111,6 +112,16 @@ When something in Tier 2 comes up, flag it right then: "Want me to capture this 
 - This is the safety net, not the primary mechanism.
 
 **When in doubt about which tier, default to Tier 2 (ask). Never default to doing nothing.**
+
+### After any skill produces output
+
+When a skill generates substantive output (analysis, next steps, drafted messages, meeting summaries, email reviews, etc.), check whether the vault needs updating before moving on. Common updates:
+- **Daily note:** Log what happened (emails sent, decisions made, new info surfaced)
+- **Tickets/project notes:** Update status, add history entries, note new blockers or resolutions
+- **Knowledge notes:** Update when new info changes understanding of a system, project, or person
+- **Basecamps:** Update when something changes how someone would understand the whole territory
+
+Some skills handle vault updates explicitly in their workflow. For all others, apply the same tier logic: auto-log routine updates, nudge on substantive ones, never default to doing nothing. If the skill output changed something or produced a decision, the vault should reflect that.
 
 ### Should this become a note?
 

@@ -9,6 +9,8 @@ description: Use when ending a work session, when the user says "log this," "sav
 
 Preserve session context so nothing falls through the cracks between conversations. The vault only works if things get written to it, and the biggest risk is sessions ending without capturing the thinking that happened.
 
+**Related:** The `remember` skill is the on-demand version of this. `/remember` captures everything right now. This skill is for proactive end-of-session nudges and context preservation.
+
 ## When to Trigger
 
 - When the user asks to log the session
