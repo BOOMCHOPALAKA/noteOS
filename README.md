@@ -378,15 +378,9 @@ The fix was obvious once I saw it. Take the full workflow and put it in its own 
 
 Think of it this way. The instruction file is like briefing a new assistant on your preferences. Skills are like handing them your playbook for specific tasks. "Here's exactly how I process meetings. Here's how I like my status reports structured. Here's how I want you to handle it when I say 'save this.'" The assistant doesn't need to memorize all of that on day one. They just need to know where the playbook is when the task comes up.
 
-#### Session continuity: never lose context again
+#### Session continuity
 
-The two most powerful skills in the vault are `remember` and `pickup`. They solve the single biggest frustration with AI: losing everything when you close the chat window.
-
-**`/remember`** is the save. You type it (or say "log this chat") and AI assesses everything substantive from your conversation. What decisions were made, what new information surfaced, what's still open. Then it figures out where each piece goes. Daily note, project notes, your cross-session context file, your chat log. You don't have to explain what to save or where. It reads the conversation, reads the vault, and connects the dots. It also nudges you at natural breakpoints. After a big decision, after processing a batch of meeting transcripts, after any substantial block of work. "Want me to log this session? We covered X, Y, and Z."
-
-**`/pickup`** is the load. You start a new session and type it. AI reads what was saved, traces the links to the relevant notes, and gives you a concise briefing. Where you left off. What's active. What's waiting on someone else. What needs attention. Then it asks "Where do you want to pick up from?" with a few options drawn from your active threads. You pick one and you're back in it. No re-explaining. No "so last time we were talking about..." Just pick up and go.
-
-These two work together. The quality of the pickup depends entirely on the quality of what remember saved. And remember is designed to write for continuation. Not just "what happened" but "where things stand, what's next, and what to read to get the full picture." Every entry includes links to the specific notes and sections that have the details. Your chat log becomes a running record of every session, what was discussed, and what made it into the vault. It's a trail of breadcrumbs you can trace back anytime.
+The remember/pickup workflow is covered in detail above. See [How session continuity actually works](#how-session-continuity-actually-works). The skills section here focuses on the other workflows that ship with the vault.
 
 #### What skills look like in practice
 
@@ -394,7 +388,7 @@ You drop a meeting transcript in chat. AI recognizes what you're doing, loads th
 
 You need to make a tough call. You ask AI to help you think through it. The deep analysis skill kicks in. It doesn't just list pros and cons. It challenges your assumptions, steelmans the other side, separates what you actually know from what you're inferring, and makes the tradeoffs explicit. It pushes back when you're rationalizing. It tells you what it doesn't know. The instruction file can't hold that level of detail for every workflow. But a skill can.
 
-You're done for the day. You type `/remember`. Everything gets saved, linked, timestamped. Tomorrow you type `/pickup`. You're caught up in 30 seconds and working again.
+You've covered a lot of ground in this session. You type `/remember`. Everything gets saved, linked, timestamped. Tomorrow you type `/pickup`. Caught up in 30 seconds.
 
 **How you use them depends on your AI tool:**
 
