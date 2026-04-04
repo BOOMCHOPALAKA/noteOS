@@ -350,6 +350,15 @@
             <p>You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you've had it help draft an email, summarize a meeting, do some research. Maybe you've even set up custom instructions or used the memory features.</p>
             <p>But there's a ceiling. And if you've used these tools enough, you've hit your head on it. Every conversation seems to start from scratch. You re-explain your projects, your thoughts on something, the background, your preferences. You tell it things you've told it before. You double-check its answers because you know it's filling gaps with confident guesses. It's like working with a brilliant intern. Smart, fast, capable. But every morning they show up having forgotten everything from yesterday. So you manage them. You re-explain context. You verify their work. You get useful output, but it takes effort to get there every time.</p>
             <p>That's where this idea of a personal operating system comes in. What if instead of managing an intern, you were working with a partner who already knew your projects, your history, and your preferences? Who you could trust to check their own work against real context? Who got sharper the more you worked together, not because the AI got smarter, but because the system around it got richer? That's noteOS.</p>
+
+            <h3 class="subsection-title" id="how-session-continuity-actually-works">How session continuity actually works</h3>
+            <p>Two commands. <code>/remember</code> is the save. <code>/pickup</code> is the load.</p>
+            <p>You're in a session and you've covered a lot of ground. Decisions made, new information surfaced, things still open. You type <code>/remember</code>. AI assesses everything substantive from the conversation, figures out where each piece goes. Daily note, project notes, your cross-session context file, your chat log. You don't have to explain what to save or where. It reads the conversation, reads the vault, and connects the dots. It also nudges you when it notices a natural breakpoint. After a big decision, after processing a meeting, after any substantial block of work. Use it whenever it feels right. Mid-session, end of session, multiple times in a long conversation. Think of it like hitting save.</p>
+            <p>There's a practical reason this matters beyond convenience. AI tools have a context window. The longer a conversation goes, the more likely things get missed, repeated, or slightly off. Starting fresh conversations regularly is genuinely better practice. But only if you have a way to carry the important stuff forward. That's what remember does. You get the benefits of a clean slate without the cost of lost context.</p>
+            <p>Next session. You type <code>/pickup</code>. AI reads what was saved, traces the links to the relevant notes, and gives you a concise briefing. Where you left off. What's active. What's waiting on someone else. What needs attention. Then it asks where you want to pick up from. You pick one and you're back in it.</p>
+            <p>Here's what's actually happening. When you run <code>/remember</code>, AI writes to your vault. Meeting notes and updates go to your daily note. Status changes go to project notes. A context file tracks what's active, what's blocked, and what's next. A chat log records what was discussed and what got saved. Everything gets linked together. When you run <code>/pickup</code>, AI reads that context file, follows the links, and reconstructs where you are. It's not magic. It's just well-organized text files that AI knows how to read and write.</p>
+            <p>noteOS is already set up to persist things proactively as you work. Auto-logging routine items, nudging you when something substantive comes up that should be captured. But <code>/remember</code> is you taking control. It's the manual save that makes sure nothing gets missed. The system tries to catch things on its own. Remember guarantees it.</p>
+            <p>That's the loop. Save when you've done meaningful work. Load when you're back. The more you use it, the more natural it gets.</p>
         </div>
     </section>
 
@@ -405,7 +414,7 @@
                     </div>
                     <div class="changes-after">
                         <div class="changes-label">&nbsp;</div>
-                        <div class="changes-text">Notes link to other notes by design. AI searches your vault before answering and connects new content to what's already there. The denser the web, the better it navigates. You build that density just by using it.</div>
+                        <div class="changes-text"><code>/remember</code> saves where you are. <code>/pickup</code> gets you back. Your notes link to each other, AI searches across them, and the context compounds over time. New sessions start informed, not blank.</div>
                     </div>
                 </div>
 
