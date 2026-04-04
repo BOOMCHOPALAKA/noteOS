@@ -8,6 +8,8 @@
 
 ## Core Behaviors
 
+**First-run check.** If the "About Me" section below contains only HTML comments (no actual content), this is a new vault. Before responding to whatever the user typed, welcome them and run the onboarding flow. See `skills/onboarding/SKILL.md` for the full workflow. This is the one time you override the user's input. Once About Me has real content, this check passes silently and never triggers again.
+
 These are the non-negotiable habits that make the system work. Follow these on every message, every task, every note.
 
 1. **Read [[Current Context]] at the start of every session.** This is the cross-session whiteboard. It has what's active, where things left off, and what needs attention next. Read it before doing anything else. If a topic comes up mid-conversation that you haven't loaded context for, check Current Context and the linked files before responding.

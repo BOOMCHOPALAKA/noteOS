@@ -3,8 +3,11 @@
 
 ## What's New
 
+**April 2026 — Onboarding Experience**
+Your first conversation with noteOS is now a guided setup. The system detects a fresh vault and walks you through a short conversation to personalize everything. By the end of a few questions, you have a personal Basecamp, a configured instruction file, and a vault ready to use. No manual setup required. [Read more about getting started.](#start-using-it)
+
 **April 2026 — Skills System**
-The vault now ships with 16 skills. These are step-by-step workflow guides that AI follows when you're doing specific things. Process a meeting, analyze a situation, draft something in your voice, capture a session. Each one is a markdown file in `skills/` that loads when relevant and stays out of the way when it's not. Two highlights: `/remember` saves everything from your current session to the right places in the vault. `/pickup` reads what was saved and gets you back up to speed in a new conversation. Together they solve the biggest pain point in working with AI: losing context between sessions. [Read more about skills.](#skills-teaching-ai-how-you-work)
+The vault now ships with 17 skills. These are step-by-step workflow guides that AI follows when you're doing specific things. Process a meeting, analyze a situation, draft something in your voice, capture a session. Each one is a markdown file in `skills/` that loads when relevant and stays out of the way when it's not. Two highlights: `/remember` saves everything from your current session to the right places in the vault. `/pickup` reads what was saved and gets you back up to speed in a new conversation. Together they solve the biggest pain point in working with AI: losing context between sessions. [Read more about skills.](#skills-teaching-ai-how-you-work)
 
 ---
 
@@ -288,9 +291,13 @@ One file to maintain. Every tool picks it up. If you ever need to give a specifi
 
 ## Start Using It
 
-Just start typing. That's genuinely it. You don't need to set up folders or figure out an organizational scheme. Just chat with AI the way you normally would, but now it's building your knowledge base as you go.
+Just start typing. That's genuinely it. Say hello, ask a question, tell it what you're working on. Anything.
 
-Here are some things you can try right out of the gate:
+**Your first session is special.** The system detects that it's a fresh vault and kicks off a short onboarding conversation. It'll ask you a few questions. Who you are, what you're working on, how you like to communicate. As you answer, it builds out your vault in real time. Your personal profile, your instruction file, your first daily note. By the end of 5-7 questions, the system knows who you are and you have a personal Basecamp you can go browse. Every session after that starts with that context already loaded.
+
+If you'd rather skip the onboarding and just start using it, just say so. You can always run `/onboarding` later to set up your profile.
+
+After onboarding, here are some things you can try:
 
 - **"Give me a morning brief."** Works on day one. Pulls today's weather, top headlines, and whatever's active in your vault. Sparse at first. After a few weeks it knows your open TODOs, your active projects, what happened yesterday. It grows with your vault.
 - **"Create a daily note for today. Here's what I worked on..."** and give it a few bullets about your day.
@@ -400,10 +407,11 @@ And the instruction file still works on its own. Every workflow section has a qu
 
 #### What's included
 
-The starter vault ships with 16 skills:
+The starter vault ships with 17 skills:
 
 | Skill | What it does |
 |---|---|
+| `onboarding` | First-run experience. Detects a fresh vault and runs a guided conversation to personalize everything. Creates your personal Basecamp, fills in the instruction file, and seeds the vault |
 | `remember` | On-demand session capture. Type `/remember` and AI figures out what to save and where. Updates your notes, context file, and chat log. Nudges proactively at natural breakpoints |
 | `pickup` | Resume where you left off. Type `/pickup` and AI reads your last session's context, briefs you, and asks where you want to pick up from |
 | `meeting-processing` | Speaker ID, structured summaries, TODO extraction, vault linking, takeaway analysis |
