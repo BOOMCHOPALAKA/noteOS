@@ -95,15 +95,26 @@ Before reporting back, check: is there anything substantive from this session th
 
 Don't be generic ("anything else to save?"). Name what and where.
 
-### 6. Report Back
+### 6. Note & Basecamp Evaluation
+
+After the persistence sweep, evaluate whether any topic from this session has outgrown its current home. Three signals:
+
+1. **Basecamp candidate.** A topic came up that has (or is accumulating) 3+ related notes, and there's no hub to orient from. The test: "Would a new session need to understand this territory, not just one note within it?" Search the vault to confirm no Basecamp already exists for the topic and to count how many notes touch it.
+
+2. **Standalone note candidate.** Something substantive was discussed that's currently only captured in a daily note entry or conversation, but it'll be referenced independently later. A decision with reasoning, an analysis with findings, a plan with steps.
+
+3. **Neither.** Most sessions. The daily note and existing notes handled it. Don't force it. If nothing warrants a new note or Basecamp, say nothing about this step.
+
+If something qualifies, make a specific suggestion: "X is starting to feel like Basecamp territory. You've got [[note A]], [[note B]], and [[note C]] all touching it. Want me to set one up?" Or: "The analysis we did on Y has enough substance to stand alone. Right now it's just in the daily note. Want a dedicated note?" Never create without asking.
+
+### 7. Report Back
 
 After all updates, output a brief summary in chat:
 - Which files were updated
 - What was captured where
 - Anything you chose NOT to persist and why (if relevant)
-- Any new notes you'd recommend creating (don't create without asking)
 
-### 7. Session Recap
+### 8. Session Recap
 
 After the persistence sweep, close with a short narrative recap of the conversation. This captures the arc, not just the artifacts. Write it as a natural paragraph: what the session started with, what it led to, where things landed. Keep it to 3-5 sentences. The goal is that the user can skim it and immediately remember the flow of the conversation, not just what files changed.
 
