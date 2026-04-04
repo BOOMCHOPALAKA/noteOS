@@ -336,6 +336,7 @@
             <p>...where you had a personal Wikipedia for your life. Work, side projects, health, finances, travel, adventures, recipes. All of it connected, searchable, and growing every day. Fully interactive and conversational. You ask it questions and it answers with the full weight of everything you've ever put into it. If you can make a folder on your computer and type a message to AI, you're already there.</p>
             <p>That's noteOS.</p>
             <p><strong>It remembers what you don't.</strong> You had a conversation with your doctor three months ago. Or a contractor gave you a quote. Or you made a decision in a meeting and can't remember the reasoning. Instead of digging through emails or hoping you wrote it down somewhere, you ask. The system traces through your notes and gives you the answer with full context. Not because you organized everything perfectly. Because the system did.</p>
+            <p><strong>You pick up right where you left off.</strong> You close your laptop Friday afternoon in the middle of a complex project. Or halfway through planning a trip. Or after a long conversation about a decision you're weighing. Monday morning you open a new chat, pick up where you left off, and you're back in it. What you were working on, where you stopped, what's still open. No re-explaining. No scrolling through old chats trying to reconstruct what happened.</p>
             <p><strong>Things start connecting themselves.</strong> You're planning a ski trip to the Alps and you're reminded of a hotel your friend raved about two years ago in a completely different conversation. You're experimenting with a new recipe and it connects back to a cooking class you took on vacation. Your life is full of these threads. The system finds them for you.</p>
             <p><strong>It builds itself while you use it.</strong> I thought I'd spend hours setting up folders and organizing notes. I didn't. I just type. I tell it what happened in a meeting, what I'm thinking about, what I need to remember. It creates the notes, links them to everything related, and the structure emerges on its own. Everything connects through links and references, like Wikipedia. You find things by following connections, not by remembering which folder you put something in.</p>
             <p>The whole thing runs on plain text files and a free app. No code. No databases. You don't need to be technical. The system does the heavy lifting.</p>
@@ -347,8 +348,17 @@
         <div class="container">
             <h2>What This Actually Is</h2>
             <p>You're probably already using AI. ChatGPT, Claude, Gemini, whatever. Maybe you've had it help draft an email, summarize a meeting, do some research. Maybe you've even set up custom instructions or used the memory features.</p>
-            <p>But there's a ceiling. And if you've used these various AI chatbots enough, you've hit your head on it. Carrying on a conversation in one chat, then moving to another session and bringing something up expecting it to just know. But it acts like it doesn't have the slightest clue. Or constantly having to give it background info on something for the umpteenth time.</p>
-            <p>That's where this idea of a personal operating system comes in. Your own Wikipedia that you're both the editor and reader of, with AI as the engine that helps you build and search through it all. Your projects, your ideas, your info, your plans, your decisions, your preferences, your life. All in files you control on your computer. Plain text. Nothing proprietary. It gets more useful the more you put into it. That's noteOS.</p>
+            <p>But there's a ceiling. And if you've used these tools enough, you've hit your head on it. Every conversation seems to start from scratch. You re-explain your projects, your thoughts on something, the background, your preferences. You tell it things you've told it before. You double-check its answers because you know it's filling gaps with confident guesses. It's like working with a brilliant intern. Smart, fast, capable. But every morning they show up having forgotten everything from yesterday. So you manage them. You re-explain context. You verify their work. You get useful output, but it takes effort to get there every time.</p>
+            <p>That's where this idea of a personal operating system comes in. What if instead of managing an intern, you were working with a partner who already knew your projects, your history, and your preferences? Who you could trust to check their own work against real context? Who got sharper the more you worked together, not because the AI got smarter, but because the system around it got richer? That's noteOS.</p>
+
+            <h3 class="subsection-title" id="how-session-continuity-actually-works">How session continuity actually works</h3>
+            <p>Two commands. <code>/remember</code> is the save. <code>/pickup</code> is the load.</p>
+            <p>You're in a session and you've covered a lot of ground. Decisions made, new information surfaced, things still open. You type <code>/remember</code>. AI assesses everything substantive from the conversation, figures out where each piece goes. Daily note, project notes, your cross-session context file, your chat log. You don't have to explain what to save or where. It reads the conversation, reads the vault, and connects the dots. It also nudges you when it notices a natural breakpoint. After a big decision, after processing a meeting, after any substantial block of work. Use it whenever it feels right. Mid-session, end of session, multiple times in a long conversation. Think of it like hitting save.</p>
+            <p>There's a practical reason this matters beyond convenience. AI tools have a context window. The longer a conversation goes, the more likely things get missed, repeated, or slightly off. Starting fresh conversations regularly is genuinely better practice. But only if you have a way to carry the important stuff forward. That's what remember does. You get the benefits of a clean slate without the cost of lost context.</p>
+            <p>Next session. You type <code>/pickup</code>. AI reads what was saved, traces the links to the relevant notes, and gives you a concise briefing. Where you left off. What's active. What's waiting on someone else. What needs attention. Then it asks where you want to pick up from. You pick one and you're back in it.</p>
+            <p>Here's what's actually happening. When you run <code>/remember</code>, AI writes to your vault. Meeting notes and updates go to your daily note. Status changes go to project notes. A context file tracks what's active, what's blocked, and what's next. A chat log records what was discussed and what got saved. Everything gets linked together. When you run <code>/pickup</code>, AI reads that context file, follows the links, and reconstructs where you are. It's not magic. It's just well-organized text files that AI knows how to read and write.</p>
+            <p>noteOS is already set up to persist things proactively as you work. Auto-logging routine items, nudging you when something substantive comes up that should be captured. But <code>/remember</code> is you taking control. It's the manual save that makes sure nothing gets missed. The system tries to catch things on its own. Remember guarantees it.</p>
+            <p>That's the loop. Save when you've done meaningful work. Load when you're back. The more you use it, the more natural it gets.</p>
         </div>
     </section>
 
@@ -404,7 +414,7 @@
                     </div>
                     <div class="changes-after">
                         <div class="changes-label">&nbsp;</div>
-                        <div class="changes-text">Notes link to other notes by design. AI searches your vault before answering and connects new content to what's already there. The denser the web, the better it navigates. You build that density just by using it.</div>
+                        <div class="changes-text"><code>/remember</code> saves where you are. <code>/pickup</code> gets you back. Your notes link to each other, AI searches across them, and the context compounds over time. New sessions start informed, not blank.</div>
                     </div>
                 </div>
 
@@ -663,8 +673,10 @@
     <section id="start-using">
         <div class="container">
             <h2>Start Using It</h2>
-            <p>Just start typing. That's genuinely it. You don't need to set up folders or figure out an organizational scheme. Just chat with AI the way you normally would, but now it's building your knowledge base as you go.</p>
-            <p>Here are some things you can try right out of the gate:</p>
+            <p>Just start typing. That's genuinely it. Say hello, ask a question, tell it what you're working on. Anything.</p>
+            <p><strong>Your first session is special.</strong> The system detects that it's a fresh vault and kicks off a short onboarding conversation. It'll ask you a few questions. Who you are, what you're working on, how you like to communicate. As you answer, it builds out your vault in real time. Your personal profile, your instruction file, your first daily note. By the end of 5-7 questions, the system knows who you are and you have a personal Basecamp you can go browse. Every session after that starts with that context already loaded.</p>
+            <p>If you'd rather skip the onboarding and just start using it, just say so. You can always run <code>/onboarding</code> later to set up your profile.</p>
+            <p>After onboarding, here are some things you can try:</p>
             <ul class="clean-list">
                 <li><strong>"Give me a morning brief."</strong> Works on day one. Pulls today's weather, top headlines, and whatever's active in your vault. Sparse at first. After a few weeks it knows your open TODOs, your active projects, what happened yesterday. It grows with your vault.</li>
                 <li><strong>"Create a daily note for today. Here's what I worked on..."</strong> and give it a few bullets about your day.</li>
@@ -741,19 +753,17 @@
             <p>The fix was obvious once I saw it. Take the full workflow and put it in its own file. Not in the instruction file that loads every conversation. In a separate file that only loads when you're actually doing that specific thing. That's what skills are. Markdown files that walk AI through a proven workflow step by step. Consistent results, every session.</p>
             <p>The instruction file tells AI who you are. Skills tell AI how to do specific things for you. The instruction file is always loaded. Skills load on demand. That's what makes the whole system scale. Think of the instruction file as briefing a new assistant on your preferences. Skills are the playbook for specific tasks. The assistant doesn't need to memorize every workflow on day one. They just need to know where the playbook is when the task comes up.</p>
 
-            <h3 class="subsection-title">Session continuity: never lose context again</h3>
-            <p>The two most powerful skills in the vault are <code>remember</code> and <code>pickup</code>. They solve the single biggest frustration with AI: losing everything when you close the chat window.</p>
-            <p><strong><code>/remember</code></strong> is the save. Type it and AI assesses everything from your conversation. What decisions were made, what new information surfaced, what's still open. It figures out where each piece goes. Daily note, project notes, your cross-session context file, your chat log. You don't explain what to save or where. It reads the conversation, reads the vault, and connects the dots. It also nudges you at natural breakpoints. After a big decision, after processing transcripts, after any substantial block of work.</p>
-            <p><strong><code>/pickup</code></strong> is the load. Start a new session, type it, and AI reads what was saved, traces the links, and briefs you. Where you left off. What's active. What's waiting on someone else. Then it asks "Where do you want to pick up from?" with a few options. You pick one and you're back in it. No re-explaining. Just pick up and go.</p>
-            <p>These two work together. Remember writes for continuation. Not just "what happened" but "where things stand, what's next, and what to read." Your chat log becomes a running record you can trace back anytime.</p>
+            <h3 class="subsection-title">Session continuity</h3>
+            <p>The remember/pickup workflow is covered in detail above. See <a href="#how-session-continuity-actually-works">How session continuity actually works</a>. The skills section here focuses on the other workflows that ship with the vault.</p>
 
             <h3 class="subsection-title">What skills look like in practice</h3>
             <p>You drop a meeting transcript in chat. AI loads the meeting processing skill and follows it. Identifies the speakers, presents a mapping for you to confirm, searches the vault for related notes, writes the summary, extracts only the TODOs you're responsible for, and gives you the "so what" layer. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. Every session. Consistent.</p>
             <p>You need to make a tough call. The deep analysis skill kicks in. It doesn't list pros and cons. It challenges your assumptions, steelmans the other side, separates what you know from what you're inferring, and makes the tradeoffs explicit. It pushes back when you're rationalizing. It tells you what it doesn't know.</p>
-            <p>You're done for the day. Type <code>/remember</code>. Everything gets saved, linked, timestamped. Tomorrow, type <code>/pickup</code>. Caught up in 30 seconds.</p>
+            <p>You've covered a lot of ground in this session. Type <code>/remember</code>. Everything gets saved, linked, timestamped. Tomorrow, type <code>/pickup</code>. Caught up in 30 seconds.</p>
 
-            <h3 class="subsection-title">16 skills included</h3>
+            <h3 class="subsection-title">17 skills included</h3>
             <div class="skills-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; margin: 24px 0; font-size: 0.95rem;">
+                <div><strong>Onboarding</strong> . First-run experience. Detects a fresh vault, walks you through setup, creates your personal Basecamp</div>
                 <div><strong>Remember</strong> . Type <code>/remember</code> and AI saves what matters, where it matters, with links and timestamps</div>
                 <div><strong>Pickup</strong> . Type <code>/pickup</code> to resume where you left off with a concise briefing</div>
                 <div><strong>Meeting Processing</strong> . Speaker ID, summaries, TODO extraction, vault linking, takeaway analysis</div>
