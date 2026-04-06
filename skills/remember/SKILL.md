@@ -116,7 +116,7 @@ After all updates, output a brief summary in chat:
 
 ### 8. Session Recap
 
-After the persistence sweep, close with a short narrative recap of the conversation. This captures the arc, not just the artifacts. Write it as a natural paragraph: what the session started with, what it led to, where things landed. Keep it to 3-5 sentences. The goal is that the user can skim it and immediately remember the flow of the conversation, not just what files changed.
+After the persistence sweep, close with a bulleted recap of the conversation. Each bullet is one topic or thread, with a sentence on what happened and where it landed. This captures the arc, not just the artifacts. The goal is that the user can skim the bullets and immediately see what was covered, not just what files changed. Keep each bullet to 1-2 sentences. Group related items into the same bullet.
 
 **Always close with a natural reminder about the Chat Log.** The Chat Log is a running record of all sessions, what was discussed, what got persisted, and key context. Remind the user it's there if they want to review. Vary the phrasing. Examples: "All session entries live in [[Chat Log]] if you want to look back at what's been captured." / "Everything's logged. [[Chat Log]] has the full history across sessions."
 
