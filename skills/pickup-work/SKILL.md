@@ -28,6 +28,10 @@ Work-focused variant of /pickup. Same read-and-orient workflow, but filters the 
 
 ## Workflow
 
+### 0. Verify the Current Date
+
+Run `date '+%Y-%m-%d %H:%M %Z'` first. The gap between "last time" and "now," and which daily note is today's, both depend on the real date. Don't rely on the system context date, which is set at session start and may be stale. If file timestamps or Chat Log dates conflict with the assumed date, trust those.
+
 ### 1. Read Current Context
 
 Start with Current Context (or whatever cross-session whiteboard the vault uses). Identify which threads are work vs. personal. Note dates and linked files for work threads.

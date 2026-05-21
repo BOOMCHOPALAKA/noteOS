@@ -15,6 +15,10 @@ Same as daily-email-digest: source-agnostic. Use a connected email integration, 
 
 ## Workflow
 
+### 0. Verify the Current Date
+
+Run `date '+%Y-%m-%d %H:%M %Z'` before pulling anything. The target week is calculated from "now," so a wrong date silently pulls the wrong range. Don't rely on the system context date, which is set at session start and may be stale. If email timestamps conflict with the assumed date, trust the email timestamps.
+
 ### 1. Load Vault Context
 
 - Read [[Current Context]] for active threads

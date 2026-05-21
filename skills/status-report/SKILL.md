@@ -15,6 +15,8 @@ The cadence sets the window and the altitude. Daily is a tight "what moved today
 
 ## Sourcing Content
 
+**Verify the current date first.** Run `date '+%Y-%m-%d %H:%M %Z'`. The reporting period (the day, week range, or month) and the report's own date stamp both come from the system clock, not an assumed date. Don't rely on the system context date, which is set at session start and may be stale. A wrong date misframes the period for a stakeholder-facing artifact.
+
 Source from the time window the cadence implies (today for daily, the week for weekly, the month for monthly):
 
 1. Read the daily notes covering the window (`Calendar/[Month]/[Week]/`)

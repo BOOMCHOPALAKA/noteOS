@@ -17,6 +17,10 @@ Transcript files usually land in `Downloads/` for processing, or the user pastes
 
 ## Workflow
 
+### 0. Verify the Current Date
+
+Run `date '+%Y-%m-%d %H:%M %Z'` before writing. The summary lands in a daily note dated by the real date (or the meeting's date, if it's a backlog transcript). Don't rely on the system context date, which is set at session start and may be stale.
+
 ### 1. Speaker Identification (Always First)
 
 Before writing anything, map `Speaker N` labels to real people.

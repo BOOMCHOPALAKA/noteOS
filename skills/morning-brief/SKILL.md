@@ -13,6 +13,10 @@ Daily morning briefing that orients the user on what's active, what needs attent
 
 ## Sections
 
+### 0. Verify the Current Date
+
+Run `date '+%Y-%m-%d %H:%M %Z'` to get the actual date before anything else. A morning brief is inherently dated: the daily note it routes to and the "today" framing both depend on the real date. Don't rely on the system context date, which is set at session start and may be stale. If live data (file timestamps, news dates) conflicts with the assumed date, trust the live data.
+
 ### 1. Vault. State of Things
 
 Read today's daily note and the previous day's note. Summarize what's active, what moved, and what needs attention.

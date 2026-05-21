@@ -23,6 +23,10 @@ The workflow below is the same regardless of how the emails arrive. If you have 
 
 ## Workflow
 
+### 0. Verify the Current Date
+
+Run `date '+%Y-%m-%d %H:%M %Z'` before pulling anything. "Today" frames the whole digest: which emails count, which daily note it logs to. Don't rely on the system context date, which is set at session start and may be stale. If email timestamps conflict with the assumed date, trust the email timestamps.
+
 ### 1. Load Vault Context
 
 Before touching emails:
