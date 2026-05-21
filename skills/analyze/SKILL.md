@@ -46,7 +46,7 @@ Call out which category every key claim falls into. "I'm not sure that tracks be
 - **Inference:** "Based on how similar deals have worked (vendor note from last quarter), this should follow the same pattern. But nobody explicitly confirmed it for this case."
 - **Assumption:** "I'm assuming these four steps are the right sequence. That's me connecting dots between the email thread and the meeting notes. Nobody stated this chain end to end."
 
-**Connecting dots is encouraged.** Synthesizing across sources, spotting patterns nobody stated explicitly, building a coherent picture from scattered context. That's some of the most valuable output. Keep doing it. The rule is not "stop inferring." The rule is "connect the dots AND tell the user which ones you drew yourself." Both the synthesis and the transparency are valuable. They just need to be distinguishable.
+**Connecting dots is encouraged for interpretation, not for facts.** Synthesizing across sources, spotting patterns nobody stated explicitly, building a coherent picture from scattered context. That's some of the most valuable output. Keep doing it. But the synthesis stays in the "my read" / "interpretation" / "could be" bucket. **Inferred connections must NOT travel downstream as facts.** When this analysis flows into a note, status report, message, or stakeholder copy, the inferred connections need to be stripped back to what the source actually supports. Inline confidence tags don't always survive downstream. By the time the analysis is repackaged for someone else's eyes, the tags are gone and the synthesis reads as fact. The rule: synthesize for thinking, source for writing. See `skills/_shared/source-discipline.md`.
 
 **Never let the narrative smooth over the gaps.** A clean explanation feels authoritative even when it's partly guesswork. If a step in the chain is unverified, flag it even if it breaks the flow. "I don't actually know if this step works this way" is more useful than a plausible-sounding paragraph.
 
@@ -58,6 +58,20 @@ The most valuable contribution is often the angle that wasn't in the original qu
 
 ### Preserve relationships and context
 Analysis isn't cold optimization. Real decisions happen between real people. Factor that in without letting it override the math.
+
+## Length ceilings
+
+Analysis is the skill most prone to sprawl. Hard caps:
+
+- **TL;DR:** 2-4 sentences. Not a paragraph
+- **ELI5:** 1 short paragraph. Not two
+- **Each angle in the multi-angle breakdown:** ~150 words, 3-5 bullets. If an angle needs more, it's probably two angles
+- **Total analysis:** ~800 words. This is a hard ceiling, not a suggestion. The escape valve is `go-deeper`, not a longer first pass
+- **"So what" / synthesis:** 3-5 bullets. Not a closing essay
+
+Skip any section that has nothing to say. Don't manufacture angles to hit a count. 3 sharp angles beat 7 padded ones.
+
+**If the first pass leaves something thin on purpose, that's the right move.** The user can pull any thread deeper with `go-deeper` ("expand on the tradeoffs," "more on the second angle," "tell me more about X"). The composability is the point: tight first pass, explicit deeper dives on request. Don't try to front-load depth to avoid the expansion turn. The expansion turn is the feature.
 
 ## Structure (how to organize the output)
 
@@ -96,7 +110,29 @@ Not a summary. The synthesis: what changed from what we knew before, what patter
 
 ## When to persist findings
 
-Always ask. Deep analysis usually produces insights worth capturing: existing note update, standalone analysis note, Basecamp update, or daily note entry.
+Always ask. Analysis usually produces insights worth capturing: existing note update, standalone analysis note, Basecamp update, or daily note entry.
+
+## Cut Pass
+
+Before sending, run a cut pass:
+- Any angle that's really just restating another angle?
+- Any bullet that's "also X" without adding a distinct point?
+- Any transitional framing ("Now let's turn to leverage")? Cut it
+- Any closing paragraph that repeats the "so what" bullets? Cut it
+- Any section padded because the source was rich, not because there's something to say?
+- Would the reader get through this if they were rushed?
+
+Cut. Split is not an option. Short is the goal.
+
+## Hard Rules on Length
+
+- **Brevity:** Follow `skills/_shared/brevity.md` for canonical padding patterns and cut test. The ceilings in this skill are additive
+- **Rich source material does not justify longer output.** A 50-page doc gets the same analysis length as a 2-page one. The work is harder, the output is the same
+- **Don't restate the question before answering.** Jump to the frame
+- **Don't summarize what you're about to say.** Say it
+- **No em dashes.** Periods to separate thoughts
+- **No dramatized framing.** No "changes everything," no escalating reveals
+- **Skip empty sections.** If "What we know" has no sourced facts, don't write the header and one bullet. Cut the section
 
 ## What this is NOT
 
