@@ -3,11 +3,14 @@
 
 ## What's New
 
+**May 2026 — More skills, cleaner sourcing**
+The skill library grew to 22. New analytical skills: `analyze` (thinking partner), `go-deeper` (expand any thread on request), and `tldr` (stakeholder talking points). New email skills: a daily digest, a weekly digest, and deeper email analysis. Plus `update-notes` for quick mid-conversation vault flushes. The skills that write to your vault or go out to stakeholders now share a source-discipline rule: every concrete claim has to trace to a real source, and operational language ("going live," "should be ready") never gets upgraded into milestone language ("launched," "shipped"). The goal is a vault you can trust and reports you can stand behind.
+
 **April 2026 — Onboarding Experience**
 Your first conversation with noteOS is now a guided setup. The system detects a fresh vault and walks you through a short conversation to personalize everything. By the end of a few questions, you have a personal Basecamp, a configured instruction file, and a vault ready to use. No manual setup required.
 
 **April 2026 — Skills System**
-The vault now ships with 18 skills. Step-by-step workflow guides that AI follows for specific tasks. Process a meeting, analyze a situation, draft something in your voice, capture a session. Each one is a markdown file in `skills/` that loads when relevant and stays out of the way when it's not. Two highlights: `/remember` saves everything from your current session to the right places in the vault. `/pickup` reads what was saved and gets you back up to speed in a new conversation. Together they solve the biggest pain point in working with AI: losing context between sessions.
+The vault now ships with a library of skills. Step-by-step workflow guides that AI follows for specific tasks. Process a meeting, analyze a situation, draft something in your voice, capture a session. Each one is a markdown file in `skills/` that loads when relevant and stays out of the way when it's not. Two highlights: `/remember` saves everything from your current session to the right places in the vault. `/pickup` reads what was saved and gets you back up to speed in a new conversation. Together they solve the biggest pain point in working with AI: losing context between sessions.
 
 ---
 
@@ -252,11 +255,11 @@ The instruction file tells AI who you are. Skills tell AI how to do specific thi
 
 You drop a meeting transcript in chat. AI loads the meeting processing skill and follows it. Identifies the speakers, presents a mapping for you to confirm, searches the vault for related notes, writes the summary, extracts only the TODOs you're responsible for, and gives you the "so what" layer. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. Every session. Consistent.
 
-You need to make a tough call. The deep analysis skill kicks in. It doesn't list pros and cons. It challenges your assumptions, steelmans the other side, separates what you know from what you're inferring. It pushes back when you're rationalizing.
+You need to make a tough call. The analyze skill kicks in. It doesn't list pros and cons. It challenges your assumptions, steelmans the other side, separates what you know from what you're inferring. It pushes back when you're rationalizing. If you want to go deeper on any single thread, the go-deeper skill expands it.
 
 You've covered a lot of ground in this session. Type `/remember`. Everything gets saved, linked, timestamped. Tomorrow, type `/pickup`. Caught up in 30 seconds.
 
-#### 18 skills included
+#### 22 skills included
 
 | Skill | What it does |
 |---|---|
@@ -264,15 +267,20 @@ You've covered a lot of ground in this session. Type `/remember`. Everything get
 | Remember | Type `/remember` and AI saves what matters, where it matters, with links and timestamps |
 | Pickup | Type `/pickup` to resume where you left off with a concise briefing |
 | Pickup (Work) | Work-only variant of pickup. Filters to professional threads, pulls repo updates, groups by client |
-| Meeting Processing | Speaker ID, summaries, TODO extraction, vault linking, takeaway analysis |
-| Deep Analysis | Thinking partner that pushes back and stress-tests your assumptions |
+| Meeting Transcript Processing | Speaker ID, summaries, TODO extraction, vault linking, takeaway analysis. Works with any transcript (Zoom, Teams, Otter, paste) |
+| Analyze | Thinking partner that pushes back and stress-tests your assumptions |
+| Go Deeper | Expand any thread of a prior analysis on request. Tight first pass, deeper dives when you ask |
+| TLDR | Stakeholder-ready talking points. Default headline-and-bullets, or a five-section exec briefing |
 | Situation Assessment | Paste a messy thread, get a clear picture of what's going on |
 | Next Steps | Crystallizes "what now" after any discussion |
+| Email Analysis | Pattern recognition across email exports. Surfaces what fell through the cracks |
+| Daily Email Digest | Quick daily pull, filtered for noise, cross-referenced against your vault |
+| Weekly Email Digest | Pattern-level view of the week. What moved, what's stale, what's waiting on you |
+| Update Notes | Lightweight mid-conversation vault flush. "Update" and it just does it |
 | Drafting Voice | Learns how you write and drafts messages in your voice |
 | Morning Brief | Daily briefing with vault state, weather, and news |
-| Weekly Status Report | Sourcing, structure, and external sharing format |
+| Status Report | Daily, weekly, or monthly. Sourcing, structure, and external sharing format |
 | Activity Logging | Fitness and activity tracking to daily notes |
-| Session Handoff | Proactive nudges to save context at natural breakpoints |
 | Skill Creation | Guided intake for building your own skills |
 | Ticket Creation | Scannable dev tickets that people actually read |
 | Codebase Investigation | Systematic debugging with vault context |
