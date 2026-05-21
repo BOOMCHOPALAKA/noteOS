@@ -15,10 +15,12 @@ The cadence sets the window and the altitude. Daily is a tight "what moved today
 
 ## Sourcing Content
 
-1. Read daily notes for the week (`Calendar/[Month]/[Week]/`)
-2. Read any meeting summaries processed that week
+Source from the time window the cadence implies (today for daily, the week for weekly, the month for monthly):
+
+1. Read the daily notes covering the window (`Calendar/[Month]/[Week]/`)
+2. Read any meeting summaries processed in the window
 3. Check relevant project notes, Basecamps, and tickets
-4. Cross-reference previous week's report if one exists (IN PROGRESS and UPCOMING items become this week's COMPLETED or carry forward)
+4. Cross-reference the previous report if one exists (IN PROGRESS and UPCOMING items become this period's COMPLETED or carry forward)
 
 ## Report Structure
 
@@ -50,6 +52,27 @@ Standout callouts only: exceptional work, biggest risks, systemic issues. 2-3 bu
 - Informative and succinct. No filler, no buzzwords, no alarmist language.
 - Plain language. Let numbers and details speak for themselves.
 - Bold item names in COMPLETED and IN PROGRESS.
+
+## Source Discipline (critical)
+
+A status report goes to people who will act on it and quote it to their own stakeholders. A claim that's wrong here propagates. Every concrete claim (a milestone, a date, a number, a status, a decision, an attribution) must trace to a real source: a daily note entry, a meeting summary, a deploy log, a commit, a message, or a direct statement.
+
+The trap is translating operational language into milestone language. They are not interchangeable:
+
+| Source said | Don't write | Write |
+|---|---|---|
+| "going live Monday" | "launched Monday" | "going live Monday (per [source])" |
+| "should be ready" | "shipped" / "done" | "expected ready, not yet confirmed" |
+| "we're testing it" | "tested and verified" | "in testing" |
+| "I think the client's good with it" | "client approved" | "client appears on board (per [whoever said it])" |
+
+Rules:
+- **RELEASED / COMPLETED means actually done.** Deployed to production, shipped, confirmed. Staging, "ready," or "should be done" goes in IN PROGRESS, not COMPLETED.
+- **Match the source's hedge level.** If the source hedged, the report hedges.
+- **No claim without a source.** If you can't trace it, hedge it or cut it.
+- **Don't soften disagreement into consensus.** If people disagreed, the report can say a decision is pending, not that everyone aligned.
+
+See `skills/_shared/source-discipline.md` for the full rule and the four failure modes.
 
 ## External Sharing
 
