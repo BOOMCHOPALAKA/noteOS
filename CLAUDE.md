@@ -179,7 +179,7 @@ After any substantive input, pause and consider:
 
 ## Meeting Summary Conventions
 
-For the full workflow (speaker ID, TODO extraction, vault linking, takeaway analysis), see `skills/meeting-processing/SKILL.md`.
+For the full workflow (speaker ID, TODO extraction, vault linking, takeaway analysis), see `skills/meeting-transcript-processing/SKILL.md`.
 
 Search the vault for existing notes on the meeting topics before writing. Link to them. Extract TODOs only for items you own, are the bottleneck on, need to chase someone about, or are accountable for. Other teams' internal work stays off your TODO list. Always identify speakers and get sign-off before writing the summary.
 
@@ -224,7 +224,7 @@ When asked for a morning brief, generate a structured daily briefing covering: v
 
 ## Weekly Status Reports
 
-For the full workflow (sourcing, structure, external sharing format), see `skills/weekly-status-report/SKILL.md`.
+For the full workflow (sourcing, structure, external sharing format), see `skills/status-report/SKILL.md`.
 
 When asked for a weekly report: COMPLETED, IN PROGRESS, DECISIONS, UPCOMING, NOTES. Informative and succinct. Plain language, no buzzwords. Never reference vault-internal work. These are for people who don't have vault access.
 

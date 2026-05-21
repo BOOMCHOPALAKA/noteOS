@@ -1,9 +1,9 @@
 ---
-name: deep-analysis
+name: analyze
 description: Use when the user needs to make a decision, understand something deeply, analyze a situation from multiple angles, evaluate options, do strategic thinking, or says things like "what do you think about," "help me think through," "break this down," "what am I missing," or brings raw data/information that needs interpretation rather than just organization.
 ---
 
-# Deep Analysis
+# Analyze
 
 ## Overview
 

@@ -1,6 +1,6 @@
 ---
-name: meeting-processing
-description: Use when processing a meeting transcript, summarizing a meeting, or when the user pastes or references a transcript file from Downloads/. Handles speaker identification, structured summaries, TODO extraction, vault linking, and takeaway analysis.
+name: meeting-transcript-processing
+description: Use when processing a meeting transcript, summarizing a meeting, or when the user pastes or references a transcript file from Downloads/ (from Zoom, Teams, Otter, Google Meet, or any recording/transcription tool). Handles speaker identification, structured summaries, TODO extraction, vault linking, and takeaway analysis.
 ---
 
 # Meeting Transcript Processing

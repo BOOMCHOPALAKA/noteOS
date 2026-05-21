@@ -278,7 +278,7 @@ You've covered a lot of ground in this session. Type `/remember`. Everything get
 | Codebase Investigation | Systematic debugging with vault context |
 | Codebase Team Assessment | Maps who knows what in a repo |
 
-If you're using **Claude Code**, skills are discovered automatically. If you're using **anything else**, just tell your AI "read `skills/meeting-processing/SKILL.md` and follow it." They're just files. Any tool can read a file.
+If you're using **Claude Code**, skills are discovered automatically. If you're using **anything else**, just tell your AI "read `skills/meeting-transcript-processing/SKILL.md` and follow it." They're just files. Any tool can read a file.
 
 As you develop workflows that click, capture them. The skill creation skill walks you through the intake. What's the problem? What triggers it? What does good output look like? The skills you build become part of your system. They travel with your vault.
 

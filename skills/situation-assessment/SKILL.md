@@ -82,7 +82,7 @@ Adapt based on what the situation needs. Not every section every time.
 
 - Ask if the user wants to persist anything. Does this warrant a note? Should it update an existing one?
 - Surface if this connects to something bigger. "This is the third time this month that X has come up."
-- If the situation reveals a decision point, offer to shift into deep-analysis mode.
+- If the situation reveals a decision point, offer to shift into analyze mode.
 - If it reveals an action item, offer to add it to the daily note TODOs.
 
 ## What This is NOT

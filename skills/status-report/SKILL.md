@@ -1,13 +1,15 @@
 ---
-name: weekly-status-report
-description: Use when the user asks for a "weekly update," "weekly status report," "status report," or needs to produce a summary of the week's work for stakeholders, managers, or clients.
+name: status-report
+description: Use when the user asks for a "status report," "weekly update," "weekly status report," "monthly summary," "monthly recap," or "daily report," or needs to produce a summary of work for stakeholders, managers, or clients at any cadence (daily, weekly, or monthly).
 ---
 
-# Weekly Status Report
+# Status Report
 
 ## Overview
 
-Produce structured weekly status reports for projects or clients. These get shared with external readers (stakeholders, managers, clients) who don't have access to the vault. They must stand alone without vault-specific references.
+Produce structured status reports for projects or clients at any cadence (daily, weekly, or monthly). These get shared with external readers (stakeholders, managers, clients) who don't have access to the vault. They must stand alone without vault-specific references.
+
+The cadence sets the window and the altitude. Daily is a tight "what moved today." Weekly is the default. Monthly zooms out to themes and outcomes rather than task-by-task detail. The section structure below is the same across all three; what changes is the time window you source from and how much you roll up.
 
 **If the user manages multiple clients or projects, each gets its own report.** Never mix items from different clients/projects.
 
@@ -39,7 +41,7 @@ Standout callouts only: exceptional work, biggest risks, systemic issues. 2-3 bu
 
 ## Filing
 
-- File: `[Project] Weekly Status Report - Week of [Date Range].md`
+- File: `[Project] [Cadence] Status Report - [Date or Range].md` (e.g. `Acme Weekly Status Report - Week of May 18.md`, `Acme Monthly Status Report - April 2026.md`)
 - Location: `Calendar/[Month]/[Week]/` alongside daily notes
 - **Always save to vault file AND output in chat.** Never just chat output.
 
