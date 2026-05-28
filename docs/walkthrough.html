@@ -1252,6 +1252,83 @@
       border-bottom-color: var(--accent);
     }
 
+    /* === STICKY TOP CTA BAR === */
+    .sticky-cta {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(250, 248, 243, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sticky-cta-brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .sticky-cta-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .sticky-cta-secondary {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .sticky-cta-secondary:hover {
+      color: var(--text);
+    }
+
+    .sticky-cta-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .sticky-cta-primary:hover {
+      background: #4a6d4a;
+    }
+
+    @media (max-width: 600px) {
+      .sticky-cta {
+        padding: 10px 16px;
+      }
+      .sticky-cta-secondary {
+        display: none;
+      }
+    }
+
+    /* === HERO INLINE CTA === */
+    .hero-cta-row {
+      margin-top: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
     .tool-pills {
       display: flex;
       gap: 10px;
@@ -1398,6 +1475,15 @@
 </head>
 <body>
 
+<!-- Sticky top CTA bar -->
+<div class="sticky-cta">
+  <a href="https://github.com/BOOMCHOPALAKA/noteOS" class="sticky-cta-brand">noteOS</a>
+  <div class="sticky-cta-actions">
+    <a href="../index.html" class="sticky-cta-secondary">Read the guide</a>
+    <a href="https://github.com/BOOMCHOPALAKA/noteOS/archive/refs/heads/main.zip" class="sticky-cta-primary">Download the Starter Vault</a>
+  </div>
+</div>
+
 <!-- Progress Dots -->
 <nav class="progress-dots" aria-label="Page navigation">
   <button class="progress-dot active" data-panel="0" aria-label="Panel 1"></button>
@@ -1460,6 +1546,10 @@
     <p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto 20px;">You've used ChatGPT or Claude. Maybe a lot. It's fast, it's smart, it's useful. But every conversation starts from scratch. You re-explain your projects. You re-describe your life. You paste in the same context you pasted last time.</p>
     <p style="font-size: 1.15rem; max-width: 600px; margin: 0 auto 20px;">It's like working with a brilliant partner who shows up every morning having forgotten everything from yesterday.</p>
     <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; font-weight: 500; color: var(--text);">What if they didn't?</p>
+    <div class="hero-cta-row">
+      <a href="https://github.com/BOOMCHOPALAKA/noteOS/archive/refs/heads/main.zip" class="cta-primary">Download the Starter Vault</a>
+      <a href="https://github.com/BOOMCHOPALAKA/noteOS" class="cta-secondary">View on GitHub &rarr;</a>
+    </div>
   </div>
 </section>
 
