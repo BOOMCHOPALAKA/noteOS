@@ -559,31 +559,36 @@
             <p>The instruction file tells AI who you are. Skills tell AI how to do specific things for you.</p>
 
             <h3 class="subsection-title">What skills look like in practice</h3>
-            <p>You drop a meeting transcript in chat. AI loads the meeting processing skill and follows it. Identifies the speakers, presents a mapping for you to confirm, searches the vault for related notes, writes the summary, extracts only the TODOs you're responsible for, and gives you the "so what" layer. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. Every session. Consistent.</p>
-            <p>You need to make a tough call. The deep analysis skill kicks in. It doesn't list pros and cons. It challenges your assumptions, steelmans the other side, separates what you know from what you're inferring. It pushes back when you're rationalizing.</p>
+            <p>You drop a meeting transcript in chat. AI loads the meeting transcript processing skill and follows it. Identifies the speakers, presents a mapping for you to confirm, searches the vault for related notes, writes the summary, extracts only the TODOs you're responsible for, and gives you the "so what" layer. Not a summary rehash. The part where it tells you what changed, what connects, and what doesn't add up. Every session. Consistent.</p>
+            <p>You need to make a tough call. The analyze skill kicks in. It doesn't list pros and cons. It challenges your assumptions, steelmans the other side, separates what you know from what you're inferring. It pushes back when you're rationalizing. If you want to go deeper on any single thread, the go-deeper skill expands it.</p>
             <p>You've covered a lot of ground in this session. Type <code>/remember</code>. Everything gets saved, linked, timestamped. Tomorrow, type <code>/pickup</code>. Caught up in 30 seconds.</p>
 
-            <h3 class="subsection-title">18 skills included</h3>
+            <h3 class="subsection-title">22 skills included</h3>
             <div class="skills-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; margin: 24px 0; font-size: 0.95rem;">
                 <div><strong>Onboarding</strong> . First-run experience. Detects a fresh vault, walks you through setup, creates your personal Basecamp</div>
                 <div><strong>Remember</strong> . Type <code>/remember</code> and AI saves what matters, where it matters, with links and timestamps</div>
                 <div><strong>Pickup</strong> . Type <code>/pickup</code> to resume where you left off with a concise briefing</div>
                 <div><strong>Pickup (Work)</strong> . Work-only variant of pickup. Filters to professional threads, pulls repo updates, groups by client</div>
-                <div><strong>Meeting Processing</strong> . Speaker ID, summaries, TODO extraction, vault linking, takeaway analysis</div>
-                <div><strong>Deep Analysis</strong> . Thinking partner that pushes back and stress-tests your assumptions</div>
+                <div><strong>Meeting Transcript Processing</strong> . Speaker ID, summaries, TODO extraction, vault linking, takeaway analysis. Works with any transcript (Zoom, Teams, Otter, paste)</div>
+                <div><strong>Analyze</strong> . Thinking partner that pushes back and stress-tests your assumptions</div>
+                <div><strong>Go Deeper</strong> . Expand any thread of a prior analysis on request. Tight first pass, deeper dives when you ask</div>
+                <div><strong>TLDR</strong> . Stakeholder-ready talking points. Default headline-and-bullets, or a five-section exec briefing</div>
                 <div><strong>Situation Assessment</strong> . Paste a messy thread, get a clear picture of what's going on</div>
                 <div><strong>Next Steps</strong> . Crystallizes "what now" after any discussion</div>
+                <div><strong>Email Analysis</strong> . Pattern recognition across email exports. Surfaces what fell through the cracks</div>
+                <div><strong>Daily Email Digest</strong> . Quick daily pull, filtered for noise, cross-referenced against your vault</div>
+                <div><strong>Weekly Email Digest</strong> . Pattern-level view of the week. What moved, what's stale, what's waiting on you</div>
+                <div><strong>Update Notes</strong> . Lightweight mid-conversation vault flush. "Update" and it just does it</div>
                 <div><strong>Drafting Voice</strong> . Learns how you write and drafts messages in your voice</div>
                 <div><strong>Morning Brief</strong> . Daily briefing with vault state, weather, and news</div>
-                <div><strong>Weekly Status Report</strong> . Sourcing, structure, and external sharing format</div>
+                <div><strong>Status Report</strong> . Daily, weekly, or monthly. Sourcing, structure, and external sharing format</div>
                 <div><strong>Activity Logging</strong> . Fitness and activity tracking to daily notes</div>
-                <div><strong>Session Handoff</strong> . Proactive nudges to save context at natural breakpoints</div>
                 <div><strong>Skill Creation</strong> . Guided intake for building your own skills</div>
                 <div><strong>Ticket Creation</strong> . Scannable dev tickets that people actually read</div>
                 <div><strong>Codebase Investigation</strong> . Systematic debugging with vault context</div>
                 <div><strong>Codebase Team Assessment</strong> . Maps who knows what in a repo</div>
             </div>
-            <p>If you're using <strong>Claude Code</strong>, skills are discovered automatically. If you're using <strong>anything else</strong>, just tell your AI "read <code>skills/meeting-processing/SKILL.md</code> and follow it." They're just files. Any tool can read a file.</p>
+            <p>If you're using <strong>Claude Code</strong>, skills are discovered automatically. If you're using <strong>anything else</strong>, just tell your AI "read <code>skills/meeting-transcript-processing/SKILL.md</code> and follow it." They're just files. Any tool can read a file.</p>
             <p>As you develop workflows that click, capture them. The skill creation skill walks you through the intake. What's the problem? What triggers it? What does good output look like? The skills you build become part of your system. They travel with your vault.</p>
 
             <h3 class="subsection-title">Building the habit</h3>
