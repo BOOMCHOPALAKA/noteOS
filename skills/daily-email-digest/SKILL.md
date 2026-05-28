@@ -13,7 +13,7 @@ Pull today's emails, filter out noise, and produce a structured digest that tell
 
 This skill is source-agnostic. Get today's emails however your setup allows:
 
-- **A connected email MCP/integration** (if your AI tool has one). Pull the inbox for today, and also pull the Sent folder for the same period.
+- **A connected email MCP/integration** (if your AI tool has one). Pull the inbox for today, and also pull the Sent folder for the same period. See the README's "Optional: connecting AI to your data" section for setup.
 - **A pasted batch** the user drops into the conversation.
 - **An export file** in `Downloads/EmailExports/`.
 

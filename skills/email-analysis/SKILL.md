@@ -11,7 +11,7 @@ Process email exports to surface actionable items, communication patterns, and n
 
 ## Source Format
 
-Email exports land in `Downloads/EmailExports/` organized by project or date range. Formats vary (text exports, forwarded chains, batch dumps). If your AI tool has a live email integration, the same workflow applies to a pulled batch.
+Email exports land in `Downloads/EmailExports/` organized by project or date range. Formats vary (text exports, forwarded chains, batch dumps). If your AI tool has a live email integration (an MCP), the same workflow applies to a pulled batch. See the README's "Optional: connecting AI to your data" section for setup.
 
 ## Workflow
 

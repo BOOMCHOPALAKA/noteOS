@@ -3,13 +3,13 @@
 
 ## What's New
 
-**May 2026 — More skills, cleaner sourcing**
+**May 2026: More skills, cleaner sourcing**
 The skill library grew to 22. New analytical skills: `analyze` (thinking partner), `go-deeper` (expand any thread on request), and `tldr` (stakeholder talking points). New email skills: a daily digest, a weekly digest, and deeper email analysis. Plus `update-notes` for quick mid-conversation vault flushes. The skills that write to your vault or go out to stakeholders now share a source-discipline rule: every concrete claim has to trace to a real source, and operational language ("going live," "should be ready") never gets upgraded into milestone language ("launched," "shipped"). The goal is a vault you can trust and reports you can stand behind.
 
-**April 2026 — Onboarding Experience**
+**April 2026: Onboarding Experience**
 Your first conversation with noteOS is now a guided setup. The system detects a fresh vault and walks you through a short conversation to personalize everything. By the end of a few questions, you have a personal Basecamp, a configured instruction file, and a vault ready to use. No manual setup required.
 
-**April 2026 — Skills System**
+**April 2026: Skills System**
 The vault now ships with a library of skills. Step-by-step workflow guides that AI follows for specific tasks. Process a meeting, analyze a situation, draft something in your voice, capture a session. Each one is a markdown file in `skills/` that loads when relevant and stays out of the way when it's not. Two highlights: `/remember` saves everything from your current session to the right places in the vault. `/pickup` reads what was saved and gets you back up to speed in a new conversation. Together they solve the biggest pain point in working with AI: losing context between sessions.
 
 ---
@@ -207,13 +207,33 @@ Start with whatever's on your mind today. The first few notes will feel like sca
 
 **A few things to know:**
 
-**The system knows what you tell it.** It doesn't connect to your apps or pull data automatically. No fitness tracker sync, no calendar integration, no background magic. You give it information and it remembers and connects it. That's by design. You control exactly what goes in. In practice, that looks like exporting data from apps you already use, telling it about your day in conversation, or dropping documents into the vault and telling it to process them.
+**The system knows what you tell it (by default).** Out of the box, it doesn't connect to your apps or pull data automatically. You give it information and it remembers and connects it. You control exactly what goes in. In practice, that looks like exporting data from apps you already use, telling it about your day in conversation, or dropping documents into the vault and telling it to process them. If you want to plug AI directly into your email, calendar, or other tools later, you can. See the "Optional: connecting AI to your data" section below.
 
 **You can nudge it.** If something feels like it should be a note, say so. If a topic is getting big, ask "should we make a Basecamp for this?" If you want it to remember something small, just say "remember this." The system gets more proactive over time, but a nudge goes a long way.
 
 **You can verify everything.** With a normal chat, "where did you get that?" gets a vague response. With a vault, AI points to specific notes. You can open them in Obsidian and check. It's not a guarantee of accuracy, but it's transparency you don't get anywhere else.
 
 After a conversation, switch to Obsidian and take a look. Click a note. See how it links to others. After a few sessions, open the graph view (Cmd+G on Mac, Ctrl+G on Windows). Every note is a dot, every link is a line. What you'll see looks like a neural network. Clusters forming around your big topics, connections you didn't consciously create. That's when the whole thing clicks.
+
+### Optional: connecting AI to your data
+
+Some of the skills get noticeably better when AI can pull live data instead of waiting for you to paste it in. The email digest skills, for example, can either work on an export you drop in `Downloads/`, or pull straight from your inbox if AI has a live connection to your email. The vault stays the same either way. You just save a step.
+
+These live connections are called **MCPs**, which stands for Model Context Protocol. Think of an MCP as a USB port for AI. Each one is a small adapter that lets your AI tool talk to a specific service (Gmail, Google Calendar, GitHub, Slack, whatever). You install the ones you want, AI uses them when relevant, and that's it.
+
+**You do not need MCPs for noteOS to work.** Everything in this guide works without them. They are an optional upgrade for skills that touch outside data.
+
+**The three that pay off the most for a noteOS user:**
+
+- **Email** (Gmail, Outlook, or your provider's MCP). Makes the daily and weekly email digest skills work without exports.
+- **Calendar** (Google Calendar or equivalent). Lets the morning brief see what's on your day, and lets meeting-related skills know what meeting you're talking about.
+- **File storage** (Google Drive, Dropbox, etc.). Useful if you keep documents outside the vault and want AI to read them.
+
+**How to install one.** Setup happens inside your AI tool, not inside the vault. The official docs are the right place to start, because the install steps change as the ecosystem matures. The Anthropic docs at [docs.anthropic.com](https://docs.anthropic.com) cover Claude Code and Claude Cowork. Most major services now publish their own MCPs with install instructions on their developer pages.
+
+**Privacy note.** Adding an MCP means AI can read live data from that service. That data flows through your AI provider's API the same way your chat messages do. If you're already comfortable with how your AI tool handles conversation data, MCP data follows the same rules. If you handle anything sensitive (client work under NDA, regulated data, etc.), check your AI provider's terms before connecting an MCP to that source.
+
+When you're not sure, start without MCPs. The vault is fully useful on its own. Add MCPs later when a specific skill makes you wish for one.
 
 ---
 

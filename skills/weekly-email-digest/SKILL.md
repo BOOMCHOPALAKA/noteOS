@@ -11,7 +11,7 @@ Pattern-level view of the week's email activity. Not a list of every email. This
 
 ## Email Source
 
-Same as daily-email-digest: source-agnostic. Use a connected email integration, a pasted batch, or an export. If your source can pull the Sent folder, do it. The "Waiting on You" section depends on knowing what's already been replied to.
+Same as daily-email-digest: source-agnostic. Use a connected email integration (MCP), a pasted batch, or an export. If your source can pull the Sent folder, do it. The "Waiting on You" section depends on knowing what's already been replied to. See the README's "Optional: connecting AI to your data" section for setup if you want to connect an email MCP.
 
 ## Workflow
 
