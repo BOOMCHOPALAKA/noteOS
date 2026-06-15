@@ -540,30 +540,61 @@
       font-weight: 500;
     }
 
-    /* === SKILLS GRID (Panel 9: Skills showcase) === */
-    .skills-grid {
+    /* === SKILLS COLUMNS (Panel 9: Skills showcase) === */
+    .skills-columns {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .skills-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skills-column-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent-light);
+      margin-bottom: 2px;
+    }
+
+    .skills-column-technical .skills-column-label {
+      color: var(--text-secondary);
+      border-bottom-color: var(--border);
     }
 
     .skill-card {
       background: white;
       border: 1px solid var(--border);
       border-radius: 10px;
-      padding: 16px 18px;
+      padding: 14px 16px;
+    }
+
+    .skills-column-technical .skill-card {
+      background: #faf9f6;
     }
 
     .skill-cmd {
       font-family: 'Courier New', Courier, monospace;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 700;
       color: var(--accent);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
+    }
+
+    .skills-column-technical .skill-cmd {
+      color: var(--text-secondary);
     }
 
     .skill-desc {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--text-secondary);
       line-height: 1.5;
     }
@@ -2033,66 +2064,96 @@
       <p>noteOS ships with skills for the things you do every day. Type the command in chat and the AI runs the full workflow. You can also just ask naturally — it finds the right skill automatically.</p>
     </div>
     <div class="panel-visual">
-      <div class="skills-grid">
+      <div class="skills-columns">
 
-        <div class="skill-card">
-          <div class="skill-cmd">/morning-brief</div>
-          <div class="skill-desc">Pulls your email, open tasks, and project status into a single morning read.</div>
+        <div class="skills-column">
+          <div class="skills-column-label">Any workflow</div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/morning-brief</div>
+            <div class="skill-desc">Pulls your email, open tasks, and project status into a single morning read.</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/remember</div>
+            <div class="skill-desc">Saves where you are before you close the tab. Captures decisions, threads, and open questions.</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/pickup</div>
+            <div class="skill-desc">The other end of /remember. Reads what was saved last session and orients you fast.</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/analyze</div>
+            <div class="skill-desc">Structured thinking on any decision, situation, or option set. Multi-angle, not just a list of pros.</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/tldr</div>
+            <div class="skill-desc">Distills a document, thread, or topic into talking points. Useful before a stakeholder call.</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/next-steps</div>
+            <div class="skill-desc">Turns any discussion or decision into concrete next steps with owners and sequencing.</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/live-call-mode</div>
+            <div class="skill-desc">Silent second brain during live calls. Fast vault lookups and draft replies without breaking the conversation.</div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-cmd">/quarterback-mode</div>
+            <div class="skill-desc">Switches the AI from thinking partner to coordinator. Drafts messages, keeps stakeholders informed, tracks what's open during an incident.</div>
+          </div>
+
         </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/remember</div>
-          <div class="skill-desc">Saves where you are before you close the tab. Captures decisions, threads, and open questions.</div>
-        </div>
+        <div class="skills-column skills-column-technical">
+          <div class="skills-column-label">Code & systems</div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/pickup</div>
-          <div class="skill-desc">The other end of /remember. Reads what was saved last session and orients you fast.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/problemtosolve-playbook</div>
+            <div class="skill-desc">Investigation mode. Forces assumption-surfacing before solutions. Refuses to rush to answers until the problem is understood.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/analyze</div>
-          <div class="skill-desc">Structured thinking on any decision, situation, or option set. Multi-angle, not just a list of pros.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/codebase-investigation</div>
+            <div class="skill-desc">Traces how something works through a codebase. Follows the path from symptom to root cause.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/tldr</div>
-          <div class="skill-desc">Distills a document, thread, or topic into talking points. Useful before a stakeholder call.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/smoking-gun</div>
+            <div class="skill-desc">Git forensics. Answers "who wrote this and when" with a defensible evidence trail.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/next-steps</div>
-          <div class="skill-desc">Turns any discussion or decision into concrete next steps with owners and sequencing.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/codebase-review</div>
+            <div class="skill-desc">Full QA/security audit with a human verification gate before anything goes to a client.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/live-call-mode</div>
-          <div class="skill-desc">Silent second brain during live calls. Fast vault lookups and draft replies without breaking the conversation.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/ticket-creation</div>
+            <div class="skill-desc">Writes dev tickets from conversation. Background, requirements, acceptance criteria, open questions.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/quarterback-mode</div>
-          <div class="skill-desc">Switches the AI from thinking partner to coordinator. Drafts messages, keeps stakeholders informed, tracks what's open during incidents.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/confidence-check</div>
+            <div class="skill-desc">Audits the AI's own claims. Surfaces what's verified, inferred, or assumed before anything goes out.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/problemtosolve-playbook</div>
-          <div class="skill-desc">Investigation mode. Forces assumption-surfacing before solutions. Refuses to rush to answers until the problem is actually understood.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/teach-me</div>
+            <div class="skill-desc">Breaks down any concept with analogies, short chunks, and a quick check to make sure it landed.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/confidence-check</div>
-          <div class="skill-desc">Audits the AI's own claims. Surfaces what's verified, inferred, or assumed before anything goes out.</div>
-        </div>
+          <div class="skill-card">
+            <div class="skill-cmd">/skill-creation</div>
+            <div class="skill-desc">Builds a new reusable skill with you. Describe a workflow you repeat — it captures the pattern.</div>
+          </div>
 
-        <div class="skill-card">
-          <div class="skill-cmd">/teach-me</div>
-          <div class="skill-desc">Breaks down any concept with analogies, short chunks, and a quick check to make sure it landed.</div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-cmd">/skill-creation</div>
-          <div class="skill-desc">Builds a new reusable skill with you. Describe a workflow you repeat — it captures the pattern.</div>
         </div>
 
       </div>
