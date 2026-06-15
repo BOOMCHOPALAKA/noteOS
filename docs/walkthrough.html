@@ -540,6 +540,34 @@
       font-weight: 500;
     }
 
+    /* === SKILLS GRID (Panel 9: Skills showcase) === */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .skill-cmd {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .skill-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
     /* === MINI MOCKUPS === */
     .mini-finder {
       background: #f0ede6;
@@ -1507,6 +1535,7 @@
   <button class="progress-dot" data-panel="18" aria-label="Panel 19"></button>
   <button class="progress-dot" data-panel="19" aria-label="Panel 20"></button>
   <button class="progress-dot" data-panel="20" aria-label="Panel 21"></button>
+  <button class="progress-dot" data-panel="21" aria-label="Panel 22"></button>
 </nav>
 
 
@@ -1994,9 +2023,79 @@
 
 
 <!-- ============================================== -->
-<!-- PANEL 9: Three months later                    -->
+<!-- PANEL 9: Skills showcase                       -->
 <!-- ============================================== -->
 <section class="panel layout-text-above" data-index="8">
+  <div class="panel-inner">
+    <div class="panel-text">
+      <div class="time-label">Built-In Skills</div>
+      <h2>Commands that do the heavy lifting.</h2>
+      <p>noteOS ships with skills for the things you do every day. Type the command in chat and the AI runs the full workflow. You can also just ask naturally — it finds the right skill automatically.</p>
+    </div>
+    <div class="panel-visual">
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-cmd">/morning-brief</div>
+          <div class="skill-desc">Pulls your email, open tasks, and project status into a single morning read.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/remember</div>
+          <div class="skill-desc">Saves where you are before you close the tab. Captures decisions, threads, and open questions.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/pickup</div>
+          <div class="skill-desc">The other end of /remember. Reads what was saved last session and orients you fast.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/analyze</div>
+          <div class="skill-desc">Structured thinking on any decision, situation, or option set. Multi-angle, not just a list of pros.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/tldr</div>
+          <div class="skill-desc">Distills a document, thread, or topic into talking points. Useful before a stakeholder call.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/next-steps</div>
+          <div class="skill-desc">Turns any discussion or decision into concrete next steps with owners and sequencing.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/situation-assessment</div>
+          <div class="skill-desc">Paste a messy thread, email chain, or update — get back a clear read of what's actually happening.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/confidence-check</div>
+          <div class="skill-desc">Audits the AI's own claims. Surfaces what's verified, inferred, or assumed before anything goes out.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/teach-me</div>
+          <div class="skill-desc">Breaks down any concept with analogies, short chunks, and a quick check to make sure it landed.</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-cmd">/skill-creation</div>
+          <div class="skill-desc">Builds a new reusable skill with you. Describe a workflow you repeat — it captures the pattern.</div>
+        </div>
+
+      </div>
+    </div>
+    <p class="annotation">Skills are markdown files in your vault. You can read them, edit them, or build new ones. The system ships with 35+. Every skill you add makes the AI more useful for how you specifically work.</p>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- PANEL 10: Three months later                   -->
+<!-- ============================================== -->
+<section class="panel layout-text-above" data-index="9">
   <div class="panel-inner">
     <div class="panel-text">
       <div class="time-label">Three Months Later</div>
@@ -2071,7 +2170,7 @@
 <!-- ============================================== -->
 <!-- PANEL 10: How it actually works                -->
 <!-- ============================================== -->
-<section class="panel layout-text-above" data-index="9">
+<section class="panel layout-text-above" data-index="10">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>Under the hood, it's simple.</h2>
@@ -2142,7 +2241,7 @@
 <!-- ============================================== -->
 <!-- PANEL 11: Everything starts with a Basecamp    -->
 <!-- ============================================== -->
-<section class="panel layout-side-by-side basecamp-panel" data-index="10">
+<section class="panel layout-side-by-side basecamp-panel" data-index="11">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>Everything starts with a Basecamp.</h2>
@@ -2222,7 +2321,7 @@
 <!-- ============================================== -->
 <!-- PANEL 12: A place for everything               -->
 <!-- ============================================== -->
-<section class="panel layout-text-above" data-index="11">
+<section class="panel layout-text-above" data-index="12">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>Simple structure. No deep folders. Links do the organizing.</h2>
@@ -2280,7 +2379,7 @@
 <!-- ============================================== -->
 <!-- PANEL 13: See the web                          -->
 <!-- ============================================== -->
-<section class="panel layout-text-above" data-index="12">
+<section class="panel layout-text-above" data-index="13">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>After a few weeks, your knowledge looks like this.</h2>
@@ -2450,7 +2549,7 @@
 <!-- ============================================== -->
 <!-- PANEL 14: Works with everything                -->
 <!-- ============================================== -->
-<section class="panel layout-side-by-side" data-index="13">
+<section class="panel layout-side-by-side" data-index="14">
   <div class="panel-inner">
     <div class="panel-text" style="flex: 0 0 35%;">
       <h2>Not locked to any one tool.</h2>
@@ -2492,7 +2591,7 @@
 <!-- ============================================== -->
 <!-- PANEL 15: The more you use it                  -->
 <!-- ============================================== -->
-<section class="panel breathing" data-index="14">
+<section class="panel breathing" data-index="15">
   <div class="panel-inner">
     <p class="highlight-line">noteOS gets more useful the more you use it.</p>
     <p>Every conversation adds to your notes. Every note links to other notes. Every link makes the next conversation smarter. You don't maintain the system. You just use it.</p>
@@ -2505,7 +2604,7 @@
 <!-- ============================================== -->
 <!-- PANEL 16: Here's how you'd actually use it     -->
 <!-- ============================================== -->
-<section class="panel layout-text-above" data-index="15">
+<section class="panel layout-text-above" data-index="16">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>Here's how you'd actually use it.</h2>
@@ -2581,7 +2680,7 @@
 <!-- ============================================== -->
 <!-- PANEL 17: Your first conversation              -->
 <!-- ============================================== -->
-<section class="panel layout-text-above onboarding-chat" data-index="16">
+<section class="panel layout-text-above onboarding-chat" data-index="17">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>Your first conversation sets everything up.</h2>
@@ -2648,7 +2747,7 @@
 <!-- ============================================== -->
 <!-- PANEL 18: After ten minutes                    -->
 <!-- ============================================== -->
-<section class="panel layout-text-above" data-index="17">
+<section class="panel layout-text-above" data-index="18">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>After ten minutes, your system looks like this.</h2>
@@ -2707,7 +2806,7 @@
 <!-- ============================================== -->
 <!-- PANEL 19: When you want it to plug into more   -->
 <!-- ============================================== -->
-<section class="panel layout-text-above" data-index="18">
+<section class="panel layout-text-above" data-index="19">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>When you want it to plug into your other tools.</h2>
@@ -2724,7 +2823,7 @@
 <!-- ============================================== -->
 <!-- PANEL 20: What it learned along the way        -->
 <!-- ============================================== -->
-<section class="panel layout-text-above" data-index="19">
+<section class="panel layout-text-above" data-index="20">
   <div class="panel-inner">
     <div class="panel-text">
       <h2>What it learned along the way.</h2>
@@ -2739,7 +2838,7 @@
 <!-- ============================================== -->
 <!-- PANEL 21: Ready to try it?                     -->
 <!-- ============================================== -->
-<section class="panel layout-centered" data-index="20">
+<section class="panel layout-centered" data-index="21">
   <div class="panel-inner">
     <h2>Ready to try it?</h2>
     <p style="max-width: 600px; margin: 0 auto 8px;">Download Obsidian (free), download the starter vault, open Claude, and point it at the folder. The AI handles the rest.</p>
