@@ -1,6 +1,6 @@
 ---
 name: skill-creation
-description: Use when the user wants to create a new skill, says "let's make a skill for," "I want a skill that," "can we build a skill," or describes a repeatable workflow they want captured. Also triggers on "new skill" or references to adding something to the skills folder.
+description: Use when the user wants to create a new skill, says "let's make a skill for," "I want a skill that," "can we build a skill," or describes a repeatable workflow he wants captured. Also triggers on "new skill" or references to adding something to the skills folder.
 ---
 
 # Skill Creation
@@ -45,7 +45,12 @@ Some skills are vault-heavy (meeting prep). Some are standalone (social captions
 
 These become the "What NOT to Do" section. Often the most valuable part of a skill because they prevent the mistakes that prompted creating it in the first place.
 
-### 7. Does this overlap with anything?
+### 7. Does this involve MCP tools?
+"Does this skill use any MCP servers? Existing ones (zoho-mail, zoho-calendar, zoho-cliq, zoho-desk, zoho-projects, zoho-sprints, zoho-workdrive, macwhisper, airtable, cloudflare-api, kinsta) or new ones we'd need to create or connect?"
+
+If yes, ask: "Should those MCP tools run automatically without prompting, or do you want approval each time?" If auto-approve, add the appropriate `mcp__<server>__*` wildcard to `~/.claude/settings.json` permissions.allow as part of the skill setup. This prevents the skill from being interrupted by permission prompts mid-workflow.
+
+### 8. Does this overlap with anything?
 "Is this close to an existing skill? Should it be its own thing or an extension of something we already have?"
 
 Check the existing skills list before creating a new one. Sometimes the answer is updating an existing skill, not creating a new one.
@@ -56,15 +61,16 @@ Once the questions are answered:
 
 1. **Summarize back.** "Here's what I'm hearing: [problem], triggered by [X], outputs [Y], with these hard rules: [Z]. Sound right?"
 2. **Get confirmation** before writing anything.
-3. **Write the skill** following the standard structure:
+3. **Configure MCP permissions** if the skill uses MCP tools and auto-approve was requested. Add `mcp__<server>__*` entries to `~/.claude/settings.json` permissions.allow. Check existing entries first to avoid duplicates.
+4. **Write the skill** following the standard structure:
    - YAML frontmatter (name, description starting with "Use when...")
    - Self-announce line
    - Overview (2-3 sentences, what this is and why)
    - Core workflow sections
    - Hard rules / What NOT to Do
    - Vault updates section (what should be persisted after this skill runs)
-4. **Review together.** Walk through the skill and ask if anything's missing or wrong.
-5. **Test it.** Try a real prompt that should trigger the skill and see if the output matches expectations.
+5. **Review together.** Walk through the skill and ask if anything's missing or wrong.
+6. **Test it.** Try a real prompt that should trigger the skill and see if the output matches expectations.
 
 ## Skill Quality Checks
 
@@ -76,9 +82,11 @@ Before calling a skill done:
 - **Length:** Is it as short as it can be while still being complete? Cut anything that doesn't change behavior.
 - **Hard rules:** Are the failure modes explicitly called out? If the user had to correct AI doing this task before, those corrections should be rules.
 - **Vault awareness:** If it needs vault context, does it specify what to search for and where?
-- **Vault updates:** Does the skill specify what should be persisted after it runs? Every skill that produces substantive output should have a "Vault Updates" section describing what to update (daily note, tickets, knowledge notes, Basecamps) or at minimum defer to the global persistence rules in CLAUDE.md. Skills that only produce ephemeral output can skip this.
+- **Vault updates:** Does the skill specify what should be persisted after it runs? Every skill that produces substantive output should have a "Vault Updates" section describing what to update (daily note, tickets, knowledge notes, Basecamps) or at minimum defer to the global persistence rules in CLAUDE.md. Skills that only produce ephemeral output (live-call-mode, social-captions) can skip this.
 
 ## What This Doesn't Do
 
 - Doesn't skip the intake. Even if the user says "just make a quick skill for X," run through at least questions 1, 3, and 6. A skill without a clear problem, outcome, and constraints will be vague and inconsistent.
 - Doesn't write skills for one-off tasks. If it's something that will only happen once, it doesn't need a skill. It needs a conversation.
+- Doesn't create noteOS repo skills. This builds personal skills in `~/.claude/skills/`. Generalizing for the noteOS repo is a separate step.
+- Doesn't tune existing skills. If a skill already exists and the goal is to make it better based on how it's been performing, that's improve-skill, not this. This skill is for net-new.
