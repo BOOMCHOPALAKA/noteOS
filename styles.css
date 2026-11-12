@@ -194,6 +194,7 @@ p:last-child { margin-bottom: 0; }
 .quickstart li p { margin: 0 0 10px; line-height: 1.6; }
 .quickstart li .btn { margin-top: 2px; }
 .quickstart .first-message { margin: 0; }
+.quickstart .qs-note { margin: 10px 0 0; font-size: 0.92rem; color: var(--color-text-secondary); }
 .quickstart code { overflow-wrap: anywhere; }
 .quickstart .qs-after { margin: 20px 0 0; color: var(--color-text-secondary); }
 .hero .need { margin-top: 24px; color: var(--color-text-secondary); font-size: 0.95rem; max-width: 60ch; }
