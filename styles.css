@@ -546,3 +546,4 @@ p:last-child { margin-bottom: 0; }
 /* Keep section headings clear of the sticky header when a nav link is clicked. */
 html { scroll-padding-top: 72px; }
 @media (max-width: 1000px) { html { scroll-padding-top: 96px; } }
+.pillars { margin-top: 32px; }
