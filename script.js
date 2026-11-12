@@ -1,167 +1,152 @@
-// ========== Smooth scroll for anchor links ==========
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-        // Close TOC on mobile after clicking a link
-        const toc = document.getElementById('toc');
-        if (toc && window.innerWidth < 1100) {
-            toc.classList.remove('open');
-        }
+/* noteOS Starter site: the "See it in action" diagram.
+   Each step sets a state on every node, link and badge (data-s) plus a start
+   delay (--d). CSS turns those into motion, so with reduced motion on, the
+   same states show at once with no movement. */
+(function () {
+  var root = document.querySelector('.sia');
+  if (!root) return;
+
+  var STEPS = [
+    {
+      dur: 3200,
+      title: 'You talk.',
+      text: 'You ask Claude a question in plain words.',
+      s: {}
+    },
+    {
+      dur: 4200,
+      title: 'It checks its notes.',
+      text: 'Claude reads Current Context, opens the Channel Basecamp, reads its Compass, then follows the Trails to the notes it needs.',
+      s: {
+        cc: 'lit@0.1', dCchub: 'on@0.3', hub: 'lit@0.6', compass: 'on@0.8',
+        dIdeas: 'on@1.0', dCheck: 'on@1.1', dLast: 'on@1.2',
+        ideas: 'lit@1.3', check: 'lit@1.4', last: 'lit@1.5'
+      }
+    },
+    {
+      dur: 4200,
+      title: 'You say /remember.',
+      text: "Claude logs the session in today's daily note, adds a new Video 12 plan note (it asks first), links both to the basecamp and updates Current Context.",
+      s: {
+        hub: 'lit', plan: 'lit@0.4', daily: 'lit@0.6',
+        dPlan: 'on@0.9', dDaily: 'on@1.0', dCcplan: 'on@1.3',
+        cc: 'lit@1.5', badge: 'on@1.5'
+      }
+    },
+    {
+      dur: 4500,
+      title: 'Next morning, /pickup.',
+      text: 'Claude reads Current Context and your latest daily note, then tells you where you left off.',
+      s: {
+        cc: 'lit@0.4', hub: 'dim', ideas: 'dim', check: 'dim', last: 'dim',
+        dCcplan: 'on@0.7', plan: 'lit@1.0', daily: 'lit@1.15',
+        dPlan: 'settled', dDaily: 'settled'
+      }
+    }
+  ];
+  // Resting state for anything a step does not mention.
+  var BASE = {
+    cc: 'rest', hub: 'rest', ideas: 'rest', check: 'rest', last: 'rest',
+    plan: 'hidden', daily: 'hidden', compass: 'off', badge: 'off',
+    dCchub: 'off', dIdeas: 'off', dCheck: 'off', dLast: 'off',
+    dPlan: 'off', dDaily: 'off', dCcplan: 'off'
+  };
+
+  var els = {};
+  root.querySelectorAll('[data-k]').forEach(function (el) { els[el.getAttribute('data-k')] = el; });
+  var groups = root.querySelectorAll('.sia-turns');
+  var caption = root.querySelector('.sia-caption:not(.sia-sizer)');
+  var capbox = root.querySelector('.sia-capbox');
+  var controls = root.querySelector('.sia-controls');
+  var list = root.querySelector('.sia-list');
+  var dots = root.querySelectorAll('.sia-dot');
+  var toggle = root.querySelector('[data-act="toggle"]');
+  var toggleLabel = toggle.querySelector('.sia-toggle-label');
+  var toggleIcon = toggle.querySelector('svg');
+  var PAUSE_ICON = '<path d="M9 6v12M15 6v12"/>';
+  var PLAY_ICON = '<path d="M8 5.5v13l11-6.5z"/>';
+
+  var reduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var cur = 0;
+  var playing = !(reduce && reduce.matches);
+  var visible = !('IntersectionObserver' in window);
+  var timer = null;
+
+  function escapeHtml(s) {
+    return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; });
+  }
+
+  function render(i) {
+    cur = i;
+    var step = STEPS[i];
+    Object.keys(els).forEach(function (k) {
+      var v = (step.s[k] || BASE[k] || 'off').split('@');
+      els[k].setAttribute('data-s', v[0]);
+      els[k].style.setProperty('--d', (v[1] || '0') + 's');
     });
-});
-
-// ========== TOC toggle ==========
-const tocToggle = document.querySelector('.toc-toggle');
-const toc = document.getElementById('toc');
-
-if (tocToggle && toc) {
-    tocToggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        toc.classList.toggle('open');
+    groups.forEach(function (g, j) { g.classList.toggle('is-active', j === i); });
+    dots.forEach(function (d, j) {
+      if (j === i) d.setAttribute('aria-current', 'step'); else d.removeAttribute('aria-current');
     });
+    root.setAttribute('data-step', String(i + 1));
+    caption.innerHTML = '<span class="sia-count">Step ' + (i + 1) + ' of ' + STEPS.length + '</span>' +
+      '<strong>' + escapeHtml(step.title) + '</strong> ' + escapeHtml(step.text);
+  }
 
-    // Close TOC when clicking outside
-    document.addEventListener('click', function (e) {
-        if (!toc.contains(e.target)) {
-            toc.classList.remove('open');
-        }
-    });
-}
-
-// ========== TOC active section highlight on scroll ==========
-const tocLinks = document.querySelectorAll('.toc-link');
-const sections = [];
-
-tocLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && href.startsWith('#')) {
-        const section = document.querySelector(href);
-        if (section) {
-            sections.push({ el: section, link: link });
-        }
+  function schedule() {
+    clearTimeout(timer);
+    timer = null;
+    if (playing && visible && !document.hidden) {
+      timer = setTimeout(function () {
+        render((cur + 1) % STEPS.length);
+        schedule();
+      }, STEPS[cur].dur);
     }
-});
+  }
 
-function updateActiveSection() {
-    const scrollPos = window.scrollY + 120;
+  function setPlaying(p) {
+    playing = p;
+    toggleLabel.textContent = p ? 'Pause' : 'Play';
+    toggleIcon.innerHTML = p ? PAUSE_ICON : PLAY_ICON;
+    toggleIcon.classList.toggle('fill', !p);
+    root.classList.toggle('is-paused', !p);
+    schedule();
+  }
 
-    let current = sections[0];
-    for (let i = 0; i < sections.length; i++) {
-        if (sections[i].el.offsetTop <= scrollPos) {
-            current = sections[i];
-        }
-    }
+  function go(i) {
+    setPlaying(false);
+    render((i + STEPS.length) % STEPS.length);
+  }
 
-    tocLinks.forEach(link => link.classList.remove('active'));
-    if (current) {
-        current.link.classList.add('active');
-    }
-}
+  root.querySelector('[data-act="back"]').addEventListener('click', function () { go(cur - 1); });
+  root.querySelector('[data-act="next"]').addEventListener('click', function () { go(cur + 1); });
+  toggle.addEventListener('click', function () { setPlaying(!playing); });
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () { go(parseInt(d.getAttribute('data-go'), 10)); });
+  });
 
-let scrollTicking = false;
-window.addEventListener('scroll', function () {
-    if (!scrollTicking) {
-        requestAnimationFrame(function () {
-            updateActiveSection();
-            scrollTicking = false;
-        });
-        scrollTicking = true;
-    }
-});
+  if (!visible) {
+    new IntersectionObserver(function (entries) {
+      visible = entries[0].isIntersecting;
+      root.classList.toggle('is-idle', !visible);
+      schedule();
+    }, { threshold: 0.3 }).observe(root);
+  }
+  document.addEventListener('visibilitychange', schedule);
+  if (reduce) {
+    var onReduce = function () { if (reduce.matches) setPlaying(false); };
+    if (reduce.addEventListener) reduce.addEventListener('change', onReduce);
+    else if (reduce.addListener) reduce.addListener(onReduce);
+  }
 
-// Run on load
-updateActiveSection();
-
-// ========== Hero graph: highlight connected nodes on hover ==========
-(function() {
-    const svg = document.querySelector('.graph-svg');
-    if (!svg) return;
-
-    const nodes = svg.querySelectorAll('.graph-node');
-    const lines = svg.querySelectorAll('.graph-line:not(.cross-link)');
-    const crossLinks = svg.querySelectorAll('.cross-link');
-
-    // Build adjacency from line endpoints matching node circle centers
-    function getNodeCenter(node) {
-        const circle = node.querySelector('circle');
-        return { x: parseFloat(circle.getAttribute('cx')), y: parseFloat(circle.getAttribute('cy')) };
-    }
-
-    function dist(a, b) {
-        return Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
-    }
-
-    function findNodeAt(x, y) {
-        let closest = null, minD = 50;
-        nodes.forEach(n => {
-            const c = getNodeCenter(n);
-            const d = dist(c, { x, y });
-            if (d < minD) { minD = d; closest = n; }
-        });
-        return closest;
-    }
-
-    // Build connections map
-    const connections = new Map();
-    nodes.forEach(n => connections.set(n, { nodes: new Set(), lines: new Set() }));
-
-    [...lines, ...crossLinks].forEach(line => {
-        const x1 = parseFloat(line.getAttribute('x1'));
-        const y1 = parseFloat(line.getAttribute('y1'));
-        const x2 = parseFloat(line.getAttribute('x2'));
-        const y2 = parseFloat(line.getAttribute('y2'));
-        const n1 = findNodeAt(x1, y1);
-        const n2 = findNodeAt(x2, y2);
-        if (n1 && n2) {
-            connections.get(n1).nodes.add(n2);
-            connections.get(n1).lines.add(line);
-            connections.get(n2).nodes.add(n1);
-            connections.get(n2).lines.add(line);
-        }
-    });
-
-    nodes.forEach(node => {
-        node.addEventListener('mouseenter', () => {
-            const conn = connections.get(node);
-            // Dim everything
-            nodes.forEach(n => { n.style.opacity = '0.25'; n.style.transition = 'opacity 0.3s'; });
-            lines.forEach(l => { l.style.opacity = '0.04'; l.style.transition = 'opacity 0.3s'; });
-            crossLinks.forEach(l => { l.style.opacity = '0.03'; l.style.transition = 'opacity 0.3s'; });
-
-            // Highlight hovered node
-            node.style.opacity = '1';
-            // Highlight connected nodes and lines
-            conn.nodes.forEach(n => { n.style.opacity = '1'; });
-            conn.lines.forEach(l => { l.style.opacity = '0.5'; l.style.strokeWidth = '2.5'; l.style.transition = 'opacity 0.3s, stroke-width 0.3s'; });
-        });
-
-        node.addEventListener('mouseleave', () => {
-            // Restore everything
-            nodes.forEach(n => { n.style.opacity = ''; n.style.transition = ''; });
-            lines.forEach(l => { l.style.opacity = ''; l.style.strokeWidth = ''; l.style.transition = ''; });
-            crossLinks.forEach(l => { l.style.opacity = ''; l.style.strokeWidth = ''; l.style.transition = ''; });
-        });
-    });
+  // Switch from the no-script view (step 3 plus a text list) to the player, without animating the jump.
+  list.hidden = true;
+  root.classList.add('is-instant');
+  render(0);
+  capbox.hidden = false;
+  controls.hidden = false;
+  void root.offsetWidth;
+  root.classList.remove('is-instant');
+  if (!visible) root.classList.add('is-idle');
+  setPlaying(playing);
 })();
-
-// ========== FAQ accordion ==========
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', function () {
-        const item = this.parentElement;
-        const isOpen = item.classList.contains('open');
-
-        // Close all
-        document.querySelectorAll('.faq-item').forEach(faq => {
-            faq.classList.remove('open');
-        });
-
-        // Open clicked one (if it wasn't already open)
-        if (!isOpen) {
-            item.classList.add('open');
-        }
-    });
-});
