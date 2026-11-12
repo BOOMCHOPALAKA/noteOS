@@ -334,3 +334,7 @@ p:last-child { margin-bottom: 0; }
 .skills-title { margin-top: 48px; }
 
 .card .card-note { margin-top: 12px; color: var(--color-text-secondary); font-size: 0.92rem; }
+
+.callout { max-width: 46rem; margin-top: 24px; padding: 20px 24px; border-left: 4px solid var(--color-accent); background: var(--color-card-bg); border-radius: 8px; }
+.callout h3 { margin: 0 0 8px; }
+.callout p + p { margin-top: 10px; }
