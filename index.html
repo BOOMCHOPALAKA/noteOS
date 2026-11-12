@@ -75,39 +75,39 @@
         <p>And it builds itself as you go. You talk, it takes the notes and links them together. No folders to organize first.</p>
       </div>
     </section>
-
     <section class="section" id="in-action" aria-labelledby="in-action-title">
       <div class="wrap-wide">
         <h2 id="in-action-title">See it in action</h2>
-        <p class="intro">One loop, start to finish. You ask a question, Claude checks its notes, you save the session, and the next morning it picks up where you left off.</p>
+        <p class="intro">Watch a conversation turn into notes. As you talk, Claude writes files into your folder and links them together. The next morning it reads them back and picks up where you left off.</p>
 
-        <div class="sia" data-step="3">
+        <div class="sia" data-step="5">
           <div class="sia-stage">
             <div class="sia-chat">
-              <div class="sia-turns" data-for="1">
-                <p class="bubble you"><span class="who">You</span>What's next for my YouTube channel?</p>
+              <div class="sia-session" data-first="1" data-last="3">
+                <p class="bubble you" data-from="1" data-d="0.2"><span class="who">You</span><span class="text">Had a call with a brand sponsor today. They want two videos by March.</span></p>
+                <p class="bubble claude" data-from="1" data-d="2.3" data-t="0.8"><span class="who">Claude</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="text">Oh nice, congrats! Want me to save that?</span></p>
+                <p class="bubble you" data-from="1" data-d="3.8"><span class="who">You</span><span class="text">Yes please.</span></p>
+                <p class="bubble you" data-from="3" data-d="0.2"><span class="who">You</span><span class="text"><code>/remember</code></span></p>
               </div>
-              <div class="sia-turns" data-for="2">
-                <p class="bubble you held"><span class="who">You</span>What's next for my YouTube channel?</p>
-                <p class="bubble claude" style="--d:1.8s"><span class="who">Claude</span>Next on your Video ideas list is Video 12, the gear review. Your upload checklist says to plan it before you film.</p>
-              </div>
-              <div class="sia-turns is-active" data-for="3">
-                <p class="bubble you" style="--d:0.1s"><span class="who">You</span><code>/remember</code></p>
-                <p class="bubble claude" style="--d:1.8s"><span class="who">Claude</span>Got it, saved. Today's note and Current Context are up to date.</p>
-              </div>
-              <div class="sia-turns" data-for="4">
-                <p class="sia-divider bubble"><span>Next morning</span></p>
-                <p class="bubble you" style="--d:0.15s"><span class="who">You</span><code>/pickup</code></p>
-                <p class="bubble claude" style="--d:1.5s"><span class="who">Claude</span>Hey, welcome back. Here's where we left off: you started the Video 12 plan, and the outline is next.</p>
+              <div class="sia-session is-active" data-first="4" data-last="5">
+                <p class="bubble sia-divider" data-from="4" data-d="0.1"><span>Next morning</span></p>
+                <p class="bubble you" data-from="4" data-d="0.5"><span class="who">You</span><span class="text">What's next for the channel?</span></p>
+                <p class="bubble claude sia-wire-target" data-from="4" data-d="2.9" data-t="0.8"><span class="who">Claude</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="text">Morning! Where we left off: two sponsor videos due in March. Want to start the script for the first one?</span></p>
+                <p class="bubble you" data-from="5" data-d="0.2"><span class="who">You</span><span class="text">Yes.</span></p>
               </div>
             </div>
 
+            <svg class="sia-wires" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <path class="wire" data-k="wCc" data-s="off" pathLength="1" d="M0 0"/>
+              <path class="wire" data-k="wHub" data-s="off" pathLength="1" d="M0 0"/>
+            </svg>
+
             <div class="sia-graph">
-              <svg class="sia-svg" viewBox="0 0 460 364" role="img" aria-labelledby="sia-svg-title sia-svg-desc" xmlns="http://www.w3.org/2000/svg">
-                <title id="sia-svg-title">How Claude uses its notes</title>
-                <desc id="sia-svg-desc">A web of linked notes. In the middle is the Channel Basecamp, with a Compass at the top and Trails out to three notes: Video ideas, Upload checklist and Last week notes. Current Context sits at the top left. As the steps play, Claude reads Current Context, opens the basecamp, reads its Compass and follows its Trails. When you save, a daily note and a new Video 12 plan note appear and link to the basecamp, and Current Context updates. The next morning, Claude reads Current Context and the notes it points to.</desc>
+              <svg class="sia-svg" viewBox="0 0 600 430" role="img" aria-labelledby="sia-svg-title sia-svg-desc" xmlns="http://www.w3.org/2000/svg">
+                <title id="sia-svg-title">Your noteOS folder filling in as you talk</title>
+                <desc id="sia-svg-desc">A web of linked notes. Current Context sits at the top left. Channel Basecamp sits in the middle, with a Compass and a list of Trails that link to Video ideas and Upload checklist. As the chat plays, a new Sponsor call note appears and links to the basecamp, which adds it to its Trails. After /remember, Current Context gains the line "Two sponsor videos due in March." The next morning, Claude reads Current Context and the basecamp before it answers. Then a new note, Sponsor video 1 - Script, appears and links to the same basecamp.</desc>
                 <defs>
-                  <filter id="sia-glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <filter id="sia-glow" x="-30%" y="-30%" width="160%" height="160%">
                     <feGaussianBlur stdDeviation="3" result="blur"/>
                     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
                   </filter>
@@ -115,89 +115,91 @@
 
                 <!-- Ambient dots and ghost links, as on the original hero graph -->
                 <g class="sia-ambient" aria-hidden="true">
-                  <line class="ghost" x1="196" y1="26" x2="74" y2="66"/>
-                  <line class="ghost" x1="304" y1="38" x2="388" y2="72"/>
-                  <line class="ghost" x1="304" y1="38" x2="238" y2="186"/>
-                  <line class="ghost" x1="450" y1="330" x2="396" y2="238"/>
-                  <line class="ghost" x1="16" y1="140" x2="74" y2="66"/>
-                  <line class="ghost" x1="166" y1="354" x2="258" y2="310"/>
-                  <line class="ghost" x1="452" y1="150" x2="388" y2="72"/>
-                  <circle class="dot" cx="196" cy="26" r="6"/>
-                  <circle class="dot" cx="304" cy="38" r="5"/>
-                  <circle class="dot" cx="450" cy="330" r="6"/>
-                  <circle class="dot" cx="16" cy="140" r="4"/>
-                  <circle class="dot" cx="166" cy="354" r="4"/>
-                  <circle class="dot" cx="452" cy="150" r="4"/>
+                  <line class="ghost" x1="250" y1="28" x2="113" y2="74"/>
+                  <line class="ghost" x1="468" y1="22" x2="548" y2="62"/>
+                  <line class="ghost" x1="588" y1="186" x2="548" y2="300"/>
+                  <line class="ghost" x1="470" y1="410" x2="548" y2="300"/>
+                  <line class="ghost" x1="262" y1="150" x2="402" y2="207"/>
+                  <line class="ghost" x1="330" y1="400" x2="164" y2="372"/>
+                  <line class="ghost" x1="12" y1="300" x2="112" y2="234"/>
+                  <circle class="dot" cx="250" cy="28" r="5"/>
+                  <circle class="dot" cx="468" cy="22" r="6"/>
+                  <circle class="dot" cx="588" cy="186" r="4"/>
+                  <circle class="dot" cx="470" cy="410" r="6"/>
+                  <circle class="dot" cx="262" cy="150" r="4"/>
+                  <circle class="dot" cx="330" cy="400" r="5"/>
+                  <circle class="dot" cx="12" cy="300" r="4"/>
                 </g>
 
-                <!-- Base links -->
-                <line class="link cross" x1="74" y1="66" x2="238" y2="186"/>
-                <line class="link" x1="238" y1="186" x2="388" y2="72"/>
-                <line class="link" x1="238" y1="186" x2="396" y2="238"/>
-                <line class="link" x1="238" y1="186" x2="258" y2="310"/>
+                <!-- Links. Base links always show; draw links light up or draw in. -->
+                <line class="link cross" data-a="cc" data-b="hub" x1="113" y1="74" x2="402" y2="207"/>
+                <line class="link" data-a="hub" data-b="ideas" x1="402" y1="207" x2="548" y2="62"/>
+                <line class="link" data-a="hub" data-b="upload" x1="402" y1="207" x2="548" y2="300"/>
+                <line class="draw" data-a="call" data-b="hub" data-k="lCall" data-s="settled" pathLength="1" x1="112" y1="234" x2="402" y2="207"/>
+                <line class="draw" data-a="script" data-b="hub" data-k="lScript" data-s="on" pathLength="1" x1="164" y1="372" x2="402" y2="207"/>
 
-                <!-- Links that light up or draw in -->
-                <line class="draw" data-k="dCchub" data-s="off" pathLength="1" x1="74" y1="66" x2="238" y2="186"/>
-                <line class="draw" data-k="dIdeas" data-s="off" pathLength="1" x1="238" y1="186" x2="388" y2="72"/>
-                <line class="draw" data-k="dCheck" data-s="off" pathLength="1" x1="238" y1="186" x2="396" y2="238"/>
-                <line class="draw" data-k="dLast" data-s="off" pathLength="1" x1="238" y1="186" x2="258" y2="310"/>
-                <line class="draw" data-k="dPlan" data-s="on" pathLength="1" x1="80" y1="196" x2="238" y2="186"/>
-                <line class="draw" data-k="dDaily" data-s="on" pathLength="1" x1="96" y1="308" x2="238" y2="186"/>
-                <line class="draw" data-k="dCcplan" data-s="on" pathLength="1" x1="74" y1="66" x2="80" y2="196"/>
-
-                <!-- Nodes -->
-                <g class="node n-cc" data-k="cc" data-s="lit">
-                  <circle class="ring" cx="74" cy="66" r="44"/>
-                  <circle class="halo" cx="74" cy="66" r="44"/>
-                  <text class="t1" x="74" y="63">Current</text>
-                  <text class="t2" x="74" y="81">Context</text>
-                </g>
-                <g class="badge" data-k="badge" data-s="on">
-                  <rect x="94" y="12" width="74" height="22" rx="11"/>
-                  <text x="131" y="27">Updated</text>
-                </g>
-
-                <g class="node n-hub" data-k="hub" data-s="lit">
-                  <circle class="ring" cx="238" cy="186" r="58"/>
-                  <circle class="halo" cx="238" cy="186" r="58"/>
-                  <g class="compass" data-k="compass" data-s="off">
-                    <rect x="200" y="150" width="76" height="21" rx="10.5"/>
-                    <text x="238" y="164.5">COMPASS</text>
+                <!-- Circle notes in the original style -->
+                <g class="pos" data-node="ideas" transform="translate(548 62)">
+                  <g class="node" data-k="ideas" data-s="rest">
+                    <circle class="ring" r="44"/><circle class="halo" r="44"/>
+                    <text class="t1" y="-2">Video</text><text class="t2" y="16">ideas</text>
                   </g>
-                  <text class="t1 big" x="238" y="193">Channel</text>
-                  <text class="t2" x="238" y="212">Basecamp</text>
+                </g>
+                <g class="pos" data-node="upload" transform="translate(548 300)">
+                  <g class="node" data-k="upload" data-s="rest">
+                    <circle class="ring" r="46"/><circle class="halo" r="46"/>
+                    <text class="t1" y="-2">Upload</text><text class="t2" y="16">checklist</text>
+                  </g>
                 </g>
 
-                <g class="node" data-k="ideas" data-s="rest">
-                  <circle class="ring" cx="388" cy="72" r="44"/>
-                  <circle class="halo" cx="388" cy="72" r="44"/>
-                  <text class="t1" x="388" y="69">Video</text>
-                  <text class="t2" x="388" y="87">ideas</text>
-                </g>
-                <g class="node" data-k="check" data-s="rest">
-                  <circle class="ring" cx="396" cy="238" r="46"/>
-                  <circle class="halo" cx="396" cy="238" r="46"/>
-                  <text class="t1" x="396" y="235">Upload</text>
-                  <text class="t2" x="396" y="253">checklist</text>
-                </g>
-                <g class="node" data-k="last" data-s="rest">
-                  <circle class="ring" cx="258" cy="310" r="50"/>
-                  <circle class="halo" cx="258" cy="310" r="50"/>
-                  <text class="t1" x="258" y="307">Last week</text>
-                  <text class="t2" x="258" y="325">notes</text>
+                <!-- Note cards -->
+                <g class="pos" data-node="cc" transform="translate(10 10)">
+                  <g class="card" data-k="cc" data-s="rest">
+                    <rect class="frame" width="206" height="128" rx="12"/><rect class="halo" width="206" height="128" rx="12"/>
+                    <text class="title" x="14" y="26">Current Context</text>
+                    <line class="rule" x1="14" y1="38" x2="192" y2="38"/>
+                    <text class="peek" x="14" y="60">Video 11: editing</text>
+                    <g class="hl" data-k="ccNew" data-s="settled">
+                      <rect x="8" y="71" width="190" height="49" rx="7"/>
+                      <text class="peek strong" x="16" y="91">Two sponsor videos</text>
+                      <text class="peek strong" x="16" y="111">due in March</text>
+                    </g>
+                  </g>
                 </g>
 
-                <g class="node is-new" data-k="plan" data-s="lit">
-                  <circle class="ring" cx="80" cy="196" r="44"/>
-                  <circle class="halo" cx="80" cy="196" r="44"/>
-                  <text class="t1" x="80" y="193">Video 12</text>
-                  <text class="t2" x="80" y="211">plan</text>
+                <g class="pos" data-node="hub" transform="translate(316 100)">
+                  <g class="card hub" data-k="hub" data-s="lit">
+                    <rect class="frame" width="172" height="214" rx="12"/><rect class="halo" width="172" height="214" rx="12"/>
+                    <text class="title" x="14" y="26">Channel Basecamp</text>
+                    <line class="rule" x1="14" y1="38" x2="158" y2="38"/>
+                    <text class="caps" x="14" y="60">COMPASS</text>
+                    <text class="peek" x="14" y="79">My YouTube channel</text>
+                    <text class="caps" x="14" y="106">TRAILS</text>
+                    <g class="trail"><circle cx="19" cy="123.5" r="3"/><text class="peek" x="28" y="128">Video ideas</text></g>
+                    <g class="trail"><circle cx="19" cy="145.5" r="3"/><text class="peek" x="28" y="150">Upload checklist</text></g>
+                    <g class="trail is-new" data-k="trailCall" data-s="settled"><rect x="8" y="157" width="156" height="21" rx="6"/><circle cx="19" cy="167.5" r="3"/><text class="peek" x="28" y="172">Sponsor call</text></g>
+                    <g class="trail is-new" data-k="trailScript" data-s="on"><rect x="8" y="179" width="156" height="21" rx="6"/><circle cx="19" cy="189.5" r="3"/><text class="peek" x="28" y="194">Sponsor video 1</text></g>
+                  </g>
                 </g>
-                <g class="node is-new" data-k="daily" data-s="lit">
-                  <circle class="ring" cx="96" cy="308" r="42"/>
-                  <circle class="halo" cx="96" cy="308" r="42"/>
-                  <text class="t1" x="96" y="305">Daily</text>
-                  <text class="t2" x="96" y="323">note</text>
+
+                <g class="pos" data-node="call" transform="translate(28 182)">
+                  <g class="card is-new" data-k="call" data-s="rest">
+                    <rect class="frame" width="168" height="104" rx="12"/><rect class="halo" width="168" height="104" rx="12"/>
+                    <text class="title" x="12" y="26">Sponsor call.md</text>
+                    <line class="rule" x1="12" y1="38" x2="156" y2="38"/>
+                    <text class="peek" x="12" y="62">Brand sponsor call</text>
+                    <text class="peek" x="12" y="84">Two videos by March</text>
+                  </g>
+                </g>
+
+                <g class="pos" data-node="script" transform="translate(28 326)">
+                  <g class="card is-new" data-k="script" data-s="lit">
+                    <rect class="frame" width="272" height="92" rx="12"/><rect class="halo" width="272" height="92" rx="12"/>
+                    <text class="title" x="14" y="26">Sponsor video 1 - Script.md</text>
+                    <line class="rule" x1="14" y1="38" x2="258" y2="38"/>
+                    <text class="peek" x="14" y="60">Script for sponsor video 1</text>
+                    <text class="peek" x="14" y="80">Due in March</text>
+                  </g>
                 </g>
               </svg>
             </div>
@@ -206,16 +208,18 @@
           <div class="sia-bar">
             <div class="sia-capbox" hidden>
               <p class="sia-caption" aria-live="polite"></p>
-              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 1 of 4</span><strong>You talk.</strong> You ask Claude a question in plain words.</p>
-              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 2 of 4</span><strong>It checks its notes.</strong> Claude reads Current Context, opens the Channel Basecamp, reads its Compass, then follows the Trails to the notes it needs.</p>
-              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 3 of 4</span><strong>You say /remember.</strong> Claude logs the session in today's daily note, adds a new Video 12 plan note (it asks first), links both to the basecamp and updates Current Context.</p>
-              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 4 of 4</span><strong>Next morning, /pickup.</strong> Claude reads Current Context and your latest daily note, then tells you where you left off.</p>
+              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 1 of 5</span><strong>A normal conversation.</strong> You talk to Claude the way you would to a friend. When something is worth keeping, it asks before it saves.</p>
+              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 2 of 5</span><strong>A file gets made.</strong> Claude writes a note, Sponsor call.md, and adds it to the Trails on your Channel Basecamp so it can find it later.</p>
+              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 3 of 5</span><strong>You wrap up.</strong> /remember saves the session and updates Current Context with where things stand.</p>
+              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 4 of 5</span><strong>Next morning.</strong> Claude reads Current Context and the basecamp before it answers, so it already knows where you left off.</p>
+              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 5 of 5</span><strong>It builds on what it knows.</strong> The new script note links to the same basecamp, so each session adds to the last.</p>
             </div>
             <ol class="sia-list">
-              <li><strong>You talk.</strong> You ask Claude a question in plain words.</li>
-              <li><strong>It checks its notes.</strong> Claude reads Current Context, opens the Channel Basecamp, reads its Compass, then follows the Trails to the notes it needs.</li>
-              <li><strong>You say <code>/remember</code>.</strong> Claude logs the session in today's daily note, adds a new Video 12 plan note (it asks first), links both to the basecamp and updates Current Context.</li>
-              <li><strong>Next morning, <code>/pickup</code>.</strong> Claude reads Current Context and your latest daily note, then tells you where you left off.</li>
+              <li><strong>A normal conversation.</strong> You talk to Claude the way you would to a friend. When something is worth keeping, it asks before it saves.</li>
+              <li><strong>A file gets made.</strong> Claude writes a note, Sponsor call.md, and adds it to the Trails on your Channel Basecamp so it can find it later.</li>
+              <li><strong>You wrap up.</strong> /remember saves the session and updates Current Context with where things stand.</li>
+              <li><strong>Next morning.</strong> Claude reads Current Context and the basecamp before it answers, so it already knows where you left off.</li>
+              <li><strong>It builds on what it knows.</strong> The new script note links to the same basecamp, so each session adds to the last.</li>
             </ol>
             <div class="sia-controls" hidden>
               <div class="sia-buttons">
@@ -233,10 +237,11 @@
                 </button>
               </div>
               <div class="sia-dots" role="group" aria-label="Go to step">
-                <button class="sia-dot" type="button" data-go="0" aria-label="Step 1: You talk"></button>
-                <button class="sia-dot" type="button" data-go="1" aria-label="Step 2: It checks its notes"></button>
-                <button class="sia-dot" type="button" data-go="2" aria-label="Step 3: You say /remember"></button>
-                <button class="sia-dot" type="button" data-go="3" aria-label="Step 4: Next morning, /pickup"></button>
+                <button class="sia-dot" type="button" data-go="0" aria-label="Step 1: A normal conversation"></button>
+                <button class="sia-dot" type="button" data-go="1" aria-label="Step 2: A file gets made"></button>
+                <button class="sia-dot" type="button" data-go="2" aria-label="Step 3: You wrap up"></button>
+                <button class="sia-dot" type="button" data-go="3" aria-label="Step 4: Next morning"></button>
+                <button class="sia-dot" type="button" data-go="4" aria-label="Step 5: It builds on what it knows"></button>
               </div>
             </div>
           </div>

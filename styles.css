@@ -339,37 +339,37 @@ p:last-child { margin-bottom: 0; }
 .callout h3 { margin: 0 0 8px; }
 .callout p + p { margin-top: 10px; }
 
-/* ---------- See it in action diagram ----------
-   Node, line and motion style carried over from the v1 hero graph:
-   circles filled with the page color and ringed in the accent, a tinted halo,
-   two-line labels, faint ambient dots, a glow filter on the active node,
-   lines that draw in, and a pulse on the active hub. */
+/* ---------- See it in action: chat and folder story ----------
+   Graph style carried over from the v1 hero graph: notes ringed in the accent
+   with a tinted halo, two-line labels, faint ambient dots and ghost links,
+   a glow on the active note, lines that draw in, and a pulse on the active hub.
+   script.js sets a state (data-s) and a start delay (--d) on each piece per step;
+   CSS turns the change into motion. Reduced motion shows the end state at once. */
 .sia {
   background: var(--color-card-bg); border: 1px solid var(--color-card-border);
   border-radius: var(--radius); box-shadow: var(--shadow);
-  padding: clamp(14px, 3.5vw, 28px);
+  padding: clamp(10px, 3vw, 28px);
 }
 .sia-stage {
-  display: grid; gap: clamp(16px, 3vw, 32px); align-items: center;
+  position: relative; display: grid; gap: clamp(16px, 3vw, 32px); align-items: center;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
 }
-@media (max-width: 760px) { .sia-stage { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 1079px) { .sia-stage { grid-template-columns: minmax(0, 1fr); } }
 
-/* Chat panel: every step's turns share one grid cell, so the panel keeps the height of the tallest step. */
+/* Chat. Both sessions share one grid cell, and bubbles that haven't arrived yet keep their space,
+   so the panel never changes height. */
 .sia-chat {
+  position: relative; z-index: 1;
   display: grid; background: var(--color-bg); border: 1px solid var(--color-card-border);
   border-radius: 10px; padding: 16px;
 }
-.sia-turns { grid-area: 1 / 1; display: flex; flex-direction: column; justify-content: flex-start; gap: 10px; visibility: hidden; }
-.sia-turns.is-active { visibility: visible; }
+.sia-session { grid-area: 1 / 1; display: flex; flex-direction: column; gap: 10px; visibility: hidden; }
+.sia-session.is-active { visibility: visible; }
 .sia .bubble {
-  max-width: 92%; margin: 0; padding: 10px 14px; border-radius: 14px;
+  position: relative; max-width: 92%; margin: 0; padding: 10px 14px; border-radius: 14px;
   font-size: 0.98rem; line-height: 1.5; color: var(--color-text);
-  opacity: 0; transform: translateY(6px);
-  transition: opacity .35s ease, transform .35s ease;
 }
-.sia-turns.is-active .bubble { opacity: 1; transform: none; transition-delay: var(--d, 0s); }
-.sia .bubble.held { transition: none; }
+.sia-session.is-active .bubble.is-later { visibility: hidden; }
 .sia .bubble .who {
   display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
   color: var(--color-text-secondary); margin-bottom: 2px;
@@ -382,55 +382,80 @@ p:last-child { margin-bottom: 0; }
   font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-secondary);
 }
 .sia .sia-divider::before, .sia .sia-divider::after { content: ""; flex: 1; height: 1px; background: var(--color-divider); }
+.sia .bubble .dots { position: absolute; left: 14px; bottom: 14px; display: flex; gap: 4px; opacity: 0; }
+.sia .bubble .dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--color-text-secondary); animation: sia-bounce 1s ease-in-out infinite; }
+.sia .bubble .dots i:nth-child(2) { animation-delay: .15s; }
+.sia .bubble .dots i:nth-child(3) { animation-delay: .3s; }
+
+/* Arrival: the bubble fades up, your words type in, Claude shows typing dots first. */
+.sia .bubble.is-new { animation: sia-in .3s ease var(--d, 0s) both; }
+.sia .bubble.you.is-new .tk { animation: sia-show .01s linear both; animation-delay: calc(var(--d, 0s) + .25s + var(--i) * var(--gap, .11s)); }
+.sia .bubble.claude.is-new .dots { animation: sia-typing var(--t, .8s) linear var(--d, 0s) both; }
+.sia .bubble.claude.is-new .text { animation: sia-show .3s ease calc(var(--d, 0s) + var(--t, .8s)) both; }
+
+/* Lines from the notes into the chat (step 4). This layer sits over the chat and under the graph. */
+.sia-wires { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; overflow: visible; }
+.sia-wires .wire {
+  fill: none; stroke: var(--color-accent); stroke-width: 2.5; stroke-linecap: round;
+  stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0;
+  transition: stroke-dashoffset .8s ease, opacity .3s ease; transition-delay: var(--d, 0s);
+}
+.sia-wires .wire[data-s="on"] { stroke-dashoffset: 0; opacity: .85; }
+.sia-wires .wire[data-s="off"] { transition-delay: 0s; }
 
 /* Graph */
-.sia-graph { min-width: 0; }
-.sia-svg { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; overflow: visible;
+.sia-graph { position: relative; z-index: 3; min-width: 0; }
+.sia-svg { display: block; width: 100%; max-width: 600px; height: auto; margin: 0 auto; overflow: visible;
   filter: drop-shadow(0 2px 12px rgba(91, 127, 91, 0.08)); }
-.sia-svg text { font-family: var(--font-body); text-anchor: middle; }
+.sia-svg.is-narrow { max-width: 420px; }
+.sia-svg text { font-family: var(--font-body); }
 .sia-ambient .dot { fill: var(--color-accent); opacity: 0.18; transform-box: fill-box; transform-origin: center; animation: sia-float 6s ease-in-out infinite; }
 .sia-ambient .dot:nth-of-type(2n) { animation-delay: -2s; }
 .sia-ambient .dot:nth-of-type(3n) { animation-delay: -4s; }
 .sia-ambient .ghost { stroke: var(--color-accent); stroke-width: 0.8; opacity: 0.14; }
 .sia-svg .link { stroke: var(--color-accent); stroke-width: 1.6; opacity: 0.32; }
 .sia-svg .link.cross { stroke-dasharray: 4 4; opacity: 0.28; }
-
 .sia-svg .draw {
   stroke: var(--color-accent); stroke-width: 3; stroke-linecap: round;
   stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0;
-  transition: stroke-dashoffset .6s ease, opacity .3s ease, stroke-width .4s ease;
-  transition-delay: var(--d, 0s);
+  transition: stroke-dashoffset .8s ease, opacity .3s ease, stroke-width .4s ease; transition-delay: var(--d, 0s);
 }
-.sia-svg .draw[data-s="on"] { stroke-dashoffset: 0; opacity: 0.95; }
-.sia-svg .draw[data-s="settled"] { stroke-dashoffset: 0; opacity: 0.45; stroke-width: 1.8; }
+.sia-svg .draw[data-s="on"] { stroke-dashoffset: 0; opacity: .95; }
+.sia-svg .draw[data-s="settled"] { stroke-dashoffset: 0; opacity: .45; stroke-width: 1.8; }
 .sia-svg .draw[data-s="off"] { transition-delay: 0s; }
 
-.sia-svg .node { transform-box: fill-box; transform-origin: center; transition: opacity .5s ease, transform .5s ease; transition-delay: var(--d, 0s); }
-.sia-svg .node .ring { fill: var(--color-bg); stroke: var(--color-accent); stroke-width: 1.8; transition: stroke-width .4s ease; transition-delay: var(--d, 0s); }
-.sia-svg .node .halo { fill: var(--color-accent-light); stroke: none; opacity: 0; transition: opacity .4s ease; transition-delay: var(--d, 0s); }
-.sia-svg .n-hub .ring { stroke-width: 2.5; }
-.sia-svg .n-hub .halo, .sia-svg .n-cc .halo { opacity: 0.5; }
-.sia-svg .t1 { fill: var(--color-text); font-size: 17px; font-weight: 600; }
-.sia-svg .t1.big { font-size: 18px; font-weight: 700; }
-.sia-svg .t2 { fill: var(--color-text-secondary); font-size: 15px; }
+/* Notes: circles and cards share the same ring, halo and lit states. */
+.sia-svg .node, .sia-svg .card { transform-box: fill-box; transform-origin: center; transition: opacity .5s ease, transform .5s ease; transition-delay: var(--d, 0s); }
+.sia-svg .ring, .sia-svg .frame { fill: var(--color-bg); stroke: var(--color-accent); stroke-width: 1.8; transition: stroke-width .4s ease; transition-delay: var(--d, 0s); }
+.sia-svg .halo { fill: var(--color-accent-light); stroke: none; opacity: 0; transition: opacity .4s ease; transition-delay: var(--d, 0s); }
+.sia-svg .hub .frame { stroke-width: 2.5; }
+.sia-svg .hub .halo { opacity: .5; }
+.sia-svg [data-s="dim"] { opacity: .4; }
+.sia-svg [data-s="hidden"] { opacity: 0; transform: translateY(12px) scale(.9); transition-delay: 0s; }
+.sia-svg [data-s="hidden"] * { transition-delay: 0s; }
+.sia-svg [data-s="lit"] > .ring, .sia-svg [data-s="lit"] > .frame { stroke-width: 3.5; filter: url(#sia-glow); }
+.sia-svg [data-s="lit"] > .halo { opacity: 1; }
+.sia-svg .hub[data-s="lit"] > .frame { animation: sia-pulse 2.4s ease-in-out infinite; }
 
-.sia-svg .node[data-s="dim"] { opacity: 0.35; }
-.sia-svg .node[data-s="hidden"] { opacity: 0; transform: translateY(12px) scale(0.85); transition-delay: 0s; }
-.sia-svg .node[data-s="hidden"] * { transition-delay: 0s; }
-.sia-svg .node[data-s="lit"] .ring { stroke-width: 3.5; filter: url(#sia-glow); }
-.sia-svg .node[data-s="lit"] .halo { opacity: 1; }
-.sia-svg .n-hub[data-s="lit"] .ring { animation: sia-pulse 2.4s ease-in-out infinite; }
+.sia-svg .t1 { fill: var(--color-text); font-size: 15px; font-weight: 600; text-anchor: middle; }
+.sia-svg .t2 { fill: var(--color-text-secondary); font-size: 13.5px; text-anchor: middle; }
+.sia-svg .title { fill: var(--color-text); font-size: 15px; font-weight: 700; }
+.sia-svg .peek { fill: var(--color-text-secondary); font-size: 13.5px; }
+.sia-svg .peek.strong { fill: var(--color-text); font-weight: 600; }
+.sia-svg .caps { fill: var(--color-link); font-size: 13.5px; font-weight: 700; letter-spacing: 0.06em; }
+.sia-svg .rule { stroke: var(--color-card-border); stroke-width: 1; }
+.sia-svg .trail circle { fill: var(--color-accent); }
+.sia-svg .trail .peek { fill: var(--color-text); }
+/* Peek lines on a new card arrive just after the card. */
+.sia-svg .card.is-new .peek { transition: opacity .4s ease; transition-delay: calc(var(--d, 0s) + .35s); }
+.sia-svg .card.is-new[data-s="hidden"] .peek { opacity: 0; transition-delay: 0s; }
 
-.sia-svg .compass rect { fill: var(--color-accent-light); stroke: var(--color-accent); stroke-width: 1; transition: fill .4s ease; transition-delay: var(--d, 0s); }
-.sia-svg .compass text { fill: var(--color-link); font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; transition: fill .4s ease; transition-delay: var(--d, 0s); }
-.sia-svg .compass[data-s="on"] rect { fill: var(--color-accent); }
-.sia-svg .compass[data-s="on"] text { fill: var(--color-on-accent); }
-
-.sia-svg .badge { opacity: 0; transform-box: fill-box; transform-origin: center; transform: translateY(4px); transition: opacity .4s ease, transform .4s ease; transition-delay: var(--d, 0s); }
-.sia-svg .badge[data-s="on"] { opacity: 1; transform: none; }
-.sia-svg .badge[data-s="off"] { transition-delay: 0s; }
-.sia-svg .badge rect { fill: var(--color-accent); }
-.sia-svg .badge text { fill: var(--color-on-accent); font-size: 12px; font-weight: 600; }
+/* A new Trails row or Current Context line: off, on (highlighted) or settled. */
+.sia-svg .trail.is-new, .sia-svg .hl { transition: opacity .4s ease; transition-delay: var(--d, 0s); }
+.sia-svg .trail.is-new rect, .sia-svg .hl rect { fill: var(--color-accent-light); stroke: var(--color-accent); stroke-width: 0; transition: stroke-width .4s ease, fill .4s ease; transition-delay: var(--d, 0s); }
+.sia-svg .trail.is-new[data-s="off"], .sia-svg .hl[data-s="off"] { opacity: 0; transition-delay: 0s; }
+.sia-svg .trail.is-new[data-s="on"] rect, .sia-svg .hl[data-s="on"] rect { stroke-width: 1.5; }
+.sia-svg .trail.is-new[data-s="settled"] rect, .sia-svg .hl[data-s="settled"] rect { fill: transparent; }
 
 /* Caption and controls */
 .sia-bar { margin-top: 20px; display: grid; gap: 16px; }
@@ -467,10 +492,16 @@ p:last-child { margin-bottom: 0; }
   .sia-btn { padding: 0 12px; }
 }
 
-/* Pause the ambient motion while the diagram is off screen or paused by the viewer. */
-.sia.is-idle *, .sia.is-paused * { animation-play-state: paused !important; }
-.sia.is-instant *, .sia.is-instant *::before { transition: none !important; }
+/* Pause the looping motion (ambient drift, hub pulse, typing dots) while off screen or paused. */
+.sia.is-idle .sia-ambient *, .sia.is-paused .sia-ambient *,
+.sia.is-idle .hub > .frame, .sia.is-paused .hub > .frame,
+.sia.is-idle .dots i, .sia.is-paused .dots i { animation-play-state: paused !important; }
+.sia.is-instant *, .sia.is-instant *::before { transition: none !important; animation: none !important; }
 
+@keyframes sia-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes sia-show { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sia-typing { 0%, 99% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes sia-bounce { 0%, 100% { transform: translateY(0); opacity: .5; } 50% { transform: translateY(-3px); opacity: 1; } }
 @keyframes sia-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
 @keyframes sia-pulse { 0%, 100% { stroke-width: 3.5; } 50% { stroke-width: 5; } }
 
