@@ -508,3 +508,14 @@ p:last-child { margin-bottom: 0; }
 @media (prefers-reduced-motion: reduce) {
   .sia *, .sia *::before { transition: none !important; animation: none !important; }
 }
+
+/* Cowork vs Code tab comparison */
+.compare { margin-top: 40px; }
+.compare > h3 { margin: 0 0 8px; }
+.compare > p { max-width: 46rem; color: var(--color-text-secondary); margin-bottom: 20px; }
+.compare h4 { margin: 0 0 10px; font-size: 1.15rem; }
+.compare .pick { margin-bottom: 14px; }
+.compare .list-label { margin: 14px 0 6px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text); }
+.compare ul { margin: 0; padding-left: 1.15em; }
+.compare li { color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 6px; overflow-wrap: anywhere; }
+.compare code { overflow-wrap: anywhere; }

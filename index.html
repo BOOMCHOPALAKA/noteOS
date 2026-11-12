@@ -317,9 +317,52 @@
           </article>
           <article class="card">
             <span class="badge">Optional</span>
-            <h3>Code tab</h3>
-            <p>Another part of the same app, working with the same folder. It reads the instruction file without being asked, starts skills on its own, runs two small reminders and can split planning between Opus and Sonnet. The setup guides cover it near the end.</p>
+            <h3>Code tab (Claude Code)</h3>
+            <p>The tab labeled Code in the same app, next to Chat and Cowork. This is Claude Code. It works with the same folder and does more on its own. The comparison below shows how it differs from Cowork.</p>
           </article>
+        </div>
+        <div class="compare">
+          <h3>Cowork or the Code tab?</h3>
+          <p>Both are tabs in the same Claude desktop app, on the same paid plans, and both work with the same noteOS folder. Your notes are the same files either way, so you can switch any time.</p>
+          <div class="grid grid-2">
+            <article class="card">
+              <span class="badge accent">Start here</span>
+              <h4>Cowork</h4>
+              <p class="pick"><strong>Pick it if</strong> you want it to feel like the chat you already use.</p>
+              <p class="list-label">Good</p>
+              <ul>
+                <li>Looks and feels like chat.</li>
+                <li>In my test it asked for permission twice at the start, then got to work.</li>
+              </ul>
+              <p class="list-label">Watch out</p>
+              <ul>
+                <li>It doesn&#39;t read <code>CLAUDE.md</code> on its own. Start each session with <code>Read CLAUDE.md in this folder and follow it.</code></li>
+                <li>Ask for skills in plain words, like &quot;save this session.&quot; Typing <code>/remember</code> is a Code tab shortcut.</li>
+                <li>The two reminders and the Opus to Sonnet split are Code tab only.</li>
+                <li>Sessions run in the cloud, so the files Claude uses are processed on Anthropic&#39;s servers.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <span class="badge">Claude Code</span>
+              <h4>Code tab</h4>
+              <p class="pick"><strong>Pick it if</strong> you want the whole system running on its own and don&#39;t mind approving more.</p>
+              <p class="list-label">Good</p>
+              <ul>
+                <li>It reads <code>CLAUDE.md</code> without being asked, so <code>hi</code> works as a first message.</li>
+                <li>Skills start on their own, and <code>/remember</code> and <code>/pickup</code> work.</li>
+                <li>Two reminders run: one offers to log a correction, one asks for examples before you start something new.</li>
+                <li>Opus can plan while Sonnet builds, which usually makes your usage go further.</li>
+                <li>A local session runs on your computer. What Claude reads still goes to Anthropic so it can answer.</li>
+              </ul>
+              <p class="list-label">Watch out</p>
+              <ul>
+                <li>It looks more like a tool for developers.</li>
+                <li>By default it asks before each file change and each command, so expect more Allow clicks.</li>
+                <li>Accept edits mode stops the asking for edits, but then Claude can move or delete files without checking with you.</li>
+                <li>Newer for this folder: not yet tested end to end, and the reminders aren&#39;t tested on Windows yet.</li>
+              </ul>
+            </article>
+          </div>
         </div>
         <p class="muted small after-grid">Any AI that can read this folder can use it. <code>CLAUDE.md</code> holds the instructions, and each skill is a plain file that lists its steps.</p>
       </div>
