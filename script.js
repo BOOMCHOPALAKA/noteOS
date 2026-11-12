@@ -8,25 +8,25 @@
 
   var STEPS = [
     {
-      dur: 6500,
+      dur: 10000,
       title: 'A normal conversation.',
       text: 'You talk to Claude the way you would to a friend. When something is worth keeping, it asks before it saves.',
       s: {}
     },
     {
-      dur: 5500,
+      dur: 8500,
       title: 'A file gets made.',
       text: 'Claude writes a note, Sponsor call.md, and adds it to the Trails on your Channel Basecamp so it can find it later.',
       s: { call: 'lit@0.3', lCall: 'on@1.3', hub: 'lit@1.9', trailCall: 'on@2.1' }
     },
     {
-      dur: 5500,
+      dur: 8500,
       title: 'You wrap up.',
       text: '/remember saves the session and updates Current Context with where things stand.',
       s: { call: 'rest', lCall: 'settled', trailCall: 'settled', cc: 'lit@1.4', ccNew: 'on@1.8' }
     },
     {
-      dur: 8000,
+      dur: 12000,
       title: 'Next morning.',
       text: 'Claude reads Current Context and the basecamp before it answers, so it already knows where you left off.',
       s: {
@@ -36,7 +36,7 @@
       }
     },
     {
-      dur: 6000,
+      dur: 9000,
       title: 'It builds on what it knows.',
       text: 'The new script note links to the same basecamp, so each session adds to the last.',
       s: {
