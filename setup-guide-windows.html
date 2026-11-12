@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Windows Setup Guide</title>
-  <meta name="description" content="Step by step setup for noteOS
-Starter on a Windows PC.">
+  <meta name="description" content="Step by step setup for noteOS Starter on a Windows PC.">
   <script>
     try { var t = localStorage.getItem('noteos-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
   </script>
@@ -19,7 +18,7 @@ Starter on a Windows PC.">
   <header class="site-header">
     <div class="wrap-wide">
       <a class="brand" href="index.html">note<span>OS</span> Starter</a>
-      <a class="btn btn-primary header-cta" href="noteos-starter.zip" download>Download</a>
+      <a class="btn btn-primary header-cta" href="noteOS.zip" download>Download</a>
     </div>
   </header>
   <main id="main" class="wrap">
@@ -138,20 +137,22 @@ name. Click Cowork.</li>
 don't see Cowork, go to "Cowork doesn't show up" in section 11.</p>
 <p>You should see: Cowork open, with a box to type in.</p>
 <h3
-id="step-3-unzip-the-pack-move-it-to-documents-and-open-it-in-obsidian">Step
-3. Unzip the pack, move it to Documents, and open it in Obsidian</h3>
+id="step-3-unzip-noteoszip-move-it-to-documents-and-open-it-in-obsidian">Step
+3. Unzip noteOS.zip, move it to Documents, and open it in Obsidian</h3>
 <p>Move the folder to Documents before you open it anywhere. This folder
 is Claude's home, and Downloads tends to get cleaned out.</p>
 <ol type="1">
-<li>Open File Explorer and find the pack's zip file in your Downloads
-folder.</li>
-<li>Right-click the zip file and choose <strong>Extract All</strong>.
-When it asks where to put the files, click <strong>Browse</strong>, pick
-your Documents folder, and click <strong>Extract</strong>.</li>
-<li>Open the new folder in Documents and find the folder named
-<code>starter</code>. You'll know it's the right one because it holds
-<code>CLAUDE.md</code> and <code>README.md</code>. You can rename it,
-for example to <code>Notes</code>.</li>
+<li>Open File Explorer and find <code>noteOS.zip</code> in your
+Downloads folder.</li>
+<li>Right-click <code>noteOS.zip</code> and choose <strong>Extract
+All</strong>. Keep the location it suggests. Don't click
+<strong>Browse</strong> to pick another place, because the files then
+land loose in that place instead of in a folder. Click
+<strong>Extract</strong>.</li>
+<li>A folder named <code>noteOS</code> opens. Check that you have the
+right one. It holds <code>CLAUDE.md</code> and <code>README.md</code>.
+Move that folder into your Documents folder. You can rename it, for
+example to <code>Notes</code>.</li>
 <li>In Obsidian, click <strong>Open</strong> next to <strong>Open folder
 as vault</strong>. ("Vault" is Obsidian's word for a folder of
 notes.)</li>
@@ -180,10 +181,10 @@ got a generic reply. This sentence points Claude at your instruction
 file.</p>
 <p><strong>Prompts come next.</strong> Two prompts from Claude are
 expected. The wording below comes from a test on a Mac, so yours may
-look a little different. Your folder's name shows where the test showed
-"starter."</p>
+look a little different. The prompt shows your folder's name, so if you
+renamed your noteOS folder, you see that name instead of "noteOS."</p>
 <ol type="1">
-<li><strong>"Allow Claude to change files in "starter"?"</strong> with
+<li><strong>"Allow Claude to change files in "noteOS"?"</strong> with
 the buttons Cancel, Always allow and Allow. Click <strong>Always
 allow</strong>, since Claude writes notes here. Do this for your notes
 folder only. Never for a folder of original footage or anything you
@@ -418,7 +419,7 @@ quietly from the next session on. If they don't seem to work, ask Claude
 it again if it doesn't. The Windows reminders are small PowerShell
 scripts, new and not yet tested on a real Windows PC. If you see an
 error about a script, Claude still works. Tell the person who shared
-this pack with you.</p>
+noteOS Starter with you.</p>
 <h3 id="step-3-split-planning-between-opus-and-sonnet">Step 3. Split
 planning between Opus and Sonnet</h3>
 <ol type="1">
@@ -486,8 +487,7 @@ again.</p>
   </main>
   <footer class="site-footer">
     <div class="wrap-wide">
-      <p>This guide is also in the starter folder as <code>Setup Guide -
-Windows.md</code>.</p>
+      <p>This guide is also in your noteOS folder as <code>Setup Guide - Windows.md</code>.</p>
       <p><a href="index.html">noteOS Starter home</a></p>
     </div>
   </footer>

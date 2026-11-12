@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>$pagetitle$</title>
+  <meta name="description" content="$description$">
+  <script>
+    try { var t = localStorage.getItem('noteos-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="brand" href="index.html">note<span>OS</span> Starter</a>
+      <a class="btn btn-primary header-cta" href="noteOS.zip" download>Download</a>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <div class="guide-top">
+      <a class="back" href="index.html">← Back to noteOS Starter</a>
+    </div>
+    <article class="prose">
+      <h1>$title$</h1>
+$if(toc)$
+      <nav class="toc" aria-label="In this guide">
+$table-of-contents$
+      </nav>
+$endif$
+$body$
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap-wide">
+      <p>This guide is also in your noteOS folder as <code>$srcname$</code>.</p>
+      <p><a href="index.html">noteOS Starter home</a></p>
+    </div>
+  </footer>
+</body>
+</html>
