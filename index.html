@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>noteOS</title>
-  <meta name="description" content="A starter folder where Claude keeps notes on your work and picks up where you left off. Download it, open it in Cowork or Claude Code, and follow the setup steps.">
+  <meta name="description" content="A starter folder where Claude keeps notes on your work and picks up where you left off. Download it, open it in Claude Cowork or Claude Code, and follow the setup steps.">
   <script>
     try { var t = localStorage.getItem('noteos-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
   </script>
@@ -51,7 +51,7 @@
           </a>
           <a class="btn btn-secondary" href="#day-1">See the setup steps</a>
         </div>
-        <p class="need">You'll need the Claude desktop app and a paid Claude plan (Pro, Max, Ultra, Team or Enterprise), because Cowork needs one. Setup takes about 30 to 45 minutes. That's my rough guess, and most of it is downloads and the first setup conversation.</p>
+        <p class="need">You'll need the Claude desktop app and a paid Claude plan (Pro, Max, Ultra, Team or Enterprise), because Claude Cowork needs one. Setup takes about 30 to 45 minutes. That's my rough guess, and most of it is downloads and the first setup conversation.</p>
       </div>
     </section>
 
@@ -100,7 +100,7 @@
           <article class="card">
             <div class="num" aria-hidden="true">2</div>
             <h3>It remembers</h3>
-            <p>Every conversation can leave notes behind, and Claude reads them next time, so it doesn't start from scratch. Some of it happens as you go: Claude logs routine things in today's note and asks before saving bigger decisions. The rest happens when you end a session by saying "save this session." Behind the scenes it pulls out the decisions, new facts and next steps, files each one in the right note, links it to the right basecamp and updates Current Context with where you stopped. The next morning, say "pick up where we left off" and it tells you where you stopped. (In Cowork, if Claude doesn&#39;t seem to know you, send <code>Read CLAUDE.md in this folder and follow it.</code> first. In Claude Code, <code>/remember</code> and <code>/pickup</code> work too.)</p>
+            <p>Every conversation can leave notes behind, and Claude reads them next time, so it doesn't start from scratch. Some of it happens as you go: Claude logs routine things in today's note and asks before saving bigger decisions. The rest happens when you end a session by saying "save this session." Behind the scenes it pulls out the decisions, new facts and next steps, files each one in the right note, links it to the right basecamp and updates Current Context with where you stopped. The next morning, say "pick up where we left off" and it tells you where you stopped. (In Claude Cowork, if Claude doesn&#39;t seem to know you, send <code>Read CLAUDE.md in this folder and follow it.</code> first. In Claude Code, <code>/remember</code> and <code>/pickup</code> work too.)</p>
             <p class="card-note">Want to see the notes? Open the folder in Obsidian, a free app that shows every note Claude has made for you in an easy-to-read format. Or skip it entirely. Keep talking to Claude and ask it for whatever you need, and you never have to open a note yourself. That's the beauty of it.
           </article>
           <article class="card">
@@ -303,19 +303,19 @@
 
     <section class="section" id="apps" aria-labelledby="apps-title">
       <div class="wrap-wide">
-        <h2 id="apps-title">The fundamentals: Chat vs. Cowork vs. Claude Code</h2>
+        <h2 id="apps-title">The fundamentals: Claude Chat vs. Claude Cowork vs. Claude Code</h2>
         <p class="intro">Most of us use AI in a chat. You type, it answers, and you upload whatever files it needs for that conversation. Chat can remember a bit about you now, but it can&#39;t open your notes or files on its own, so a lot of the time you&#39;re kind of starting from scratch.</p>
-        <p class="intro">Claude Code and Cowork work differently. You still talk to Claude, but now it can work inside an actual folder on your computer, reading and writing the files in it. Claude Code was made for software developers, so they could point it at a project and have Claude read through the files, see how everything fits together and build or fix things across them. Anthropic made Cowork to bring that same power to everyday work (they called it &quot;Claude Code for the rest of your work&quot;), things like organizing files, reviewing a stack of contracts or pulling together a report. Other AI companies have been following suit too. OpenAI has Codex, which now lives inside the ChatGPT desktop app, Google has Gemini CLI and Antigravity, and there&#39;s also GitHub Copilot&#39;s agent mode and Cursor. Most of those are aimed at developers though.</p>
+        <p class="intro">Claude Code and Claude Cowork work differently. You still talk to Claude, but now it can work inside an actual folder on your computer, reading and writing the files in it. Claude Code was made for software developers, so they could point it at a project and have Claude read through the files, see how everything fits together and build or fix things across them. Anthropic made Claude Cowork to bring that same power to everyday work (they called it &quot;Claude Code for the rest of your work&quot;), things like organizing files, reviewing a stack of contracts or pulling together a report. Other AI companies have been following suit too. OpenAI has Codex, which now lives inside the ChatGPT desktop app, Google has Gemini CLI and Antigravity, and there&#39;s also GitHub Copilot&#39;s agent mode and Cursor. Most of those are aimed at developers though.</p>
         <p class="intro"><strong>This is really where the magic of noteOS happens.</strong> Once Claude has access to the folder and reads <code>CLAUDE.md</code>, the folder becomes its memory. It looks through your notes before it answers, writes new ones, links them to the right basecamp and updates Current Context when you save a session. So each conversation can pick up where the last one left off.</p>
         <div class="grid">
           <article class="card">
             <span class="badge">Doesn&#39;t use your folder</span>
-            <h3>Chat</h3>
+            <h3>Claude Chat</h3>
             <p>You type, Claude answers, and you upload files for that one conversation. It doesn&#39;t work inside your noteOS folder, so noteOS won&#39;t really run here.</p>
           </article>
           <article class="card">
             <span class="badge accent">Works in your folder</span>
-            <h3>Cowork</h3>
+            <h3>Claude Cowork</h3>
             <p>Part of the Claude desktop app. You pick a folder and talk to Claude the same way you do in chat. Sessions run in the cloud, so the files Claude uses are processed on Anthropic&#39;s servers. Keep private files out of this folder.</p>
           </article>
           <article class="card">
@@ -326,21 +326,21 @@
         </div>
         <p class="after-grid"><strong>Other AI apps like ChatGPT may work too,</strong> as long as they can work in a folder on your computer, since it&#39;s all just plain text. Just tell it to read <code>CLAUDE.md</code> first. We&#39;re working on a guide for that as well.</p>
         <div class="compare">
-          <h3>Cowork or Claude Code?</h3>
+          <h3>Claude Cowork or Claude Code?</h3>
           <p>Both are in the same Claude desktop app, both need a paid Claude plan, and both work with the same noteOS folder. Your notes are the same files either way, so you can switch any time.</p>
           <div class="grid grid-2">
             <article class="card">
-              <h4>Cowork</h4>
+              <h4>Claude Cowork</h4>
               <p class="pick"><strong>Pick it if</strong> you want it to feel like the chat you already use.</p>
               <p class="list-label">Good</p>
               <ul>
                 <li>Looks and feels like chat.</li>
-                <li>In my test on a Mac, Claude asked twice (to change files and to access the folder) before it started.</li>
+                <li>Fewer Allow clicks: it asks twice when you start, once to change files and once to open the folder.</li>
               </ul>
               <p class="list-label">Watch out</p>
               <ul>
-                <li>In my test, it didn&#39;t read <code>CLAUDE.md</code> on its own. Start each session with <code>Read CLAUDE.md in this folder and follow it.</code></li>
-                <li>Ask for skills in plain words, like &quot;save this session.&quot; Typing <code>/remember</code> is a shortcut I&#39;ve only tested in Claude Code.</li>
+                <li>It needs one line in your Claude settings to read <code>CLAUDE.md</code> on its own. Step 2 below shows how.</li>
+                <li>Ask for skills in plain words, like &quot;save this session.&quot; Shortcuts like <code>/remember</code> are set up for Claude Code.</li>
                 <li>In this folder, the two reminders and the Opus to Sonnet split are set up for Claude Code.</li>
                 <li>Sessions run in the cloud, so the files Claude uses are processed on Anthropic&#39;s servers.</li>
               </ul>
@@ -453,6 +453,11 @@
             </a>
           </div>
           <p class="file">noteOS.zip · about 56 KB</p>
+          <div class="after-download">
+            <p><strong>After you unzip it,</strong> add this line to the end of your Claude settings (your name, then Settings, Your Claude, Instructions):</p>
+            <p><code>When I&#39;m working in a folder that has a CLAUDE.md, read it first and follow it.</code></p>
+            <p>Then pick your noteOS folder in Claude Cowork and send <code>Read CLAUDE.md in this folder and follow it.</code> The steps below walk you through it.</p>
+          </div>
           <ul class="promises">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Everything is a plain text file on your computer. You can edit or delete any of it.</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>The connect skill is told never to ask for a password, key or token in the chat, and never to save one in the folder.</span></li>
@@ -472,12 +477,17 @@
             <p>Unzip <code>noteOS.zip</code> with the default settings. On a Mac, double-click it. On Windows, right-click it, choose <strong>Extract All</strong>, keep the location it suggests (don't click Browse, or the files land loose), and click <strong>Extract</strong>. You get a folder named <code>noteOS</code>. Drag that folder into your Documents folder. You can rename it, for example to Notes. This folder is Claude's home now, and Downloads tends to get cleaned out. Then open it in Obsidian with <strong>Open folder as vault</strong>.</p>
           </li>
           <li>
-            <h3>Open Cowork</h3>
-            <p>Open the Claude desktop app and click <strong>Cowork</strong>. Depending on your app version, it's a tab at the top of the sidebar on the left or an option near the box you type in.</p>
+            <h3>Add one line to your Claude settings</h3>
+            <p>You only do this once. It lets Claude read your folder&#39;s instruction file every time you open the folder. In the Claude desktop app, click your name at the bottom of the sidebar, then <strong>Settings</strong>, then <strong>Your Claude</strong>. Click at the very end of the <strong>Instructions</strong> box, below anything already there, and paste this on a new line:</p>
+            <div class="first-message">
+              <code id="settings-line">When I&#39;m working in a folder that has a CLAUDE.md, read it first and follow it.</code>
+              <button class="copy-btn" type="button" data-copy="settings-line" hidden>Copy</button>
+            </div>
+            <p>Keep what&#39;s already in the box. If you don&#39;t see Your Claude, look for <strong>Settings &gt; Cowork &gt; Global instructions</strong>.</p>
           </li>
           <li>
-            <h3>Pick your folder</h3>
-            <p>Choose your notes folder in Documents. Look for a folder control near the box. If you don't see one, go on to the next step. Cowork asks you to pick a folder the first time it needs files.</p>
+            <h3>Open Claude Cowork and pick your folder</h3>
+            <p>In newer versions of the app, chat and Claude Cowork share one screen: pick your notes folder in Documents with the folder button under the box you type in. In older versions, click the <strong>Cowork</strong> tab in the sidebar first, then pick the folder. If you don&#39;t see a folder button, go on. Claude asks for a folder the first time it needs files.</p>
           </li>
           <li>
             <h3>Send the first message</h3>
@@ -486,11 +496,11 @@
               <code id="first-message">Read CLAUDE.md in this folder and follow it.</code>
               <button class="copy-btn" type="button" data-copy="first-message" hidden>Copy</button>
             </div>
-            <p>Cowork doesn't read <code>CLAUDE.md</code> on its own. When I tried <code>hi</code>, I got a generic reply. This sentence points Claude at your instruction file.</p>
+            <p>This starts setup. After today, the line from step 2 handles it, so a new session can start with anything, even <code>hi</code>.</p>
           </li>
           <li>
             <h3>Click Allow on each prompt</h3>
-            <p>A few permission prompts come next. These are the ones I saw on my Mac, in this order. The prompt shows your folder's name, so if you renamed your noteOS folder, you see that name instead of "noteOS."</p>
+            <p>A few permission prompts come next. On a Mac, they come in this order. The prompt shows your folder's name, so if you renamed your noteOS folder, you see that name instead of "noteOS."</p>
             <ol class="prompts">
               <li class="prompt">
                 <p class="who">Claude asks</p>
@@ -505,7 +515,7 @@
               <li class="prompt">
                 <p class="who">macOS asks</p>
                 <p class="says">"Claude" would like to access files in your Documents folder.</p>
-                <p class="do">Click <span class="pill">Allow</span>. Mine named Downloads, because my test folder was still there. With your folder in Documents, it should name Documents.</p>
+                <p class="do">Click <span class="pill">Allow</span>.</p>
               </li>
             </ol>
             <p><strong>On Windows</strong>, I haven't seen these prompts yet. The Windows guide shows the Mac wording for the two Claude prompts, so yours may look a little different. If a prompt asks about Claude and your notes folder, Allow is the right answer.</p>
@@ -540,7 +550,7 @@
         <div class="grid grid-2">
           <a class="card guide-card" href="setup-guide-mac.html">
             <h3>Setup Guide for Mac</h3>
-            <p>Installs, the three prompts I saw on a Mac, Days 1 to 5, Week 2, optional Claude Code and what to do if something looks wrong.</p>
+            <p>Installs, the permission prompts, Days 1 to 5, Week 2, optional Claude Code and what to do if something looks wrong.</p>
             <span class="go" aria-hidden="true">Open the Mac guide →</span>
           </a>
           <a class="card guide-card" href="setup-guide-windows.html">

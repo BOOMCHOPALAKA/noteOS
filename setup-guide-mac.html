@@ -62,17 +62,17 @@ wrong</a></li>
 <h2 id="1-what-youre-setting-up">1. What you're setting up</h2>
 <p>You're setting up a shared notebook for you and Claude: a folder of
 notes on your Mac. You read them in an app called Obsidian. Claude works
-in the same folder through Cowork, part of the Claude desktop app, and
-learns how you like to work. Day 1 takes about 30 to 45 minutes (a rough
-guess). Each day after that, you try one new habit in a few minutes.
-This guide is written for Claude. Other AI apps that can work in a
-folder on your computer, like ChatGPT's desktop app, should work too,
-since the notes and instructions are plain text files. Start the same
-way: Read CLAUDE.md in this folder and follow it. A guide for other apps
-is in the works.</p>
+in the same folder through Claude Cowork, part of the Claude desktop
+app, and learns how you like to work. Day 1 takes about 30 to 45 minutes
+(a rough guess). Each day after that, you try one new habit in a few
+minutes. This guide is written for Claude. Other AI apps that can work
+in a folder on your computer, like ChatGPT's desktop app, should work
+too, since the notes and instructions are plain text files. Start the
+same way: Read CLAUDE.md in this folder and follow it. A guide for other
+apps is in the works.</p>
 <p><strong>What you need:</strong> a Mac, an internet connection, and a
-paid Claude plan (Pro, Max, Ultra, Team or Enterprise). Cowork needs a
-paid plan.</p>
+paid Claude plan (Pro, Max, Ultra, Team or Enterprise). Claude Cowork
+needs a paid plan.</p>
 <p><strong>How to read this guide:</strong> each step ends with a line
 that starts "You should see:". If your screen matches, move on. If not,
 the step says what to do.</p>
@@ -82,12 +82,11 @@ the step says what to do.</p>
 in a folder.</li>
 <li><strong>Markdown file:</strong> a plain text file whose name ends in
 <code>.md</code>. Obsidian shows it as a tidy note.</li>
-<li><strong>Cowork:</strong> the part of the Claude desktop app where
-Claude works with the files in a folder you pick. Its sessions run in
-the cloud, on Anthropic's servers. (Anthropic makes Claude.)</li>
+<li><strong>Claude Cowork:</strong> the part of the Claude desktop app
+where Claude works with the files in a folder you pick. Its sessions run
+in the cloud, on Anthropic's servers. (Anthropic makes Claude.)</li>
 <li><strong>CLAUDE.md:</strong> the instruction file in your folder.
-It's the rulebook. In Cowork, you ask Claude to read it at the start of
-a session.</li>
+It's the rulebook. Claude reads it whenever you pick the folder.</li>
 <li><strong>Skill:</strong> a saved playbook in your folder. Each one
 tells Claude how to do one job the same way every time, like saving a
 session or drafting an email.</li>
@@ -117,24 +116,35 @@ onto the Applications folder.</li>
 </ol>
 <p>You should see: an Obsidian window with a few choices, one of them
 <strong>Open folder as vault</strong>. Leave it open for now.</p>
-<h3 id="step-2-install-the-claude-desktop-app-and-find-cowork">Step 2.
-Install the Claude desktop app and find Cowork</h3>
+<h3 id="step-2-install-the-claude-desktop-app-and-set-it-up">Step 2.
+Install the Claude desktop app and set it up</h3>
 <ol type="1">
-<li>In your browser, go to claude.com/download and download the Mac
-version. One version works on every Mac, Intel or Apple Silicon.</li>
-<li>Open the downloaded file. If a window shows the Claude icon and an
-Applications folder, drag the icon onto the folder.</li>
-<li>Open Claude from your Applications folder and sign in with your
-Claude account.</li>
-<li>Find <strong>Cowork</strong>. Depending on your app version, it's a
-tab at the top of the sidebar on the left or an option near the box you
-type in. If the tabs show only icons, hover over each one to see its
-name. Click Cowork.</li>
+<li><p>In your browser, go to claude.com/download and download the Mac
+version. One version works on every Mac, Intel or Apple
+Silicon.</p></li>
+<li><p>Open the downloaded file. If a window shows the Claude icon and
+an Applications folder, drag the icon onto the folder.</p></li>
+<li><p>Open Claude from your Applications folder and sign in with your
+Claude account.</p></li>
+<li><p>Add one line to Claude's settings, once, so Claude reads your
+folder's instruction file every time. Click your name at the bottom of
+the sidebar, then <strong>Settings</strong>, then <strong>Your
+Claude</strong>. At the very end of the <strong>Instructions</strong>
+box, below anything already there, paste this on a new line:</p>
+<p><code>When I'm working in a folder that has a CLAUDE.md, read it first and follow it.</code></p>
+<p>Keep what's already there. If there's a Save button, click it. No
+Your Claude? Look for <strong>Settings &gt; Cowork &gt; Global
+instructions</strong>.</p></li>
+<li><p>Find Claude Cowork. In newer versions, chat and Claude Cowork
+share one screen: pick a folder with the folder button under the box. In
+older versions, click the <strong>Cowork</strong> tab in the sidebar
+first.</p></li>
 </ol>
-<p>If you're asked to upgrade, Cowork needs a paid plan. Subscribe
-first, then come back. If you don't see Cowork at all, go to "Cowork
-doesn't show up" in section 11.</p>
-<p>You should see: Cowork open, with a box to type in.</p>
+<p>If you're asked to upgrade, Claude Cowork needs a paid plan.
+Subscribe first, then come back. If you don't see Claude Cowork at all,
+go to "Claude Cowork doesn't show up" in section 11.</p>
+<p>You should see: your line at the bottom of the Instructions box, and
+a box to type in on the Claude home screen.</p>
 <h3
 id="step-3-unzip-noteoszip-move-it-to-documents-and-open-it-in-obsidian">Step
 3. Unzip noteOS.zip, move it to Documents, and open it in Obsidian</h3>
@@ -161,22 +171,21 @@ notes.)</li>
 <code>.md</code> at the end of each name and hides the
 <code>.claude</code> folder. That's normal.</p>
 <h3
-id="step-4-open-the-folder-in-cowork-and-send-the-first-message">Step 4.
-Open the folder in Cowork and send the first message</h3>
+id="step-4-open-the-folder-in-claude-cowork-and-send-the-first-message">Step
+4. Open the folder in Claude Cowork and send the first message</h3>
 <ol type="1">
-<li><p>In Cowork, choose your notes folder in Documents. Look for a
-folder control near the box. If you don't see one, go on to the next
-step. Cowork asks you to pick a folder the first time it needs
+<li><p>In Claude Cowork, choose your notes folder in Documents. Look for
+a folder control near the box. If you don't see one, go on to the next
+step. Claude Cowork asks you to pick a folder the first time it needs
 files.</p></li>
 <li><p>Type this exactly, and press Return:</p>
 <p><code>Read CLAUDE.md in this folder and follow it.</code></p></li>
 </ol>
-<p>In my test, Cowork didn't read CLAUDE.md on its own: <code>hi</code>
-got a generic reply. This sentence points Claude at your instruction
-file.</p>
-<p><strong>Three prompts come next.</strong> In a test on a Mac, they
-appeared in this order. The prompt shows your folder's name, so if you
-renamed your noteOS folder, you see that name instead of "noteOS."</p>
+<p>This starts setup. After today, the line from step 2 handles it, so a
+new session can start with anything, even <code>hi</code>.</p>
+<p><strong>Three prompts come next,</strong> in this order. The prompt
+shows your folder's name, so if you renamed your noteOS folder, you see
+that name instead of "noteOS."</p>
 <ol type="1">
 <li><strong>"Allow Claude to change files in "noteOS"?"</strong> with
 the buttons Cancel, Always allow and Allow. Click <strong>Always
@@ -189,9 +198,7 @@ Anthropic's servers. Check <strong>Don't ask again for this folder on
 this device</strong>, then click <strong>Allow</strong>. Because of
 this, keep private files and original footage out of this folder.</li>
 <li><strong>macOS asks: ""Claude" would like to access files in your
-Documents folder."</strong> (In the test it named Downloads. With your
-folder in Documents, it should name Documents.) Click
-<strong>Allow</strong>.</li>
+Documents folder."</strong> Click <strong>Allow</strong>.</li>
 </ol>
 <p>Claude now runs the <strong>onboarding</strong> skill. It asks about
 six questions, one at a time, about you, your work and how you like
@@ -199,12 +206,8 @@ answers. Short answers are fine. As you answer, Claude writes notes in
 your folder. If it asks to run a short command, like one that reads
 today's date, allow it. If you see red error text, type:
 <code>that command failed, try another way</code>.</p>
-<p>Near the end, Claude asks: "One setup thing: can I save a note in
-this folder's instructions so I read CLAUDE.md first every time you open
-it?" Say yes. This part is new and hasn't been tested yet. If it doesn't
-stick, nothing breaks. You start each session with the same first
-message. If Claude mentions reminders as a Claude Code extra, you don't
-need them today.</p>
+<p>Near the end, Claude checks that you did step 2. If Claude mentions
+reminders as a Claude Code extra, you don't need them today.</p>
 <p>Last, Claude offers a short tour of how all this works. Say yes. It
 takes about ten minutes, shows you around your folder in Obsidian, and
 helps you change your instruction file. You can stop any time.</p>
@@ -219,13 +222,14 @@ If onboarding doesn't start, go to "Onboarding didn't start" in section
 <h3 id="step-5-start-a-fresh-session-and-open-start-here">Step 5. Start
 a fresh session and open Start Here</h3>
 <ol type="1">
-<li>Start a new session in Cowork. Look for <strong>+ New</strong> or a
-new task button in the sidebar. Choose the same notes folder.</li>
+<li>Start a new session in Claude Cowork. Look for <strong>+
+New</strong> or a new task button in the sidebar. Choose the same notes
+folder.</li>
 <li>Type: <code>what do you know about me?</code></li>
 <li>If the reply doesn't use what you told Claude, type
 <code>Read CLAUDE.md in this folder and follow it.</code> and ask again.
-That means the folder note from step 4 didn't stick. Start each new
-session with that sentence.</li>
+That means the line from step 2 is missing. Check it in Settings, then
+start a new session.</li>
 <li>In Obsidian, open <code>Start Here</code>. It's a one-page map of
 your folder.</li>
 </ol>
@@ -233,9 +237,10 @@ your folder.</li>
 onboarding, and Start Here with a welcome and a list of what's in the
 folder. You're set up. Use it for real work for the rest of the day.</p>
 <h2 id="4-day-2-remember-and-pickup">4. Day 2: remember and pickup</h2>
-<p><strong>A habit for every session:</strong> in Cowork, choose your
-notes folder. If Claude doesn't seem to know you or your folder, send
-<code>Read CLAUDE.md in this folder and follow it.</code> first.</p>
+<p><strong>A habit for every session:</strong> in Claude Cowork, choose
+your notes folder. If Claude doesn't seem to know you or your folder,
+send <code>Read CLAUDE.md in this folder and follow it.</code>
+first.</p>
 <h3 id="step-1-save-the-session">Step 1. Save the session</h3>
 <p>At the end of a working session, type <code>save this session</code>.
 The <strong>remember</strong> skill reviews the conversation, writes
@@ -246,8 +251,8 @@ note appears under <code>Calendar</code>, in a folder for this month and
 week, named with today's date.</p>
 <h3 id="step-2-pick-up-the-next-morning">Step 2. Pick up the next
 morning</h3>
-<p>The next morning, start a new session in Cowork, choose your folder,
-and type <code>pick up where we left off</code>.</p>
+<p>The next morning, start a new session in Claude Cowork, choose your
+folder, and type <code>pick up where we left off</code>.</p>
 <p>You should see: a reply that starts with "Using pickup skill," then
 "Hey, welcome back," a short briefing of where you left off, and two to
 four numbered options. Reply with a number to start.</p>
@@ -285,7 +290,7 @@ this plan hold?" Read it. Say yes, or say what to change.</p>
 <p>Say yes when the plan looks right. Claude saves the plan as a note
 (if it hasn't already) and works through each step. If Claude talks
 about switching models or modes, that's a Claude Code extra (section
-10). In Cowork, you can stay as you are.</p>
+10). In Claude Cowork, you can stay as you are.</p>
 <p>For a footage job, copy one folder of clips into
 <code>Downloads/</code> inside your notes folder, and only clips you're
 fine sending to Anthropic's servers. Keep the originals, and a backup,
@@ -362,8 +367,8 @@ Nothing changes without your yes.</li>
 on your Mac. Claude reads the new version next session.</li>
 </ul>
 <h2 id="10-want-more-claude-code">10. Want more? Claude Code</h2>
-<p>Cowork covers Days 1 to 5. Claude Code is an optional extra in the
-same app, with the same folder and notes. It adds three things:</p>
+<p>Claude Cowork covers Days 1 to 5. Claude Code is an optional extra in
+the same app, with the same folder and notes. It adds three things:</p>
 <ul>
 <li><strong>Skills start on their own.</strong> Claude reads CLAUDE.md
 without being asked, so <code>hi</code> works as a first message.
@@ -438,12 +443,12 @@ The split only saves cost.</p>
 and Accept edits while Claude builds. If a model isn't in the list, ask
 Claude: "Which models can I pick, and which is best for this?"</p>
 <h2 id="11-if-something-looks-wrong">11. If something looks wrong</h2>
-<h3 id="cowork-doesnt-show-up">Cowork doesn't show up</h3>
+<h3 id="claude-cowork-doesnt-show-up">Claude Cowork doesn't show up</h3>
 <p>Update the app with <strong>Claude &gt; Check for Updates…</strong>
-in the menu bar, then reopen it. Cowork needs a paid plan. On a Team or
-Enterprise plan, your admin may need to turn it on.</p>
-<p>You should see: Cowork in the sidebar or near the box. If it still
-isn't there, Claude Code (section 10) runs onboarding too.</p>
+in the menu bar, then reopen it. Claude Cowork needs a paid plan. On a
+Team or Enterprise plan, your admin may need to turn it on.</p>
+<p>You should see: Claude Cowork in the sidebar or near the box. If it
+still isn't there, Claude Code (section 10) runs onboarding too.</p>
 <h3 id="onboarding-didnt-start">Onboarding didn't start</h3>
 <p>Check that you typed the first message exactly:
 <code>Read CLAUDE.md in this folder and follow it.</code> Then check the
