@@ -87,11 +87,11 @@
                 <p class="bubble you" data-from="1" data-d="0.2"><span class="who">You</span><span class="text">Had a call with a brand sponsor today. They want two videos by March.</span></p>
                 <p class="bubble claude" data-from="1" data-d="2.3" data-t="0.8"><span class="who">Claude</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="text">Oh nice, congrats! Want me to save that?</span></p>
                 <p class="bubble you" data-from="1" data-d="3.8"><span class="who">You</span><span class="text">Yes please.</span></p>
-                <p class="bubble you" data-from="3" data-d="0.2"><span class="who">You</span><span class="text"><code>/remember</code></span></p>
+                <p class="bubble you" data-from="3" data-d="0.2"><span class="who">You</span><span class="text">Save this session.</span></p>
               </div>
               <div class="sia-session is-active" data-first="4" data-last="5">
                 <p class="bubble sia-divider" data-from="4" data-d="0.1"><span>Next morning</span></p>
-                <p class="bubble you" data-from="4" data-d="0.5"><span class="who">You</span><span class="text">What's next for the channel?</span></p>
+                <p class="bubble you" data-from="4" data-d="0.5"><span class="who">You</span><span class="text">Pick up where we left off.</span></p>
                 <p class="bubble claude sia-wire-target" data-from="4" data-d="2.9" data-t="0.8"><span class="who">Claude</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="text">Morning! Where we left off: two sponsor videos due in March. Want to start the script for the first one?</span></p>
                 <p class="bubble you" data-from="5" data-d="0.2"><span class="who">You</span><span class="text">Yes.</span></p>
               </div>
@@ -210,15 +210,15 @@
               <p class="sia-caption" aria-live="polite"></p>
               <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 1 of 5</span><strong>A normal conversation.</strong> You talk to Claude the way you would to a friend. When something is worth keeping, it asks before it saves.</p>
               <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 2 of 5</span><strong>A file gets made.</strong> Claude writes a note, Sponsor call.md, and adds it to the Trails on your Channel Basecamp so it can find it later.</p>
-              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 3 of 5</span><strong>You wrap up.</strong> /remember saves the session and updates Current Context with where things stand.</p>
-              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 4 of 5</span><strong>Next morning.</strong> Claude reads Current Context and the basecamp before it answers, so it already knows where you left off.</p>
+              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 3 of 5</span><strong>You wrap up.</strong> The remember skill saves the session and updates Current Context with where things stand.</p>
+              <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 4 of 5</span><strong>Next morning.</strong> The pickup skill reads Current Context and the basecamp, so Claude already knows where you left off.</p>
               <p class="sia-caption sia-sizer" aria-hidden="true"><span class="sia-count">Step 5 of 5</span><strong>It builds on what it knows.</strong> The new script note links to the same basecamp, so each session adds to the last.</p>
             </div>
             <ol class="sia-list">
               <li><strong>A normal conversation.</strong> You talk to Claude the way you would to a friend. When something is worth keeping, it asks before it saves.</li>
               <li><strong>A file gets made.</strong> Claude writes a note, Sponsor call.md, and adds it to the Trails on your Channel Basecamp so it can find it later.</li>
-              <li><strong>You wrap up.</strong> /remember saves the session and updates Current Context with where things stand.</li>
-              <li><strong>Next morning.</strong> Claude reads Current Context and the basecamp before it answers, so it already knows where you left off.</li>
+              <li><strong>You wrap up.</strong> The remember skill saves the session and updates Current Context with where things stand.</li>
+              <li><strong>Next morning.</strong> The pickup skill reads Current Context and the basecamp, so Claude already knows where you left off.</li>
               <li><strong>It builds on what it knows.</strong> The new script note links to the same basecamp, so each session adds to the last.</li>
             </ol>
             <div class="sia-controls" hidden>
@@ -271,7 +271,7 @@
           <article class="card">
             <div class="num" aria-hidden="true">2</div>
             <h3>It remembers</h3>
-            <p>Every conversation can leave notes behind, and Claude reads them next time, so it doesn't start from scratch. Some of it happens as you go: Claude logs routine things in today's note and asks before saving bigger decisions. The rest happens when you end a session with <code>/remember</code> (or just say "save this session"). Behind the scenes it pulls out the decisions, new facts and next steps, files each one in the right note, links it to the right basecamp and updates Current Context with where you stopped. The next morning, say <code>/pickup</code> and it tells you where you left off.</p>
+            <p>Every conversation can leave notes behind, and Claude reads them next time, so it doesn't start from scratch. Some of it happens as you go: Claude logs routine things in today's note and asks before saving bigger decisions. The rest happens when you end a session by saying "save this session." Behind the scenes it pulls out the decisions, new facts and next steps, files each one in the right note, links it to the right basecamp and updates Current Context with where you stopped. The next morning, say "pick up where we left off" and it tells you where you stopped. (In the Code tab, <code>/remember</code> and <code>/pickup</code> work too.)</p>
             <p class="card-note">Want to see the notes? Open the folder in Obsidian, a free app that shows every note Claude has made for you in an easy-to-read format. Or skip it entirely. Keep talking to Claude and ask it for whatever you need, and you never have to open a note yourself. That's the beauty of it.
           </article>
           <article class="card">
@@ -282,7 +282,7 @@
           <article class="card">
             <div class="num" aria-hidden="true">4</div>
             <h3>It learns and grows with you</h3>
-            <p>When you correct Claude, it writes it down in the Lessons Log. Say you tell it "that's wrong, I posted that on Tuesday, not Monday." It logs the mistake. If the same kind of mistake happens again, it suggests a rule, like "check the daily note before saying when something happened," and adds it to CLAUDE.md once you say OK. When you rewrite one of its drafts, it learns your voice the same way. A weekly tune-up suggests ways to make its skills better.</p>
+            <p>When you correct Claude, it writes it down in the Lessons Log. Say you tell it "that's wrong, I posted that on Tuesday, not Monday." It logs the mistake. If the same kind of mistake happens again, it suggests a rule, like "check the daily note before saying when something happened," and adds it to CLAUDE.md or the skill involved once you say OK. When you rewrite one of its drafts, it learns your voice the same way. Run a tune-up about once a week and it suggests ways to make its skills better.</p>
           </article>
           <article class="card">
             <div class="num" aria-hidden="true">5</div>
@@ -292,8 +292,8 @@
         </div>
         <div class="callout" role="note" aria-labelledby="crew-title">
           <h3 id="crew-title">A nice side effect: your plan goes further</h3>
-          <p>If you keep hitting your Claude usage limit, this part helps. Think of Claude's models as a team. Opus is the architect: the strongest model, best at thinking a problem through and writing the plan. Sonnet is the construction crew: it costs less, and it does great work once it has a good plan to follow.</p>
-          <p>The plan skill always writes the plan first, so you can have Opus plan and Sonnet build. How fast you reach a limit depends on the model you use, so letting the cheaper model do most of the work makes your plan go further. In the Code tab it's one setting, and the setup guide shows you how.</p>
+          <p>If you keep hitting your Claude usage limit, this part helps. Think of Claude's models as a team. Opus is the architect: the stronger model, best at thinking a problem through and writing the plan. Sonnet is the construction crew: it costs less, and it does great work once it has a good plan to follow.</p>
+          <p>The plan skill always writes the plan first, so you can have Opus plan and Sonnet build. How fast you reach a limit depends on the model you use, so letting the cheaper model do most of the work usually makes your plan go further. In the Code tab it takes a few clicks, and the setup guide shows you how.</p>
         </div>
       </div>
     </section>
@@ -463,7 +463,7 @@
         </ol>
 
         <div class="note">
-          <p><strong>Then onboarding starts.</strong> Claude welcomes you and asks about six questions, one at a time, about you, your work and how you like answers. Short answers are fine. When it's done, About Me in <code>CLAUDE.md</code> is filled in and <code>Map</code> holds a basecamp for each area you named.</p>
+          <p><strong>Then onboarding starts.</strong> Claude welcomes you and asks about six questions, one at a time, about you, your work and how you like answers. Short answers are fine. When it's done, About Me in <code>CLAUDE.md</code> should be filled in and <code>Map</code> should hold a basecamp for each area you named.</p>
           <p>Near the end, Claude asks to save a note in the folder's instructions so it reads <code>CLAUDE.md</code> first every time. Say yes. That part is new and hasn't been tested yet. If it doesn't stick, nothing breaks. Start each session with the same first message.</p>
         </div>
       </div>

@@ -22,13 +22,13 @@
     {
       dur: 8500,
       title: 'You wrap up.',
-      text: '/remember saves the session and updates Current Context with where things stand.',
+      text: 'The remember skill saves the session and updates Current Context with where things stand.',
       s: { call: 'rest', lCall: 'settled', trailCall: 'settled', cc: 'lit@1.4', ccNew: 'on@1.8' }
     },
     {
       dur: 12000,
       title: 'Next morning.',
-      text: 'Claude reads Current Context and the basecamp before it answers, so it already knows where you left off.',
+      text: 'The pickup skill reads Current Context and the basecamp, so Claude already knows where you left off.',
       s: {
         call: 'rest', lCall: 'settled', trailCall: 'settled', ccNew: 'on',
         cc: 'lit@1.6', hub: 'lit@1.7', wCc: 'on@2.0', wHub: 'on@2.2',
