@@ -332,3 +332,5 @@ p:last-child { margin-bottom: 0; }
 [hidden] { display: none !important; }
 .after-grid { margin-top: 24px; }
 .skills-title { margin-top: 48px; }
+
+.card .card-note { margin-top: 12px; color: var(--color-text-secondary); font-size: 0.92rem; }
