@@ -25,8 +25,8 @@ build_guide() {
 }
 
 build_guide "$PACK_REPO/starter/Setup Guide - Mac.md" "$SITE_REPO/setup-guide-mac.html" \
-  "Mac Setup Guide" "Step by step setup for noteOS Starter on a Mac."
+  "Mac Setup Guide" "Step by step setup for noteOS on a Mac."
 build_guide "$PACK_REPO/starter/Setup Guide - Windows.md" "$SITE_REPO/setup-guide-windows.html" \
-  "Windows Setup Guide" "Step by step setup for noteOS Starter on a Windows PC."
+  "Windows Setup Guide" "Step by step setup for noteOS on a Windows PC."
 
 echo "Built noteOS.zip ($(stat -f %z "$SITE_REPO/noteOS.zip") bytes), setup-guide-mac.html, setup-guide-windows.html"
