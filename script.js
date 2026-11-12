@@ -304,3 +304,47 @@
   if (!visible) root.classList.add('is-idle');
   setPlaying(playing);
 })();
+
+
+/* Highlight the nav item for the section in view. Sections without their own
+   nav item count toward the nearest one above them. */
+(function () {
+  var map = [
+    ['what', 'what'], ['ideas', 'ideas'], ['in-action', 'ideas'], ['apps', 'apps'],
+    ['folder', 'folder'], ['download', 'day-1'], ['day-1', 'day-1'], ['after', 'day-1'], ['guides', 'guides']
+  ];
+  var nav = document.querySelector('.site-nav');
+  var header = document.querySelector('.site-header');
+  if (!nav || !header) return;
+  var links = {};
+  Array.prototype.forEach.call(nav.querySelectorAll('a[href^="#"]'), function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  var items = map.map(function (m) { return { el: document.getElementById(m[0]), nav: m[1] }; }).filter(function (m) { return m.el && links[m.nav]; });
+  if (!items.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = null, ticking = false;
+
+  function update() {
+    ticking = false;
+    var line = header.offsetHeight + window.innerHeight * 0.3;
+    var active = null;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].el.getBoundingClientRect().top <= line) active = items[i].nav;
+    }
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) active = items[items.length - 1].nav;
+    if (active === current) return;
+    if (current && links[current]) links[current].removeAttribute('aria-current');
+    current = active;
+    if (current && links[current]) {
+      var a = links[current];
+      a.setAttribute('aria-current', 'location');
+      if (nav.scrollWidth > nav.clientWidth) {
+        var left = a.offsetLeft - (nav.clientWidth - a.offsetWidth) / 2;
+        try { nav.scrollTo({ left: left, behavior: reduce ? 'auto' : 'smooth' }); } catch (e) { nav.scrollLeft = left; }
+      }
+    }
+  }
+  function onScroll() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
