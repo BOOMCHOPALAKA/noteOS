@@ -43,13 +43,36 @@
         <p class="eyebrow">noteOS · for Mac and Windows</p>
         <h1 id="hero-title">An AI thinking partner that learns and grows with you, all powered by simple notes.</h1>
         <p class="lede">One ever-changing folder of notes that supercharges how you work with AI. The more you chat, the more it learns. The more it learns, the more useful it gets and the more it can do for you.</p>
-        <p class="need">This guide is written for Claude. In Claude, setup step 2 adds one line to your settings so Claude should read <code>CLAUDE.md</code>, the rulebook file inside your noteOS folder, on its own. Other AI apps that can work in a folder on your computer, like ChatGPT's desktop app, should work too, since the notes and instructions are plain text files. In those apps, start with <code>Read CLAUDE.md in this folder and follow it.</code> A guide for other apps is in the works.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary btn-big" href="noteOS.zip" download>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-            Download the noteOS folder
-          </a>
-          <a class="btn btn-secondary" href="#day-1">See the setup steps</a>
+        <div class="quickstart" aria-labelledby="qs-title">
+          <h2 id="qs-title">Short on time? Here's the quick start.</h2>
+          <p>The rest of this page walks through how it all works. But if you just want to get going, these four steps are really all you need.</p>
+          <ol>
+            <li>
+              <p><strong>Grab the folder.</strong> Unzip it and drag the <code>noteOS</code> folder into your Documents folder.</p>
+              <a class="btn btn-primary" href="noteOS.zip" download>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+                Download the noteOS folder
+              </a>
+            </li>
+            <li>
+              <p><strong>Add one line to your Claude settings.</strong> In the Claude desktop app, click your name at the bottom of the sidebar, then <strong>Settings</strong>, then <strong>Your Claude</strong>. Paste this at the very end of the <strong>Instructions</strong> box, and keep whatever's already in there:</p>
+              <div class="first-message">
+                <code id="qs-settings-line">When I&#39;m working in a folder that has a CLAUDE.md, read it first and follow it.</code>
+                <button class="copy-btn" type="button" data-copy="qs-settings-line" hidden>Copy</button>
+              </div>
+            </li>
+            <li>
+              <p><strong>Point Claude at the folder.</strong> Start a new chat, pick your noteOS folder with the folder button under the box, and send:</p>
+              <div class="first-message">
+                <code id="qs-first-message">Read CLAUDE.md in this folder and follow it.</code>
+                <button class="copy-btn" type="button" data-copy="qs-first-message" hidden>Copy</button>
+              </div>
+            </li>
+            <li>
+              <p><strong>Say yes and start talking.</strong> Click Allow on the prompts, then answer Claude&#39;s questions. It should take it from there.</p>
+            </li>
+          </ol>
+          <p class="qs-after">That&#39;s it. Come back and read the rest whenever you&#39;re curious how it all works, or <a href="#day-1">see the full setup steps</a>.</p>
         </div>
         <p class="need">You'll need the Claude desktop app and a paid Claude plan (Pro, Max, Ultra, Team or Enterprise), because Claude Cowork needs one. Setup takes about 30 to 45 minutes. That's my rough guess, and most of it is downloads and the first setup conversation.</p>
       </div>
