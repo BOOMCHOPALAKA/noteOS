@@ -316,7 +316,7 @@
           <article class="card">
             <span class="badge accent">Works in your folder</span>
             <h3>Claude Cowork</h3>
-            <p>Part of the Claude desktop app. You pick a folder and talk to Claude the same way you do in chat. Sessions run in the cloud, so the files Claude uses are processed on Anthropic&#39;s servers. Keep private files out of this folder.</p>
+            <p>Part of the Claude desktop app. You pick a folder and talk to Claude the same way you do in chat. Sessions run in the cloud, so the files Claude uses are processed on Anthropic&#39;s servers. Keep private files out of this folder. In newer versions of the app, it&#39;s the same screen as chat once you pick a folder.</p>
           </article>
           <article class="card">
             <span class="badge accent">Works in your folder</span>
@@ -335,12 +335,12 @@
               <p class="list-label">Good</p>
               <ul>
                 <li>Looks and feels like chat.</li>
-                <li>Fewer Allow clicks: it asks twice when you start, once to change files and once to open the folder.</li>
+                <li>You click Allow twice to start, once to change files and once to open the folder.</li>
               </ul>
               <p class="list-label">Watch out</p>
               <ul>
-                <li>It needs one line in your Claude settings to read <code>CLAUDE.md</code> on its own. Step 2 below shows how.</li>
-                <li>Ask for skills in plain words, like &quot;save this session.&quot; Shortcuts like <code>/remember</code> are set up for Claude Code.</li>
+                <li>Add one line to your Claude settings so it reads <code>CLAUDE.md</code> on its own. Step 2 below shows how.</li>
+                <li>Ask for skills in plain words, like &quot;save this session.&quot; Typing <code>/remember</code> is a Claude Code shortcut and may not work here.</li>
                 <li>In this folder, the two reminders and the Opus to Sonnet split are set up for Claude Code.</li>
                 <li>Sessions run in the cloud, so the files Claude uses are processed on Anthropic&#39;s servers.</li>
               </ul>
@@ -487,7 +487,7 @@
           </li>
           <li>
             <h3>Open Claude Cowork and pick your folder</h3>
-            <p>In newer versions of the app, chat and Claude Cowork share one screen: pick your notes folder in Documents with the folder button under the box you type in. In older versions, click the <strong>Cowork</strong> tab in the sidebar first, then pick the folder. If you don&#39;t see a folder button, go on. Claude asks for a folder the first time it needs files.</p>
+            <p>If your app shows one combined screen, pick your notes folder in Documents with the folder button under the box you type in. If you see separate Chat and Cowork options near the box, click <strong>Cowork</strong> first, then pick the folder. If you don&#39;t see a folder button, go on. Claude asks for a folder the first time it needs files.</p>
           </li>
           <li>
             <h3>Send the first message</h3>
@@ -496,11 +496,11 @@
               <code id="first-message">Read CLAUDE.md in this folder and follow it.</code>
               <button class="copy-btn" type="button" data-copy="first-message" hidden>Copy</button>
             </div>
-            <p>This starts setup. After today, the line from step 2 handles it, so a new session can start with anything, even <code>hi</code>.</p>
+            <p>This starts setup. After today, the line from step 2 should handle it, so a new session can start with anything, even <code>hi</code>.</p>
           </li>
           <li>
             <h3>Click Allow on each prompt</h3>
-            <p>A few permission prompts come next. On a Mac, they come in this order. The prompt shows your folder's name, so if you renamed your noteOS folder, you see that name instead of "noteOS."</p>
+            <p>A few permission prompts come next. On a Mac, they should come in this order. The prompt shows your folder's name, so if you renamed your noteOS folder, you see that name instead of "noteOS."</p>
             <ol class="prompts">
               <li class="prompt">
                 <p class="who">Claude asks</p>
@@ -515,7 +515,7 @@
               <li class="prompt">
                 <p class="who">macOS asks</p>
                 <p class="says">"Claude" would like to access files in your Documents folder.</p>
-                <p class="do">Click <span class="pill">Allow</span>.</p>
+                <p class="do">Click <span class="pill">Allow</span>. It should name the folder your notes are in, like Documents.</p>
               </li>
             </ol>
             <p><strong>On Windows</strong>, I haven't seen these prompts yet. The Windows guide shows the Mac wording for the two Claude prompts, so yours may look a little different. If a prompt asks about Claude and your notes folder, Allow is the right answer.</p>

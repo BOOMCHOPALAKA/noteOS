@@ -86,7 +86,8 @@ in a folder.</li>
 where Claude works with the files in a folder you pick. Its sessions run
 in the cloud, on Anthropic's servers. (Anthropic makes Claude.)</li>
 <li><strong>CLAUDE.md:</strong> the instruction file in your folder.
-It's the rulebook. Claude reads it whenever you pick the folder.</li>
+It's the rulebook. After step 2, Claude should read it when you pick the
+folder.</li>
 <li><strong>Skill:</strong> a saved playbook in your folder. Each one
 tells Claude how to do one job the same way every time, like saving a
 session or drafting an email.</li>
@@ -135,11 +136,10 @@ box, below anything already there, paste this on a new line:</p>
 <p><code>When I'm working in a folder that has a CLAUDE.md, read it first and follow it.</code></p>
 <p>Keep what's already there. If there's a Save button, click it. No
 Your Claude? Look for <strong>Settings &gt; Cowork &gt; Global
-instructions</strong>. (This is the Mac layout.)</p></li>
-<li><p>Find Claude Cowork. In newer versions, chat and Claude Cowork
-share one screen: pick a folder with the folder button under the box. In
-older versions, click the <strong>Cowork</strong> tab in the sidebar
-first.</p></li>
+instructions</strong>. (Mac names; Windows should match.)</p></li>
+<li><p>Find Claude Cowork. On one combined screen, pick a folder with
+the folder button under the box. If you see separate Chat and Cowork
+options, click <strong>Cowork</strong>.</p></li>
 </ol>
 <p>If you're asked to upgrade, subscribe first, then come back. If you
 don't see Claude Cowork, go to "Claude Cowork doesn't show up" in
@@ -186,8 +186,8 @@ files.</p></li>
 <li><p>Type this exactly, and press Enter:</p>
 <p><code>Read CLAUDE.md in this folder and follow it.</code></p></li>
 </ol>
-<p>This starts setup. After today, the line from step 2 handles it, so a
-new session can start with anything, even <code>hi</code>.</p>
+<p>This starts setup. After today, the line from step 2 should handle
+it, so a new session can start with anything, even <code>hi</code>.</p>
 <p><strong>Prompts come next.</strong> Two prompts from Claude are
 expected. The wording below is from the Mac app, so yours may look a
 little different. The prompt shows your folder's name, so if you renamed
@@ -212,8 +212,9 @@ answers. Short answers are fine. As you answer, Claude writes notes in
 your folder. If it asks to run a short command, like one that reads
 today's date, allow it. If you see red error text, type:
 <code>that command failed, try another way</code>.</p>
-<p>Near the end, Claude checks that you did step 2. If Claude mentions
-reminders as a Claude Code extra, you don't need them today.</p>
+<p>Near the end, Claude should check that you did step 2. If Claude
+mentions reminders as a Claude Code extra, you don't need them
+today.</p>
 <p>Last, Claude offers a short tour of how all this works. Say yes. It
 takes about ten minutes, shows you around your folder in Obsidian, and
 helps you change your instruction file. You can stop any time.</p>
@@ -234,8 +235,8 @@ folder.</li>
 <li>Type: <code>what do you know about me?</code></li>
 <li>If the reply doesn't use what you told Claude, type
 <code>Read CLAUDE.md in this folder and follow it.</code> and ask again.
-That means the line from step 2 is missing. Check it in Settings, then
-start a new session.</li>
+That may mean the line from step 2 is missing. Check it in Settings,
+then start a new session.</li>
 <li>In Obsidian, open <code>Start Here</code>. It's a one-page map of
 your folder.</li>
 </ol>
