@@ -63,7 +63,7 @@
               <p class="qs-note">No Your Claude? Look under Settings, then Cowork, then Global instructions.</p>
             </li>
             <li>
-              <p><strong>Point Claude at the folder.</strong> Start a new chat, pick your noteOS folder with the folder button under the box (if you see separate Chat and Cowork options, click Cowork first), and send:</p>
+              <p><strong>Point Claude at the folder and say hi.</strong> Start a new chat, pick your noteOS folder with the folder button under the box (if you see separate Chat and Cowork options, click Cowork first), and type <code>hi</code>. Claude should read the folder&#39;s instructions and start setup. If it doesn&#39;t seem to know the folder, send:</p>
               <div class="first-message">
                 <code id="qs-first-message">Read CLAUDE.md in this folder and follow it.</code>
                 <button class="copy-btn" type="button" data-copy="qs-first-message" hidden>Copy</button>
@@ -486,11 +486,11 @@
               Download the noteOS folder
             </a>
           </div>
-          <p class="file">noteOS.zip · about 56 KB</p>
+          <p class="file">noteOS.zip · about 58 KB</p>
           <div class="after-download">
             <p><strong>After you unzip it,</strong> add this line to the end of your Claude settings (your name, then Settings, Your Claude, Instructions):</p>
             <p><code>When I&#39;m working in a folder that has a CLAUDE.md, read it first and follow it.</code></p>
-            <p>Then pick your noteOS folder in Claude Cowork and send <code>Read CLAUDE.md in this folder and follow it.</code> The steps below walk you through it.</p>
+            <p>Then pick your noteOS folder in Claude Cowork and say hi. If Claude doesn&#39;t seem to know the folder, send <code>Read CLAUDE.md in this folder and follow it.</code> The steps below walk you through it.</p>
           </div>
           <ul class="promises">
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Everything is a plain text file on your computer. You can edit or delete any of it.</span></li>
@@ -524,13 +524,13 @@
             <p>If your app shows one combined screen, pick your notes folder in Documents with the folder button under the box you type in. If you see separate Chat and Cowork options near the box, click <strong>Cowork</strong> first, then pick the folder. If you don&#39;t see a folder button, go on. Claude asks for a folder the first time it needs files.</p>
           </li>
           <li>
-            <h3>Send the first message</h3>
-            <p>Type this exactly:</p>
+            <h3>Say hi</h3>
+            <p>Type <code>hi</code>. Because of the line from step 2, Claude should read the folder&#39;s instructions and start setup. If Claude answers like it doesn&#39;t know the folder, send this instead:</p>
             <div class="first-message">
               <code id="first-message">Read CLAUDE.md in this folder and follow it.</code>
               <button class="copy-btn" type="button" data-copy="first-message" hidden>Copy</button>
             </div>
-            <p>This starts setup. After today, the line from step 2 should handle it, so a new session can start with anything, even <code>hi</code>.</p>
+            <p>Then check the line from step 2 in Settings, so the next session starts on its own.</p>
           </li>
           <li>
             <h3>Click Allow on each prompt</h3>
@@ -558,7 +558,7 @@
 
         <div class="note">
           <p><strong>Then onboarding starts.</strong> Claude welcomes you and asks about six questions, one at a time, about you, your work and how you like answers. Short answers are fine. When it's done, About Me in <code>CLAUDE.md</code> should be filled in and <code>Map</code> should hold a basecamp for each area you named.</p>
-          <p>Near the end, Claude asks to save a note in the folder's instructions so it reads <code>CLAUDE.md</code> first every time. Say yes. That part is new and hasn't been tested yet. If it doesn't stick, nothing breaks. Start each session with the same first message.</p>
+          <p>Near the end, Claude should check that you added the line from step 2. If it&#39;s missing, Claude helps you add it.</p>
         </div>
       </div>
     </section>
